@@ -1,0 +1,17 @@
+.git
+.gitignore
+
+.DS_Store
+
+.project
+.buildpath
+.settings
+
+media/
+deploy/
+databases/
+Framework/Connection_Data.php
+#css/style.css
+
+LICENSE
+README.md
