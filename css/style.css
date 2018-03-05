@@ -770,14 +770,14 @@ span.button {
 
 .page .button-black {
 	color: #fff;
-	background-color: #000;
-	border-color: #000;
+	background-color: #77b332;
+	border-color: #77b332;
 }
 
 .page .button-black:hover, .page .button-black:focus, .page .button-black:active, .page .button-black:hover {
 	color: #fff;
-	background-color: #ed1c24;
-	border-color: #ed1c24;
+	background-color: #77b332;
+	border-color: #77b332;
 }
 
 .page .button-gray-dark {
@@ -800,8 +800,8 @@ span.button {
 
 .page .button-primary:hover, .page .button-primary:focus, .page .button-primary:active, .page .button-primary:hover {
 	color: #fff;
-	background-color: #ed1c24;
-	border-color: #ed1c24;
+	background-color: #77b332;
+	border-color: #77b332;
 }
 
 .page .button-gray-light-outline {
@@ -14874,7 +14874,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	cursor: pointer;
 	color: #fff;
 	transition: .33s;
-	background-color: #333;
+	background-color: #77b332;
 }
 
 .swiper-slider .swiper-button-prev::before,
