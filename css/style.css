@@ -252,7 +252,7 @@ h4,
 .heading-4 {
 	font-size: 18px;
 	line-height: 1.5;
-	color: #333;
+	color: #77b332;
 }
 
 @media (min-width: 768px) {
@@ -992,7 +992,7 @@ span.button {
 	font-weight: 600;
 	text-transform: uppercase;
 	line-height: 1.34167;
-	color: #000;
+	color: #77b332;
 }
 
 .blurb__title a, .blurb__title a:active, .blurb__title a:focus {
@@ -6171,7 +6171,7 @@ a.thumbnail-classic-title:hover {
 }
 
 .layout-panel-wrap h1, .context-light h1, .bg-gray-lighter h1, .layout-panel-wrap h2, .context-light h2, .bg-gray-lighter h2, .layout-panel-wrap h3, .context-light h3, .bg-gray-lighter h3, .layout-panel-wrap h4, .context-light h4, .bg-gray-lighter h4, .layout-panel-wrap h5, .context-light h5, .bg-gray-lighter h5, .layout-panel-wrap h6, .context-light h6, .bg-gray-lighter h6, .layout-panel-wrap .heading-1, .context-light .heading-1, .bg-gray-lighter .heading-1, .layout-panel-wrap .heading-2, .context-light .heading-2, .bg-gray-lighter .heading-2, .layout-panel-wrap .heading-3, .context-light .heading-3, .bg-gray-lighter .heading-3, .layout-panel-wrap .heading-4, .context-light .heading-4, .bg-gray-lighter .heading-4, .layout-panel-wrap .heading-5, .context-light .heading-5, .bg-gray-lighter .heading-5, .layout-panel-wrap .heading-6, .context-light .heading-6, .bg-gray-lighter .heading-6 {
-	color: #333;
+	color: #77b332;
 }
 
 @media (max-width: 1199px) {
@@ -6264,7 +6264,7 @@ a.thumbnail-classic-title:hover {
 }
 
 .bg-gray-dark {
-	background-color: #8A0829;
+	background-color: #013467;
 }
 
 .bg-gray-dark[class*='section-'] + .bg-gray-dark.section-md,
@@ -6295,7 +6295,7 @@ a.thumbnail-classic-title:hover {
 }
 
 .bg-gray-darkest {
-	background-color: #8A0829;
+	background-color: #013467;
 	color: #888;
 }
 
@@ -6657,7 +6657,7 @@ html .page .group-bottom > *, html .page .group-bottom > *:first-child {
 @media (min-width: 992px) {
 	.section-md {
 		padding: 80px 0 100px;
-        background-color: #8A0829;
+        background-color: #e0e0e0;
 	}
 	.section-lg {
 		padding: 100px 0;
@@ -9202,7 +9202,7 @@ h4 + .owl-carousel {
 }
 
 .rd-navbar .rd-navbar-nav > li > a {
-	font-size: 12px;
+	font-size: 16px;
 	line-height: 1.28;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -9646,7 +9646,7 @@ h4 + .owl-carousel {
 .rd-navbar-static .rd-navbar-top-panel-dark .icon-gray-darker,
 .rd-navbar-sidebar .rd-navbar-top-panel-dark a,
 .rd-navbar-sidebar .rd-navbar-top-panel-dark .icon-gray-darker {
-	color: #fff;
+	color: #77be32;
 }
 
 .rd-navbar-static .rd-navbar-top-panel-dark a:hover,
@@ -9658,7 +9658,7 @@ h4 + .owl-carousel {
 
 .rd-navbar-static .rd-navbar-top-panel-dark::before,
 .rd-navbar-sidebar .rd-navbar-top-panel-dark::before {
-	background: #8A0829;
+	background: #fff;
 }
 
 .ie-10 .rd-navbar-static .rd-navbar-top-panel__content > *,
@@ -10028,19 +10028,19 @@ h4 + .owl-carousel {
 .rd-navbar-sidebar .rd-navbar-nav > li > a,
 .rd-navbar-sidebar .rd-navbar-nav > li > a:active,
 .rd-navbar-sidebar .rd-navbar-nav > li > a:focus {
-	color: #000;
+	color: #fff;
 }
 
 .rd-navbar-static .rd-navbar-nav > li > a:hover,
 .rd-navbar-sidebar .rd-navbar-nav > li > a:hover {
-	color: #ed1c24;
+	color: #77b332;
 }
 
 .rd-navbar-static .rd-navbar-nav > li.opened > a,
 .rd-navbar-static .rd-navbar-nav > li.active > a,
 .rd-navbar-sidebar .rd-navbar-nav > li.opened > a,
 .rd-navbar-sidebar .rd-navbar-nav > li.active > a {
-	color: #ed1c24;
+	color: #fff;
 }
 
 .rd-navbar-static .rd-navbar-nav > li > .rd-navbar-submenu-toggle,
@@ -10304,7 +10304,7 @@ h4 + .owl-carousel {
 .rd-navbar-static {
 	display: block;
 	padding: 0 15px;
-	background-color: #c19a68;
+	background-color: #013467;
 	box-shadow: 0 2px 12px rgba(136, 136, 136, 0.1);
 }
 
@@ -10492,7 +10492,7 @@ h4 + .owl-carousel {
 }
 
 .rd-navbar-static .rd-navbar-nav > li.focus > a {
-	color: #ed1c24;
+	color: #fff;
 }
 
 .rd-navbar-static .rd-navbar-nav > li > .rd-navbar-dropdown {
@@ -14633,7 +14633,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	right: 0;
 	left: 0;
 	content: "";
-	background-color:  #c19a68;
+	background-color:  #013467;
 	z-index: 0;
 }
 
