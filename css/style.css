@@ -8652,7 +8652,7 @@ h4 + .owl-carousel {
 
 .owl-prev:hover,
 .owl-next:hover {
-	color: #ed1c24;
+	color: #77b332;
 }
 
 .owl-prev {
@@ -8696,7 +8696,7 @@ h4 + .owl-carousel {
 }
 
 .owl-dot:hover, .owl-dot.active {
-	background-color: #ed1c24;
+	background-color: #77b332;
 }
 
 .owl-dot + .owl-dot {
@@ -9157,7 +9157,7 @@ h4 + .owl-carousel {
 }
 
 .desktop .rd-navbar .rd-navbar-search__toggle:hover {
-	color: #000;
+	color: #77b332;
 }
 
 .rd-navbar .rd-search .form-input {
