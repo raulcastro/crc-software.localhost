@@ -49,7 +49,7 @@
 			progressLinear: $(".progress-linear"),
 			circleProgress: $(".progress-bar-circle"),
 			dateCountdown: $('.DateCountdown'),
-			pageLoader: $(".preloader"),
+			pageLoader: $("#page-loader"),
 			flickrfeed: $(".flickr"),
 			selectFilter: $("select"),
 			rdAudioPlayer: $(".rd-audio"),
@@ -71,7 +71,9 @@
 			materialParallax: $(".parallax-container"),
 			wow: $(".wow"),
 			textRotator: $(".text-rotator"),
-			particles: $('#particles-js')
+			particles: $('#particles-js'),
+			mailchimp: $('.mailchimp-mailform'),
+			campaignMonitor: $('.campaign-mailform')
 		};
 
 	/**
@@ -85,7 +87,8 @@
 		});
 	} else {
 		plugins.pageLoader.remove();
-	};
+	}
+	;
 
 	/**
 	 * Initialize All Scripts
@@ -130,14 +133,14 @@
 				videos,
 				videoItems = prevSlide.find("video");
 
-			for(var i = 0; i < videoItems.length; i++) {
+			for (var i = 0; i < videoItems.length; i++) {
 				videoItems[i].pause();
 			}
 
 			videos = nextSlide.find("video");
 			if (!isNoviBuilder && videos.length) {
 				videos.get(0).play();
-				videos.css({'visibility':'visible', 'opacity':'1'});
+				videos.css({'visibility': 'visible', 'opacity': '1'});
 			}
 		}
 
@@ -167,7 +170,7 @@
 				duration = nextSlideItem.attr('data-caption-duration');
 
 				var tempFunction = function (nextSlideItem, duration) {
-					return function(){
+					return function () {
 						nextSlideItem
 							.removeClass("not-animated")
 							.addClass(nextSlideItem.attr("data-caption-animate"))
@@ -231,7 +234,7 @@
 		 */
 		function initOwlCarousel(c) {
 			var aliaces = ["-", "-sm-", "-md-", "-lg-", "-xl-", "-xxl-"],
-				values = [0, 576, 768, 992, 1200,  1600],
+				values = [0, 576, 768, 992, 1200, 1600],
 				responsive = {};
 
 			for (var j = 0; j < values.length; j++) {
@@ -281,7 +284,7 @@
 			});
 
 			c.owlCarousel({
-				autoplay: isNoviBuilder ? false: c.attr("data-autoplay") === "true",
+				autoplay: isNoviBuilder ? false : c.attr("data-autoplay") === "true",
 				loop: isNoviBuilder ? false : c.attr("data-loop") !== "false",
 				items: 1,
 				rtl: isRtl,
@@ -310,6 +313,73 @@
 					}
 				}()
 			});
+		}
+
+		/**
+		 * @desc Initialize the gallery with set of images
+		 * @param {object} itemsToInit - jQuery object
+		 * @param {string} addClass - additional gallery class
+		 */
+		function initLightGallery(itemsToInit, addClass) {
+			if (!isNoviBuilder) {
+				$(itemsToInit).lightGallery({
+					thumbnail: $(itemsToInit).attr("data-lg-thumbnail") !== "false",
+					selector: "[data-lightgallery='item']",
+					autoplay: $(itemsToInit).attr("data-lg-autoplay") === "true",
+					pause: parseInt($(itemsToInit).attr("data-lg-autoplay-delay")) || 5000,
+					addClass: addClass,
+					mode: $(itemsToInit).attr("data-lg-animation") || "lg-slide",
+					loop: $(itemsToInit).attr("data-lg-loop") !== "false"
+				});
+			}
+		}
+
+		/**
+		 * @desc Initialize the gallery with dynamic addition of images
+		 * @param {object} itemsToInit - jQuery object
+		 * @param {string} addClass - additional gallery class
+		 */
+		function initDynamicLightGallery(itemsToInit, addClass) {
+			if (!isNoviBuilder) {
+				$(itemsToInit).on("click", function () {
+					$(itemsToInit).lightGallery({
+						thumbnail: $(itemsToInit).attr("data-lg-thumbnail") !== "false",
+						selector: "[data-lightgallery='item']",
+						autoplay: $(itemsToInit).attr("data-lg-autoplay") === "true",
+						pause: parseInt($(itemsToInit).attr("data-lg-autoplay-delay")) || 5000,
+						addClass: addClass,
+						mode: $(itemsToInit).attr("data-lg-animation") || "lg-slide",
+						loop: $(itemsToInit).attr("data-lg-loop") !== "false",
+						dynamic: true,
+						dynamicEl: JSON.parse($(itemsToInit).attr("data-lg-dynamic-elements")) || []
+					});
+				});
+			}
+		}
+
+		/**
+		 * @desc Initialize the gallery with one image
+		 * @param {object} itemToInit - jQuery object
+		 * @param {string} addClass - additional gallery class
+		 */
+		function initLightGalleryItem(itemToInit, addClass) {
+			if (!isNoviBuilder) {
+				$(itemToInit).lightGallery({
+					selector: "this",
+					addClass: addClass,
+					counter: false,
+					youtubePlayerParams: {
+						modestbranding: 1,
+						showinfo: 0,
+						rel: 0,
+						controls: 0
+					},
+					vimeoPlayerParams: {
+						byline: 0,
+						portrait: 0
+					}
+				});
+			}
 		}
 
 		/**
@@ -1097,7 +1167,7 @@
 								swiper.update(true);
 							})
 
-							if(!isRtl) {
+							if (!isRtl) {
 								$window.on('resize', function () {
 									swiper.update(true);
 								});
@@ -1312,6 +1382,10 @@
 		 * Isotope
 		 * @description Enables Isotope plugin
 		 */
+		/**
+		 * Isotope
+		 * @description Enables Isotope plugin
+		 */
 		if (plugins.isotope.length) {
 			var isogroup = [];
 			for (var i = 0; i < plugins.isotope.length; i++) {
@@ -1451,6 +1525,152 @@
 		 */
 		if (plugins.captcha.length) {
 			$.getScript("//www.google.com/recaptcha/api.js?onload=onloadCaptchaCallback&render=explicit&hl=en");
+		}
+
+		// MailChimp Ajax subscription
+		if (plugins.mailchimp.length) {
+			for (i = 0; i < plugins.mailchimp.length; i++) {
+				var $mailchimpItem = $(plugins.mailchimp[i]),
+					$email = $mailchimpItem.find('input[type="email"]');
+
+				// Required by MailChimp
+				$mailchimpItem.attr('novalidate', 'true');
+				$email.attr('name', 'EMAIL');
+
+				$mailchimpItem.on('submit', $.proxy( function ( $email, event ) {
+					event.preventDefault();
+
+					var $this = this;
+
+					var data = {},
+						url = $this.attr('action').replace('/post?', '/post-json?').concat('&c=?'),
+						dataArray = $this.serializeArray(),
+						$output = $("#" + $this.attr("data-form-output"));
+
+					for (i = 0; i < dataArray.length; i++) {
+						data[dataArray[i].name] = dataArray[i].value;
+					}
+
+					$.ajax({
+						data: data,
+						url: url,
+						dataType: 'jsonp',
+						error: function (resp, text) {
+							$output.html('Server error: ' + text);
+
+							setTimeout(function () {
+								$output.removeClass("active");
+							}, 4000);
+						},
+						success: function (resp) {
+							$output.html(resp.msg).addClass('active');
+							$email[0].value = '';
+							var $label = $('[for="'+ $email.attr( 'id' ) +'"]');
+							if ( $label.length ) $label.removeClass( 'focus not-empty' );
+
+							setTimeout(function () {
+								$output.removeClass("active");
+							}, 6000);
+						},
+						beforeSend: function (data) {
+							var isNoviBuilder = window.xMode;
+
+							var isValidated = (function () {
+								var results, errors = 0;
+								var elements = $this.find('[data-constraints]');
+								var captcha = null;
+								if (elements.length) {
+									for (var j = 0; j < elements.length; j++) {
+
+										var $input = $(elements[j]);
+										if ((results = $input.regula('validate')).length) {
+											for (var k = 0; k < results.length; k++) {
+												errors++;
+												$input.siblings(".form-validation").text(results[k].message).parent().addClass("has-error");
+											}
+										} else {
+											$input.siblings(".form-validation").text("").parent().removeClass("has-error")
+										}
+									}
+
+									if (captcha) {
+										if (captcha.length) {
+											return validateReCaptcha(captcha) && errors === 0
+										}
+									}
+
+									return errors === 0;
+								}
+								return true;
+							})();
+
+							// Stop request if builder or inputs are invalide
+							if (isNoviBuilder || !isValidated)
+								return false;
+
+							$output.html('Submitting...').addClass('active');
+						}
+					});
+
+					return false;
+				}, $mailchimpItem, $email ));
+			}
+		}
+
+		// Campaign Monitor ajax subscription
+		if (plugins.campaignMonitor.length) {
+			for (i = 0; i < plugins.campaignMonitor.length; i++) {
+				var $campaignItem = $(plugins.campaignMonitor[i]);
+
+				$campaignItem.on('submit', $.proxy(function (e) {
+					var data = {},
+						url = this.attr('action'),
+						dataArray = this.serializeArray(),
+						$output = $("#" + plugins.campaignMonitor.attr("data-form-output")),
+						$this = $(this);
+
+					for (i = 0; i < dataArray.length; i++) {
+						data[dataArray[i].name] = dataArray[i].value;
+					}
+
+					$.ajax({
+						data: data,
+						url: url,
+						dataType: 'jsonp',
+						error: function (resp, text) {
+							$output.html('Server error: ' + text);
+
+							setTimeout(function () {
+								$output.removeClass("active");
+							}, 4000);
+						},
+						success: function (resp) {
+							$output.html(resp.Message).addClass('active');
+
+							setTimeout(function () {
+								$output.removeClass("active");
+							}, 6000);
+						},
+						beforeSend: function (data) {
+							// Stop request if builder or inputs are invalide
+							if (isNoviBuilder || !isValidated($this.find('[data-constraints]')))
+								return false;
+
+							$output.html('Submitting...').addClass('active');
+						}
+					});
+
+					// Clear inputs after submit
+					var inputs = $this[0].getElementsByTagName('input');
+					for (var i = 0; i < inputs.length; i++) {
+						inputs[i].value = '';
+						var label = document.querySelector( '[for="'+ inputs[i].getAttribute( 'id' ) +'"]' );
+						if( label ) label.classList.remove( 'focus', 'not-empty' );
+					}
+
+					return false;
+				}, $campaignItem));
+			}
 		}
 
 		/**
@@ -1600,75 +1820,6 @@
 							output.removeClass("active error success");
 							form.removeClass('success');
 						}, 3500);
-					}
-				});
-			}
-		}
-
-		/**
-		 * @desc Initialize the gallery with set of images
-		 * @param {object} itemsToInit - jQuery object
-		 * @param {string} addClass - additional gallery class
-		 */
-		function initLightGallery(itemsToInit, addClass) {
-			if (!isNoviBuilder) {
-				$(itemsToInit).lightGallery({
-					thumbnail: $(itemsToInit).attr("data-lg-thumbnail") !== "false",
-					selector: "[data-lightgallery='item']",
-					autoplay: $(itemsToInit).attr("data-lg-autoplay") === "true",
-					pause: parseInt($(itemsToInit).attr("data-lg-autoplay-delay")) || 5000,
-					addClass: addClass,
-					mode: $(itemsToInit).attr("data-lg-animation") || "lg-slide",
-					loop: $(itemsToInit).attr("data-lg-loop") !== "false",
-					download: false
-				});
-			}
-		}
-
-		/**
-		 * @desc Initialize the gallery with dynamic addition of images
-		 * @param {object} itemsToInit - jQuery object
-		 * @param {string} addClass - additional gallery class
-		 */
-		function initDynamicLightGallery(itemsToInit, addClass) {
-			if (!isNoviBuilder) {
-				$(itemsToInit).on("click", function () {
-					$(itemsToInit).lightGallery({
-						thumbnail: $(itemsToInit).attr("data-lg-thumbnail") !== "false",
-						download: false,
-						selector: "[data-lightgallery='item']",
-						autoplay: $(itemsToInit).attr("data-lg-autoplay") === "true",
-						pause: parseInt($(itemsToInit).attr("data-lg-autoplay-delay")) || 5000,
-						addClass: addClass,
-						mode: $(itemsToInit).attr("data-lg-animation") || "lg-slide",
-						loop: $(itemsToInit).attr("data-lg-loop") !== "false",
-						dynamic: true,
-						dynamicEl: JSON.parse($(itemsToInit).attr("data-lg-dynamic-elements")) || []
-					});
-				});
-			}
-		}
-
-		/**
-		 * @desc Initialize the gallery with one image
-		 * @param {object} itemToInit - jQuery object
-		 * @param {string} addClass - additional gallery class
-		 */
-		function initLightGalleryItem(itemToInit, addClass) {
-			if (!isNoviBuilder) {
-				$(itemToInit).lightGallery({
-					selector: "this",
-					addClass: addClass,
-					counter: false,
-					youtubePlayerParams: {
-						modestbranding: 1,
-						showinfo: 0,
-						rel: 0,
-						controls: 0
-					},
-					vimeoPlayerParams: {
-						byline: 0,
-						portrait: 0
 					}
 				});
 			}
@@ -2021,13 +2172,6 @@
 								slidesToShow: parseInt($slickItem.attr('data-lg-items')) || 1,
 								swipe: false
 							}
-						},
-						{
-							breakpoint: 1599,
-							settings: {
-								slidesToShow: parseInt($slickItem.attr('data-xl-items')) || 1,
-								swipe: false
-							}
 						}
 					]
 				})
@@ -2327,7 +2471,7 @@
 		}
 
 		/**
-		 * JQuery mousewheel plugin
+		 * jScrollPane - v2.1.2-rc.1 - 2018-01-18
 		 * @description  Enables jquery mousewheel plugin
 		 */
 		if (plugins.scroller.length) {
@@ -2335,10 +2479,8 @@
 			for (i = 0; i < plugins.scroller.length; i++) {
 				var scrollerItem = $(plugins.scroller[i]);
 
-				scrollerItem.mCustomScrollbar({
-					theme: scrollerItem.attr('data-theme') ? scrollerItem.attr('data-theme') : 'minimal',
-					scrollInertia: 100,
-					scrollButtons: {enable: false}
+				scrollerItem.jScrollPane({
+					autoReinitialise: true
 				});
 			}
 		}
@@ -2357,12 +2499,12 @@
 					videObj.pause();
 				}
 
-				document.addEventListener( 'scroll', function ( $element, videObj ) {
+				document.addEventListener('scroll', function ($element, videObj) {
 					return function () {
-						if (!isNoviBuilder && (isScrolledIntoView($element) || videObj.pause()) ) videObj.play();
+						if (!isNoviBuilder && (isScrolledIntoView($element) || videObj.pause())) videObj.play();
 						else videObj.pause();
 					}
-				}( $element, videObj ) );
+				}($element, videObj));
 
 			}
 		}
@@ -2402,7 +2544,7 @@
 		/**
 		 * canvas animation
 		 */
-		if ( plugins.particles.length ) {
+		if (plugins.particles.length) {
 			particlesJS("particles-js", {
 				"particles": {
 					"number": {
