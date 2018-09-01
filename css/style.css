@@ -27337,3 +27337,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .blog{
     text-align: center;
 }
+.texto{
+    text-align: justify;
+}
+
+.work{
+    text-align: center !important;
+    margin-left: 332px;
+}
