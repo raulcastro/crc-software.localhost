@@ -27345,3 +27345,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     text-align: center !important;
     margin-left: 332px;
 }
+
+.slider{
+    color: #fff;
+    margin-right:  33.25em !important;
+    font-size: 44px;
+    
+}
