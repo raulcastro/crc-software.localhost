@@ -210,7 +210,7 @@ h1, h2, h3, h4, h5, h6, .heading-1, .heading-2, .heading-3, .heading-4, .heading
 	margin-bottom: 0;
 	font-family: inherit;
 	font-weight: 500;
-	color: #888;
+	color: #151515;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .heading-1 a, .heading-2 a, .heading-3 a, .heading-4 a, .heading-5 a, .heading-6 a {
@@ -696,15 +696,15 @@ span.button {
 }
 
 .page .button-gray-light-outline {
-	color: #fff;
+	color: #000;
 	background-color: transparent;
 	border-color: #e0e0e2;
 }
 
 .page .button-gray-light-outline:hover, .page .button-gray-light-outline:focus, .page .button-gray-light-outline:active, .page .button-gray-light-outline:hover {
 	color: #fff;
-	background-color: #F91805;
-	border-color: #F91805;
+	background-color: #18BCDD;
+	border-color: #18BCDD;
 }
 
 .page span.button-gray-light-outline {
@@ -2485,7 +2485,7 @@ figure img {
 }
 
 a.thumbnail-classic-title:hover {
-	color: #F91805;
+	color: #2ed3ae;
 }
 
 .thumbnail-classic-time {
@@ -5435,7 +5435,7 @@ h6 + .rating-list {
 }
 
 .bg-default {
-	background-color: ##f8f8f8 !important;
+	background-color: #fff;
 }
 
 .bg-default + .bg-default.section-md,
@@ -5586,7 +5586,7 @@ h6 + .rating-list {
 }
 
 .bg-gray-lighter {
-	background-color: #000;
+	background-color: #f8f8f8;
 }
 
 .bg-gray-lighter + .bg-gray-lighter.section-md,
@@ -9286,19 +9286,19 @@ html:not(.lt-ie10) .not-animated {
 .rd-navbar-sidebar .rd-navbar-nav > li > a,
 .rd-navbar-sidebar .rd-navbar-nav > li > a:active,
 .rd-navbar-sidebar .rd-navbar-nav > li > a:focus {
-	color: #000;
+	color: #18BCDD;
 }
 
 .rd-navbar-static .rd-navbar-nav > li > a:hover,
 .rd-navbar-sidebar .rd-navbar-nav > li > a:hover {
-	color: #F91805;
+	color: #2ed3ae;
 }
 
 .rd-navbar-static .rd-navbar-nav > li.opened > a,
 .rd-navbar-static .rd-navbar-nav > li.active > a,
 .rd-navbar-sidebar .rd-navbar-nav > li.opened > a,
 .rd-navbar-sidebar .rd-navbar-nav > li.active > a {
-	color: #000;
+	color: #18BCDD;
 }
 
 .rd-navbar-static .rd-navbar-nav > li > .rd-navbar-submenu-toggle,
@@ -27348,10 +27348,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .slider{
     color: #fff;
-}
-.negro{
-    background-color: #000!important;
-}
-.color-gris{
-    background-color: #333!important;
+   
+    
 }

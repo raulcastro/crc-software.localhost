@@ -1,0 +1,29 @@
+RewriteEngine On
+
+# Error Pages
+ErrorDocument 401 /not-found.html
+ErrorDocument 403 /not-found.html
+ErrorDocument 404 /not-found.html
+ErrorDocument 500 /not-found.html
+
+# Prevent directory browsing
+Options -Indexes +FollowSymLinks -MultiViews
+
+# Canonical host
+RewriteCond %{HTTP_HOST}    ^www\.(.*)      [NC]
+RewriteRule ^(.*)$          http://%1/$1    [L,R,NE]
+
+#Needed
+RewriteRule ^sitemap.xml$ sitemap.xml
+
+RewriteBase /
+
+#Spanish
+RewriteRule ^$ 			/index.php
+RewriteRule ^nosotros/$ 		/nosotros.php?section=nosotros
+
+#RewriteRule ^gallery/from/([0-9]+)/$ /gallery.php?from=$1&section=gallery
+#RewriteRule ^gallery/from/([0-9]+)/page/([0-9]+)/$ /gallery.php?from=$1&section=gallery&page=$2
+#RewriteRule ^testimonials/$ 	/testimonials.php?section=testimonials
+#RewriteRule ^$ 			/index.php?page=1&category=all
+#RewriteRule ^blog/([A-Za-z0-9-]+)/category/([A-Za-z0-9-]+)/from/([0-9]+)/page/([0-9]+)/$ /index.php?from=$1&section=gallery&page=$2
