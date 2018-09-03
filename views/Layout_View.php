@@ -70,8 +70,11 @@ class Layout_View
                             echo self::getIndexContact();
         				    break;
         				    
-                        case 'about':
-                            echo self::getAbout();
+                        case 'nosotros':
+                            echo self::getBreadcrumbsAboutES();
+                            echo self::getWhoWeAreTextAboutES();
+                            echo self::getWhoWeAreColumnsAboutES();
+                            echo self::getOurTeamAboutES();
                         break;
                         
                         case 'contact':
@@ -163,7 +166,7 @@ class Layout_View
                             <ul class="rd-navbar-nav">
                                 <li class="active"><a href="/">Inicio</a></li>
 
-                                <li><a href="about.html">Nosotros</a></li>
+                                <li><a href="/nosotros/">Nosotros</a></li>
                                 <li><a href="services.html">Servicios</a></li>
                                 <li><a href="contacts.html">Contacto</a></li>
                                 <li><a href="portfolio.html">Portfolio</a>
@@ -563,6 +566,216 @@ class Layout_View
                                         <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="image-post.html">by Brian Williamson</a></div>
                             </div>
                         </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getBreadcrumbsAboutES()
+    {
+        ob_start();
+        ?>
+        <section class="breadcrumbs-custom">
+            <div class="container">
+                <div class="breadcrumbs-custom__inner">
+                    <p class="breadcrumbs-custom__title">Nosotros</p>
+                    <!--<ul class="breadcrumbs-custom__path">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html#">Pages</a></li>
+              <li class="active">About</li>
+            </ul>-->
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getWhoWeAreTextAboutES()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+            <!-- RD Parallax-->
+            <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="images/crc.jpg">
+                <div class="parallax-content">
+                    <div class="parallax-header__inner">
+                        <div class="parallax-header__content">
+                            <div class="container">
+                                <div class="row justify-content-sm-center">
+                                    <div class="col-md-10 col-xl-8">
+                                        <h2>Quiénes somos y qué hacemos?</h2>
+                                        <p>Somos CRC-Software, una de las compañías de desarrollo de software a medida. Diseñamos aplicaciones web inteligentes, rentables e intuitivas, aplicaciones de escritorio y aplicaciones móviles que ayudan a optimizar los procesos para las empresas, así como a crear nuevas fuentes de ingresos para empresas nuevas y establecidas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getWhoWeAreColumnsAboutES()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default">
+            <div class="container">
+                <div class="row row-50">
+                    <div class="col-md-6">
+                        <h3>Nuestro enfoque para software a medida</h3>
+                        <p>Adoptamos un enfoque único al fusionar los métodos tradicionales y los nuevos para desarrollar software de calidad a gran velocidad, al mismo tiempo que conservamos nuestro toque personal y nuestra actitud exigente con la planificación.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Agenda tu cita</h3>
+                        <p>Nos encanta conocer clientes potenciales o existentes. Llámenos y conozca al equipo que analiza, visualiza, crea y prueba su software, así como la demostración de algunos de nuestros productos únicos y emocionantes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-accent">
+            <div class="container">
+                <div class="row justify-content-md-center align-items-lg-end">
+                    <div class="col-md-8 col-lg-6 section-xl">
+                        <h3>Desarrollo de software de confianza</h3>
+                        <p>En CRC-Software hemos acumulado experiencia considerable en una variedad de sectores: públicos y privados, enfocados en los consumidores y las empresas y sin fines de lucro. Hemos ayudado a empresas que van desde empresas nuevas y empresas, pequeñas empresas administradas por sus propietarios hasta grandes organizaciones públicas</p><a class="button button-gray-light-outline" href="about.html#">Contactanos</a>
+                    </div>
+                    <div class="col-md-8 col-lg-6">
+                        <div class="cat-img-group">
+                            <div><img src="images/cat-2-507x508.jpg" alt="" width="507" height="508" />
+                            </div>
+                            <div><img src="images/cat-1-326x427.jpg" alt="" width="326" height="427" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getOurTeamAboutES()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+            <div class="container">
+                <h3>Nuestro equipo de trabajo</h3>
+                <p>El equipo de CRC-Software mezcla todos los ingredientes que consideramos necesarios para una empresa de desarrollo de software exitosa. Contamos con desarrolladores de software. Mentes analíticas que pueden comprender los matices de los negocios de nuestros clientes, los gerentes y diseñadores metódicos de proyectos, la gestión dirigida con un enfoque de calidad y entrega, y los innovadores que transforman la forma en que vemos las cosas.</p>
+                <div class="row row-50 justify-content-sm-center">
+                    <div class="col-md-6 col-lg-4">
+                        <!-- Thumb corporate-->
+                        <div class="thumb thumb-corporate">
+                            <div class="thumb-corporate__main"><img src="images/brian-king-480x362.jpg" alt="" width="480" height="362" />
+                                <div class="thumb-corporate__overlay">
+                                    <ul class="list-inline-sm thumb-corporate__list">
+                                        <li>
+                                            <a class="icon-sm fa-facebook icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-twitter icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-google-plus icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-vimeo icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-youtube icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-pinterest-p icon" href="about.html#"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="thumb-corporate__caption">
+                                <p class="thumb__title"><a href="team-member-profile.html">Raul Catro</a></p>
+                                <p class="thumb__subtitle">Director</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <!-- Thumb corporate-->
+                        <div class="thumb thumb-corporate">
+                            <div class="thumb-corporate__main"><img src="images/amanda-smith-480x362.jpg" alt="" width="480" height="362" />
+                                <div class="thumb-corporate__overlay">
+                                    <ul class="list-inline-sm thumb-corporate__list">
+                                        <li>
+                                            <a class="icon-sm fa-facebook icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-twitter icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-google-plus icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-vimeo icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-youtube icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-pinterest-p icon" href="about.html#"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="thumb-corporate__caption">
+                                <p class="thumb__title"><a href="team-member-profile.html">Cynthia Gonzalez</a></p>
+                                <p class="thumb__subtitle">Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <!-- Thumb corporate-->
+                        <div class="thumb thumb-corporate">
+                            <div class="thumb-corporate__main"><img src="images/george-nelson-418x315.jpg" alt="" width="418" height="315" />
+                                <div class="thumb-corporate__overlay">
+                                    <ul class="list-inline-sm thumb-corporate__list">
+                                        <li>
+                                            <a class="icon-sm fa-facebook icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-twitter icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-google-plus icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-vimeo icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-youtube icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-pinterest-p icon" href="about.html#"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="thumb-corporate__caption">
+                                <p class="thumb__title"><a href="team-member-profile.html">Arian Falcon</a></p>
+                                <p class="thumb__subtitle">Disenador Grafico</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
