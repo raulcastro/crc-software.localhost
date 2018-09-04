@@ -22,6 +22,9 @@ RewriteBase /
 RewriteRule ^$ 			/index.php
 RewriteRule ^nosotros/$ 		/nosotros.php?section=nosotros
 RewriteRule ^servicios/$ 		/servicios.php?section=servicios
+RewriteRule ^contacto/$ 		/contacto.php?section=contacto
+RewriteRule ^portafolio/$ 		/portafolio.php?section=portafolio
+RewriteRule ^blog/$ 		/blog.php?section=blog
 
 #RewriteRule ^gallery/from/([0-9]+)/$ /gallery.php?from=$1&section=gallery
 #RewriteRule ^gallery/from/([0-9]+)/page/([0-9]+)/$ /gallery.php?from=$1&section=gallery&page=$2

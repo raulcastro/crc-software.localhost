@@ -86,8 +86,18 @@ class Layout_View
                             echo self::getGridServicesThreeES();
                         break;
                         
-                        case 'contact':
-                            echo self :: getIndexContact();
+                        case 'contacto':
+                            echo self::getContactFormES();
+                        break;
+                        
+                        case 'portafolio':
+                            echo self::getPortfolioES();
+                            echo self::getIndexContact();
+                        break;
+                        
+                        case 'blog':
+                            echo self::getBlog();
+                            echo self::getIndexContact();
                         break;
         				
     				        default:
@@ -177,9 +187,9 @@ class Layout_View
 
                                 <li><a href="/nosotros/">Nosotros</a></li>
                                 <li><a href="/servicios/">Servicios</a></li>
-                                <li><a href="contacts.html">Contacto</a></li>
-                                <li><a href="portfolio.html">Portfolio</a>
-                                    <li><a href="grid-blog.html">BLOG</a>
+                                <li><a href="/contacto/">Contacto</a></li>
+                                <li><a href="/portafolio/">Portafolio</a>
+                                <li><a href="/blog/">Blog</a>
                             </ul>
                         </div>
                     </div>
@@ -1028,6 +1038,411 @@ class Layout_View
                                 <p> Permítanos ayudarlo con el aspecto más desafiante de comenzar un negocio: Desarrollar su aplicación de software</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getContactFormES()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default">
+            <div class="container">
+                <div class="row row-50">
+                    <div class="col-md-5 col-lg-4">
+                        <h3>Contacto</h3>
+                        <ul class="list-xs contact-info">
+                            <li>
+                                <dl class="list-terms-minimal">
+                                    <dt>Ubicacion</dt>
+                                    <dd>Playa del Carmen. Quintana Roo. Mexico</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="list-terms-minimal">
+                                    <dt>Telefono</dt>
+                                    <dd>
+                                        <ul class="list-semicolon">
+                                            <li><a href="callto:#">(045) 984-131-4389</a></li>
+                                            <li><a href="callto:#">(045) 984-254-9271</a></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="list-terms-minimal">
+                                    <dt>E-mail</dt>
+                                    <dd><a href="mailto:#">info@crc-software</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="list-terms-minimal">
+                                    <dt>Horario de atencion</dt>
+                                    <dd>lun-sab: 10 am-8 pm</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <ul class="list-inline-sm">
+                                    <li>
+                                        <a class="icon-sm fa-facebook icon" href="contacts.html#"></a>
+                                    </li>
+                                    <li>
+                                        <a class="icon-sm fa-twitter icon" href="contacts.html#"></a>
+                                    </li>
+                                    <li>
+                                        <a class="icon-sm fa-instagram icon" href="services.html#"></a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-7 col-lg-8">
+                        <h3>Formulario de contacto</h3>
+                        <!-- RD Mailform-->
+                        <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="http://livedemo00.template-help.com/wt_62267_v4/62267-default/bat/rd-mailform.php">
+                            <div class="form-wrap form-wrap_icon linear-icon-man">
+                                <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                                <label class="form-label" for="contact-name">Nombre</label>
+                            </div>
+                            <div class="form-wrap form-wrap_icon linear-icon-envelope">
+                                <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+                                <label class="form-label" for="contact-email"> e-mail</label>
+                            </div>
+                            <div class="form-wrap form-wrap_icon linear-icon-telephone">
+                                <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Numeric">
+                                <label class="form-label" for="contact-phone">Telefono</label>
+                            </div>
+                            <div class="form-wrap form-wrap_icon linear-icon-feather">
+                                <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                                <label class="form-label" for="contact-message">mensaje</label>
+                            </div>
+                            <button class="button button-primary" type="submit">enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getPortfolioES()
+    {
+        ob_start();
+        ?>
+        <!-- PANEL-->
+        <!-- Page Header-->
+        <header class="page-header">
+            <!-- RD Navbar-->
+            <div class="rd-navbar-wrap">
+                <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-stick-up-clone="false" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true" data-md-stick-up-offset="69px" data-lg-stick-up-offset="1px" data-body-class="rd-navbar-default-linked">
+                    <div class="rd-navbar-inner">
+                        <!-- RD Navbar Panel-->
+                        <div class="rd-navbar-panel">
+                            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                            <!-- RD Navbar Brand-->
+                            <div class="rd-navbar-brand">
+                                <a class="brand-name" href="index.html"><img src="images/CRCazul.png" alt="" width="174" height="32" /></a>
+                            </div>
+                        </div>
+                        <!-- RD Navbar Nav-->
+                        <div class="rd-navbar-nav-wrap">
+                            <ul class="rd-navbar-nav">
+                                <li class="active"><a href="index.html">Inicio</a></li>
+
+                                <li><a href="about.html">Nosotros</a></li>
+                                <li><a href="services.html">Servicios</a></li>
+                                <li><a href="contacts.html">Contacto</a></li>
+                                <li><a href="portfolio.html">Portfolio</a>
+                                    <li><a href="grid-blog.html">BLOG</a>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="section-lg bg-default text-center">
+            <div class="container">
+                <h3>Portafolio</h3>
+                <div class="isotope-wrap row row-70">
+                    <div class="col-sm-12">
+                        <ul class="list-nav isotope-filters isotope-filters-horizontal">
+                            <li><a class="active" data-isotope-filter="*" data-isotope-group="gallery" href="portfolio.html#">All</a></li>
+                            <li><a data-isotope-filter="Category 1" data-isotope-group="gallery" href="portfolio.html#">Objects</a></li>
+                            <li><a data-isotope-filter="Category 2" data-isotope-group="gallery" href="portfolio.html#">People</a></li>
+                        </ul>
+                        <div class="isotope row" data-isotope-layout="fitRows" data-isotope-group="gallery">
+                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1">
+                                <a class="img-thumbnail-variant-3" href="single-portfolio.html"><img src="images/portfolio-1-418x315.jpg" alt="" width="418" height="315" /><span class="label-custom label-white">Album</span>
+                                    <div class="caption"><span class="icon hover-top-element linear-icon-folder-picture"></span>
+                                        <ul class="list-inline-tag hover-top-element">
+                                            <li>9 photos</li>
+                                            <li>Objects</li>
+                                        </ul>
+                                        <p class="heading-5 hover-top-element">Portfolio Album</p>
+                                        <div class="divider"></div>
+                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-arrow-right"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1">
+                                <a class="img-thumbnail-variant-3" href="images/slider-slide-14-1920x1080.jpg" data-lightgallery="item">
+                                    <figure><img src="images/portfolio-2-418x315.jpg" alt="" width="418" height="315" />
+                                    </figure>
+                                    <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
+                                        <ul class="list-inline-tag hover-top-element">
+                                            <li>Objects</li>
+                                        </ul>
+                                        <p class="heading-5 hover-top-element">Photo</p>
+                                        <div class="divider"></div>
+                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-plus"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1">
+                                <a class="img-thumbnail-variant-3" href="single-portfolio.html"><img src="images/portfolio-3-418x315.jpg" alt="" width="418" height="315" /><span class="label-custom label-white">Album</span>
+                                    <div class="caption"><span class="icon hover-top-element linear-icon-folder-picture"></span>
+                                        <ul class="list-inline-tag hover-top-element">
+                                            <li>9 photos</li>
+                                            <li>Objects</li>
+                                        </ul>
+                                        <p class="heading-5 hover-top-element">Portfolio Album</p>
+                                        <div class="divider"></div>
+                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-arrow-right"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1">
+                                <a class="img-thumbnail-variant-3" href="images/image-original-6-1200x905.jpg" data-lightgallery="item">
+                                    <figure><img src="images/portfolio-4-418x315.jpg" alt="" width="418" height="315" />
+                                    </figure>
+                                    <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
+                                        <ul class="list-inline-tag hover-top-element">
+                                            <li>Objects</li>
+                                        </ul>
+                                        <p class="heading-5 hover-top-element">Photo</p>
+                                        <div class="divider"></div>
+                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-plus"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
+                                <a class="img-thumbnail-variant-3" href="single-portfolio.html"><img src="images/portfolio-5-418x315.jpg" alt="" width="418" height="315" /><span class="label-custom label-white">Album</span>
+                                    <div class="caption"><span class="icon hover-top-element linear-icon-folder-picture"></span>
+                                        <ul class="list-inline-tag hover-top-element">
+                                            <li>9 photos</li>
+                                            <li>Objects</li>
+                                        </ul>
+                                        <p class="heading-5 hover-top-element">Portfolio Album</p>
+                                        <div class="divider"></div>
+                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-arrow-right"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
+                                <a class="img-thumbnail-variant-3" href="images/portfolio-orginal-6-1200x675.jpg" data-lightgallery="item">
+                                    <figure><img src="images/portfolio-6-418x315.jpg" alt="" width="418" height="315" />
+                                    </figure>
+                                    <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
+                                        <ul class="list-inline-tag hover-top-element">
+                                            <li>Objects</li>
+                                        </ul>
+                                        <p class="heading-5 hover-top-element">Photo</p>
+                                        <div class="divider"></div>
+                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-plus"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
+                                <a class="img-thumbnail-variant-3" href="images/gallery-post-1-886x668.jpg" data-lightgallery="item">
+                                    <figure><img src="images/portfolio-7-418x315.jpg" alt="" width="418" height="315" />
+                                    </figure>
+                                    <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
+                                        <ul class="list-inline-tag hover-top-element">
+                                            <li>Objects</li>
+                                        </ul>
+                                        <p class="heading-5 hover-top-element">Photo</p>
+                                        <div class="divider"></div>
+                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-plus"></span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
+                                <a class="img-thumbnail-variant-3" href="images/day-events-1-886x668.jpg" data-lightgallery="item">
+                                    <figure><img src="images/portfolio-8-418x315.jpg" alt="" width="418" height="315" />
+                                    </figure>
+                                    <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
+                                        <ul class="list-inline-tag hover-top-element">
+                                            <li>Objects</li>
+                                        </ul>
+                                        <p class="heading-5 hover-top-element">Photo</p>
+                                        <div class="divider"></div>
+                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-plus"></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <!-- Classic Pagination-->
+                        <nav>
+                            <ul class="pagination-classic">
+                                <li class="active"><span>1</span></li>
+                                <li><a href="portfolio.html#">2</a></li>
+                                <li><a href="portfolio.html#">3</a></li>
+                                <li><a href="portfolio.html#">4</a></li>
+                                <li>
+                                    <a class="icon linear-icon-arrow-right" href="portfolio.html#"></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getBlogBreadcrumbs()
+    {
+        ob_start();
+        ?>
+        <section class="breadcrumbs-custom">
+            <div class="container">
+                <div class="breadcrumbs-custom__inner">
+                    <p class="breadcrumbs-custom__title">BLOG</p>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getBlog()
+    {
+        ob_start();
+        ?>
+        <section class="bg-default section-lg">
+            <div class="container">
+                <div class="row row-60">
+                    <div class="col-md-6 col-xl-4">
+                        <!-- Post classic-->
+                        <article class="post-classic post-minimal"><img src="images/post-minimal-1-418x315.jpg" alt="" width="418" height="315" />
+                            <div class="post-classic-title">
+                                <h5><a href="image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
+                            </div>
+                            <div class="post-meta">
+                                <div class="group">
+                                    <a href="image-post.html">
+                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="image-post.html">by Brian Williamson</a></div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <!-- Post classic-->
+                        <article class="post-classic post-minimal"><img src="images/post-classic-1-886x668.jpg" alt="" width="886" height="668" />
+                            <div class="post-classic-title">
+                                <h5><a href="image-post.html">Getting to another  level of design and functionality.</a></h5>
+                            </div>
+                            <div class="post-meta">
+                                <div class="group">
+                                    <a href="image-post.html">
+                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="image-post.html">by Brian Williamson</a></div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <!-- Post slider-->
+                        <article class="post-slider post-minimal">
+                            <!-- Owl Carousel-->
+                            <div class="owl-carousel carousel-post-gallery carousel-slider-blog-post" data-autoplay="true" data-items="1" data-stage-padding="0" data-loop="false" data-margin="10px" data-mouse-drag="false" data-nav="true" data-dots="true" data-lightgallery="group">
+                                <div class="item">
+                                    <a class="img-thumbnail-variant-1" href="images/gallery-post-01-original-1354x762.jpg" data-lightgallery="item">
+                                        <figure> <img src="images/gallery-post-1-886x668.jpg" alt="" width="886" height="668" />
+                                        </figure>
+                                        <div class="caption"><span class="icon icon-lg linear-icon-magnifier"></span></div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a class="img-thumbnail-variant-1" href="images/gallery-post-02-original-1354x762.jpg" data-lightgallery="item">
+                                        <figure> <img src="images/gallery-post-2-886x668.jpg" alt="" width="886" height="668" />
+                                        </figure>
+                                        <div class="caption"><span class="icon icon-lg linear-icon-magnifier"></span></div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a class="img-thumbnail-variant-1" href="images/gallery-post-03-original-1354x762.jpg" data-lightgallery="item">
+                                        <figure> <img src="images/gallery-post-3-886x668.jpg" alt="" width="886" height="668" />
+                                        </figure>
+                                        <div class="caption"><span class="icon icon-lg linear-icon-magnifier"></span></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="post-classic-title">
+                                <h5><a href="gallery-post.html">Clean Style. Cons and Pros.</a></h5>
+                            </div>
+                            <div class="post-meta">
+                                <div class="group">
+                                    <a href="gallery-post.html">
+                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="gallery-post.html">by Brian Williamson</a></div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <!-- Post video-->
+                        <article class="post-video post-minimal">
+                            <div class="entry-video embed-responsive embed-responsive-16by9">
+                                <iframe width="886" height="668" src="http://www.youtube.com/embed/ccuQoF0vKYU" allowfullscreen=""></iframe>
+                            </div>
+                            <div class="post-classic-title">
+                                <h5><a href="video-post.html">Site Speed and Search Engines Optimization Aspects.</a></h5>
+                            </div>
+                            <div class="post-meta">
+                                <div class="group">
+                                    <a href="video-post.html">
+                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="video-post.html">by Brian Williamson</a></div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <!-- Post classic-->
+                        <article class="post-classic post-minimal"><img src="images/post-minimal-2-418x315.jpg" alt="" width="418" height="315" />
+                            <div class="post-classic-title">
+                                <h5><a href="image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
+                            </div>
+                            <div class="post-meta">
+                                <div class="group">
+                                    <a href="image-post.html">
+                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="image-post.html">by Brian Williamson</a></div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <!-- Post classic-->
+                        <article class="post-classic post-minimal"><img src="images/post-minimal-3-418x315.jpg" alt="" width="418" height="315" />
+                            <div class="post-classic-title">
+                                <h5><a href="image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
+                            </div>
+                            <div class="post-meta">
+                                <div class="group">
+                                    <a href="image-post.html">
+                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="image-post.html">by Brian Williamson</a></div>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
