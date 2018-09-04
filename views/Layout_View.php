@@ -177,7 +177,7 @@ class Layout_View
                             <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                             <!-- RD Navbar Brand-->
                             <div class="rd-navbar-brand">
-                                <a class="brand-name" href="index.html"><img src="images/CRCazul.png" alt="" width="174" height="32" /></a>
+                                <a class="brand-name" href="index.html"><img src="<?php echo $this->data['info']['url']; ?>/images/CRCazul.png" alt="" width="174" height="32" /></a>
                             </div>
                         </div>
                         <!-- RD Navbar Nav-->
