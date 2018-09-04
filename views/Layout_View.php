@@ -77,6 +77,15 @@ class Layout_View
                             echo self::getOurTeamAboutES();
                         break;
                         
+                        case 'servicios':
+                            echo self::getBanerServicesES();
+                            echo self::getGridServicesOneES();
+                            echo self::getTextSectionOneServicesES();
+                            echo self::getGridServicesTwoES();
+                            echo self::getTextSectionTwoServicesES();
+                            echo self::getGridServicesThreeES();
+                        break;
+                        
                         case 'contact':
                             echo self :: getIndexContact();
                         break;
@@ -167,7 +176,7 @@ class Layout_View
                                 <li class="active"><a href="/">Inicio</a></li>
 
                                 <li><a href="/nosotros/">Nosotros</a></li>
-                                <li><a href="services.html">Servicios</a></li>
+                                <li><a href="/servicios/">Servicios</a></li>
                                 <li><a href="contacts.html">Contacto</a></li>
                                 <li><a href="portfolio.html">Portfolio</a>
                                     <li><a href="grid-blog.html">BLOG</a>
@@ -774,6 +783,249 @@ class Layout_View
                             <div class="thumb-corporate__caption">
                                 <p class="thumb__title"><a href="team-member-profile.html">Arian Falcon</a></p>
                                 <p class="thumb__subtitle">Disenador Grafico</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getBanerServicesES()
+    {
+        ob_start();
+        ?>
+        <section class="bg-gray-lighter">
+            <!-- RD Parallax-->
+            <div class="parallax-container bg-image parallax-header" data-parallax-img="images/solutions-web.jpg">
+                <div class="parallax-content">
+                    <div class="parallax-header__inner">
+                        <div class="parallax-header__content">
+                            <div class="container">
+                                <div class="row justify-content-sm-center">
+                                    <div class="col-md-10 col-xl-8">
+                                        <h2 class="slider"> Servicios de desarrollo de aplicaciones comerciales y software</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getGridServicesOneES()
+    {
+        ob_start();
+        ?>
+        <section class="negro section-lg bg-default">
+            <div class="container">
+                <div class="row row-60">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/crc7.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="aplicaciones-comerciales.html">Aplicaciones comerciales a medida</a></h5>
+                                <p> Desde aplicaciones web hasta portales de clientes y todo lo demás; somos expertos en el uso de la tecnología para desarrollar la eficiencia empresarial y la ventaja competitiva. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/crc5.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="apliciones-dearrollo-de-sitios-web.html">Aplicaciones y desarrollo de sitios web</a></h5>
+                                <p>Nuestra especialidad es desarrollar aplicaciones web productivas, atractivas y seguras con compatibilidad entre navegadores y un diseño receptivo (para trabajar en dispositivos móviles, tabletas y computadoras de escritorio).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/movil.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="desarrollo-aplicaciones-moviles.html">Desarrollo de aplicaciones móviles</a></h5>
+                                <p>Nuestro equipo de desarrolladores de aplicaciones móviles puede ayudarte a aumentar la participación de tu marca con una aplicación intuitiva, rápida, creativa e interactiva.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/data-base.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="base-de-datos.html">Bases de datos a medida</a></h5>
+                                <p>Nos especializamos en el diseño y la creación de bases de datos personalizadas de Microsoft SQL Server que impulsan la eficiencia de tu negocio, lo ayudan a ver las tendencias operacionales y escalan tu negocio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/crm.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="sistema-crm.html">Sistemas CRM a medida</a></h5>
+                                <p>logre sus objetivos de interacción con el cliente con un sistema de CRM personalizado y escalable que no requiera licencias por separado para cada nuevo usuario</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/integracion-software.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="integracion-software.html">Integración de software</a></h5>
+                                <p>Si necesita procesar datos de su hardware especializado, por ejemplo, lecturas de un termómetro o dispositivo de medición, transmisión de video desde una cámara o cualquier otra cosa, crearemos un software para permitir esto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getTextSectionOneServicesES()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+            <!-- RD Parallax-->
+            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="images/crc.jpg">
+                <div class="parallax-content">
+                    <div class="container section-xxl">
+                        <h2>Servicios de integración de sistemas</h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getGridServicesTwoES()
+    {
+        ob_start();
+        ?>
+        <section class="negro section-lg bg-default">
+            <div class="container">
+                <div class="row row-60">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/migracion-datos.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="migracion-de-datos.html">Servicios de migración de datos</a></h5>
+                                <p> Si necesita un servicio de migración de datos rápido, eficiente y seguro sin interrupciones en su negocio, nuestros expertos pueden ayudarlo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/sistemas.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="sistemas-operacionales.html">Sistemas operacionales</a></h5>
+                                <p>Si tiene que adaptar sus procesos o resolver brechas en la administración o funcionalidad de los sistemas, podría ser momento de considerar un nuevo sistema operativo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/moderno.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="modernizacion-software.html">Modernización de software heredado</a></h5>
+                                <p>¿Harto de gastar dinero en un lento sistema de TI que no funciona? Le construiremos un reemplazo poderoso que ayude, no obstaculice su negocio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getTextSectionTwoServicesES()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+            <!-- RD Parallax-->
+            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="images/crc.jpg">
+                <div class="parallax-content">
+                    <div class="container section-xxl">
+                        <h2 class="slider">Servicios profesionales y de soporte</h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getGridServicesThreeES()
+    {
+        ob_start();
+        ?>
+        <section class="negro section-lg bg-default">
+            <div class="container">
+                <div class="row row-60">
+
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/consultoria.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5 class=""><a class="thumbnail-classic-title" href="consultoria-software.html">Consultoría de software</a></h5>
+                                <p>Si necesita ayuda para identificar las barreras tecnológicas que se interponen entre usted y un negocio más rentable, nuestros consultores de software pueden ayudarlo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/4.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="rescatamos-su-proyecto.html">Rescatamos su proyecto Software</a></h5>
+                                <p>Si su proyecto de software a medida ha fallado o si se ha caído con su desarrollador de software, podemos rápidamente poner su negocio nuevamente en marcha.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/codigo.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="recuperacion-codigo-fuente.html">Recuperación del código fuente</a></h5>
+                                <p>Podemos ayudar a aliviar el dolor de cabeza del código fuente perdido al recuperarlo o volver a desarrollarlo para usted. También podemos reconstruir repositorios de código fuente roto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/mantenimiento-de-aplicaciones.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="soporte-de-aplicaciones.html">Soporte y mantenimiento de aplicaciones</a></h5>
+                                <p>Desde la solución de errores prioritarios hasta nuestro servicio de asistencia interna; Apoyaremos y mantendremos su software a lo largo de su ciclo de vida, incluso si no lo construimos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/webhosting.jpg" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="hosting.html">Hosting</a></h5>
+                                <p>Si necesita una forma simple y rentable de acceder a su nueva aplicación de software, pruebe nuestro servicio de alojamiento brindado a través de los líderes de la industria.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="images/desarrollo-software.png" alt="" width="418" height="315" />
+                            <div class="caption">
+                                <h5><a class="thumbnail-classic-title" href="desarrollo-software.html">Desarrollo de software</a></h5>
+                                <p> Permítanos ayudarlo con el aspecto más desafiante de comenzar un negocio: Desarrollar su aplicación de software</p>
                             </div>
                         </div>
                     </div>
