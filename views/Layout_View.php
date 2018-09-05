@@ -623,7 +623,7 @@ class Layout_View
         ?>
         <section class="text-center">
             <!-- RD Parallax-->
-            <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="images/crc.jpg">
+            <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="<?php echo $this->data['info']['url']; ?>/images/crc.jpg">
                 <div class="parallax-content">
                     <div class="parallax-header__inner">
                         <div class="parallax-header__content">

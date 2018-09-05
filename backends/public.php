@@ -33,7 +33,7 @@ class generalBackend
             'lang'			=> "en"
 		);
 		
-		$data['categories'] = $this->model->getBlogCategories();
+		//$data['categories'] = $this->model->getBlogCategories();
 		
 		switch ($section) 
 		{
@@ -45,6 +45,8 @@ class generalBackend
                     'subject'       => "subject",
                     'keywords'      => "keywords"
 		        );
+                
+                
 		        
 		        $data['posts'] = $this->model->getAllBlogPosts();
 		        $data['months'] = $this->model->getMonthsBlog();
@@ -68,18 +70,28 @@ class generalBackend
 		            $from = $_GET['from'];
 		        }
 		        
-		        if ($_GET['category'] == "all")
+		        /*if ($_GET['category'] == "all")
 		        {
 		            $data['page'] = $this->model->getPostsRange($from, $data['posts']['limit']);
-		        }
+		        }*/
 		        
 // 		        var_dump($data['page']);
             break;
             
-		    case 'services':
+		    case 'nosotros':
 		        $data['seo'] = array(
-		        'title'           => "Services",
-		        'author'          => "Michelle",
+		        'title'           => "Nosotros",
+		        'author'          => "CRC Sw",
+		        'description'     => "description",
+		        'subject'         => "subject",
+		        'keywords'        => "keywords"
+		            );
+	        break;
+                
+            case 'servicios':
+		        $data['seo'] = array(
+		        'title'           => "servicios",
+		        'author'          => "CRC Sw",
 		        'description'     => "description",
 		        'subject'         => "subject",
 		        'keywords'        => "keywords"
