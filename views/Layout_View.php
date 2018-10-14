@@ -125,7 +125,7 @@ class Layout_View
         ob_start();
         ?>
             <!-- Stylesheets-->
-            <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Libre+Franklin:200,300,500,600,300italic">
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Libre+Franklin:200,300,500,600,300italic">
             <link rel="stylesheet" href="/css/bootstrap.css">
             <link rel="stylesheet" href="/css/style.css">
             <!--[if lt IE 10]>
