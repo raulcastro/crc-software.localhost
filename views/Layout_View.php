@@ -27,17 +27,19 @@ class Layout_View
     {
         ?>
     <!DOCTYPE html>
-    <html class="wide wow-animation" lang="en">
+    <html class="wide wow-animation" lang="es">
 
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>
             <?php echo $this->data['seo']['title']; ?>
         </title>
         <meta name="format-detection" content="telephone=no">
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta charset="utf-8">
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta name="description" content="<?php echo $this->data['seo']['description']; ?>">
+        <meta name="keywords" content="<?php echo $this->data['seo']['keywords']; ?>">
+        <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
         <?php 
             echo self::getCommonStyle();
         ?>
@@ -46,11 +48,11 @@ class Layout_View
     <body>
         <!-- Page -->
         <div class="page">
-            <div id="page-loader">
+            <!--<div id="page-loader">
                 <div class="cssload-container">
                     <div class="cssload-speeding-wheel"></div>
                 </div>
-            </div>
+            </div>-->
             <?php 
                 echo self::getCommonHeader();
             ?>
@@ -75,6 +77,7 @@ class Layout_View
                             echo self::getWhoWeAreTextAboutES();
                             echo self::getWhoWeAreColumnsAboutES();
                             echo self::getOurTeamAboutES();
+                            echo self::getIndexContact();
                         break;
                         
                         case 'servicios':
@@ -84,7 +87,48 @@ class Layout_View
                             echo self::getGridServicesTwoES();
                             echo self::getTextSectionTwoServicesES();
                             echo self::getGridServicesThreeES();
+                            echo self::getIndexContact();
                         break;
+                                
+                        case 'aplicaciones':
+                            echo self::getAplicacionesParalax();
+                            echo self::getContenAplicaciones();
+                            echo self::getIndexContact();
+                        break;
+                                
+                        case 'desarrollo-web':
+                            echo self::getDesarrolloWeb();
+                            echo self::getContenidoWeb();
+                            echo self::getIndexContact();
+                        break;
+                        
+                        case 'aplicaciones-moviles':
+                            echo self::getMovil();
+                            echo self::getContenidoApp();
+                            echo self::getIndexContact();
+                        break;
+                        
+                        case 'base-de-datos':
+                            echo self::getBaseDatos();
+                            echo self::getContenidoDatos();
+                            echo self::getIndexContact();
+                        break;
+                        
+                        case 'sistema-crm':
+                            echo self::getSistema();
+                            echo self::getContenidoCRM();
+                            echo self::getIndexContact();
+                        break;
+                        
+                        case 'migracion-de-datos':
+                            echo self::getMigracion();
+                            echo self::getContenidoMigracion();
+                            echo self::getIndexContact();
+                        break;
+                        
+                            
+                            
+                                
                         
                         case 'contacto':
                             echo self::getContactFormES();
@@ -177,7 +221,7 @@ class Layout_View
                             <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                             <!-- RD Navbar Brand-->
                             <div class="rd-navbar-brand">
-                                <a class="brand-name" href="index.html"><img src="<?php echo $this->data['info']['url']; ?>/images/CRCazul.png" alt="" width="174" height="32" /></a>
+                                <a class="brand-name" href="/"><img src="<?php echo $this->data['info']['url']; ?>/images/CRCazul.png" alt="" width="174" height="32" /></a>
                             </div>
                         </div>
                         <!-- RD Navbar Nav-->
@@ -187,9 +231,10 @@ class Layout_View
 
                                 <li><a href="/nosotros/">Nosotros</a></li>
                                 <li><a href="/servicios/">Servicios</a></li>
+                                
+                                <!--<li><a href="/portafolio/">Portafolio</a>-->
+                                <li><a href="/#/">Blog</a>
                                 <li><a href="/contacto/">Contacto</a></li>
-                                <li><a href="/portafolio/">Portafolio</a>
-                                <li><a href="/blog/">Blog</a>
                             </ul>
                         </div>
                     </div>
@@ -202,6 +247,451 @@ class Layout_View
         return $header;
     }
     
+    public function getAplicacionesParalax()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Desarrollo de aplicaciones empresariales a medida de CRC</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getContenAplicaciones()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3>Desarrollo de aplicaciones empresariales a medida de CRC</h3>
+              <p class="texto">Ya sea que necesite un sistema para mejorar su servicio al cliente, aumentar la efectividad de su negocio, optimizar sus procesos o aumentar sus ventas (ya sea a través de la experiencia del cliente front-end o de back-end), podemos crear aplicaciones comerciales inteligentes, rentables e intuitivas para ayudarte.
+
+            Trabajaremos con usted para comprender sus procesos comerciales y el desafío que está tratando de resolver, y luego le sugeriremos el tipo de desarrollo de aplicaciones que funcionaría mejor para usted, como por ejemplo:</p>
+                <ul class="list-marked texto">
+                <li>una aplicación alojada, basada en la web con una base de datos remota, local, sincronizada o multi-tenant back-end de la base de datos</li>
+                <li>un sitio web alojado, front-end impulsado por una base de datos</li>
+                <li>una aplicación alojada, basada en web con un sistema CRM integral</li>
+                <li>una combinación de sistemas front-end, back-end y portal de proveedor / cliente alojados</li>
+                <li>una aplicación de escritorio con bases de datos remotas (en la nube) o bases de datos locales que se pueden sincronizar / replicar con sistemas centrales de bases de datos</li>
+                <li>aplicaciones para dispositivos móviles y tabletas con bases de datos locales y en la nube</li>
+              </ul>
+            </div>
+            <!--div class="col-md-10">
+              <h5>Las aplicaciones a medida que hemos creado incluyen:</h5>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong>Mensajeria Segura</strong></li>
+                <li><strong>Clientes que pueden iniciar sesión desde la oficina, el hogar o un móvil: acceso más rápido a lo que necesitan, cuando lo deseen</strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>-->
+          </div>
+        </div>
+      </section>
+        
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    
+    public function getDesarrolloWeb()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2> Desarrollo de sitios web</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getContenidoWeb()
+        {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3>¿Qué es una aplicación web?</h3>
+              <p class="texto">
+                  Una aplicación web es un programa de software que utiliza con un navegador de Internet, de la misma manera que una aplicación móvil es un programa de software que utiliza en su dispositivo móvil.<br>
+                  Los últimos años han visto una proliferación de aplicaciones web. Lo más probable es que su popularidad se deba a su facilidad de uso: cualquier persona con un navegador conectado a Internet puede acceder a ellos, atienden las necesidades de los usuarios móviles (ya que los teléfonos inteligentes son la principal forma en que las personas acceden a Internet). y se pueden implementar rápidamente y casi sin necesidad de instalación por parte del usuario.<br>
+                  Si necesita una aplicación web interna para ayudar a administrar los gastos del personal, una aplicación web que puede revender a sus clientes o una que revolucionará su servicio al cliente, trabajaremos con usted para construir rápida e inteligentemente una herramienta potente e intuitiva.<br>
+                  A partir de ahí, es un proceso simple que comienza cuando nos sentamos con usted para comprender su negocio, lo que su nueva aplicación necesita poder entregar y a quién. Las posibles opciones incluyen:
+                </p>
+                <ul class="list-marked texto">
+                <li> Una aplicación web alojada con un back-end de base de datos remoto, local, sincronizado o multitendado</li>
+                <li> Una combinación de sistemas de front-end, back-end.</li>
+                <li> Una aplicación web que incluye un completo back-end CRM</li>
+                <li> Una aplicación web que complementa un nuevo sitio web o el existente</li>
+                <li> Permitir a los usuarios agregar nuevos campos, definir cuadros desplegables, crear nuevos formularios y generar informes personalizados según sea necesario</li>
+                <li> Fuentes diarias de datos de múltiples bases de datos para asegurarse de que la aplicación siempre use la información correcta y actualizada del cliente</li>
+                <li> Usar permisos de acuerdo con el rol de una persona y los derechos de acceso</li>
+               
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3>Aplicaciones web responsivas</h3>
+              <p class="texto">
+                Como era de esperar, todas las aplicaciones web que construimos son "receptivas". Esto significa que se ven muy bien y funcionan perfectamente en cualquier tamaño de pantalla: una PC de escritorio, tableta o teléfono móvil. Hacemos esto adaptando menús, controles y otros elementos visuales para que se ajusten al dispositivo en función del ancho y alto de la pantalla actual, asegurando que el usuario siempre obtenga la mejor experiencia posible, independientemente del dispositivo que esté usando. Puede ver esto en acción cambiando el tamaño de la ventana en este sitio web o visitándola en su teléfono inteligente; vea cómo todo “simplemente funciona”.
+                </p>
+                <!--<ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>-->
+                
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getMovil()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Desarrollo de aplicaciones web</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getContenidoApp()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3>Expertos desarrolladores de aplicaciones móviles</h3>
+              <p class="texto">
+                  No hay duda de que una aplicación móvil concebida estratégicamente puede obtener grandes recompensas a la hora de establecer relaciones con sus clientes, pero como el 73% de los usuarios espera que una aplicación móvil sea más fácil de usar que un sitio web móvil, es importante que esté al día. - Ahí es donde podemos ayudarte.<br>
+
+                  Mientras creará el concepto detrás de la aplicación móvil, podemos proporcionar un enfoque completo en la experiencia del usuario. Además de tener que lucir bien, sabemos que la aplicación móvil que creamos para usted debe ser.
+                </p>
+                <ul class="list-marked texto">
+                <li>Sencilla, intuitiva y funcional</li>
+                <li>Atractiva</li>
+                <li>Rápida velocidad de carga de la aplicación</li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3>Plataformas de aplicaciones móviles: iOS y Android.</h3>
+              <p class="texto">
+                  En CRC, nos esforzamos por la eficiencia y la rentabilidad de nuestros clientes. Nos es ajeno construir la misma aplicación varias veces para atender a los "dos grandes" plataformas móviles: Android y iOS.
+                </p>
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getBaseDatos()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Base de datos a medida</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+     
+    public function getContenidoDatos()
+    {
+        ob_start();
+        ?>
+         <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto">
+                  Desde la creación de un sistema para monitorear el desperdicio de alimentos en restaurantes, hasta una aplicación que interactúa ; hemos trabajado con una amplia gama de industrias para crear soluciones integradas en hardware que impulsan la innovación, crean rentabilidad y automatizan procesos.
+                </p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>     
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getSistema()
+        {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Sistemas CRM a medida</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+        
+    public function getContenidoCRM()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getMigracion()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Migracion de datos</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getContenidoMigracion()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    
+        
     public function getFooter()
     {
         ob_start();
@@ -230,7 +720,7 @@ class Layout_View
         <section>
             <div class="swiper-container swiper-slider swiper-slider_fullheight" data-simulate-touch="false" data-loop="false" data-autoplay="5500">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide bg-gray-lighter" data-slide-bg="images/slider1.jpg">
+                    <div class="swiper-slide bg-gray-lighter" data-slide-bg="/images/slider1.jpg">
                         <div class="swiper-slide-caption text-center">
                             <div class="container">
                                 <h1 data-caption-animate="fadeInUpSmall"> <span class="slider"></span><sup class="text-accent"></sup></h1>
@@ -240,13 +730,13 @@ class Layout_View
                     </div>
                     <div class="swiper-slide swiper-slide_video context-dark video-bg-overlay">
                         <!-- RD Video-->
-                        <div class="swiper-slide bg-gray-lighter" data-slide-bg="images/security.jpg">
+                        <div class="swiper-slide bg-gray-lighter" data-slide-bg="/images/security.jpg">
                             <!--<div class="vide_bg" data-vide-bg="video/video-lg" data-vide-options="posterType: jpg">-->
                             <div class="swiper-slide-caption text-center">
                                 <div class="container">
                                     <h2 data-caption-animate="fadeInUpSmall">CRC SOFTAWARE</h2>
                                     <p class="text-width-2 block-centered" data-caption-animate="fadeInUpSmall" data-caption-delay="200"><sup>No solo creamos aplicaciones de software. Proporcionamos soporte y alojamiento, ayudando a que su sistema funcione y a que sus usuarios estén contentos todo el tiempo que nos necesite. Incluso asumiremos software que no hemos creado, lo solucionaremos, lo mantendremos y lo ayudaremos a llevar su proyecto al siguiente nivel.</sup></p>
-                                    <div class="group-lg group-middle"><a class="button button-black" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="services.html" data-custom-scroll-to="section-see-features">Servicios</a><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="contacts.html">Contacto</a></div>
+                                    <div class="group-lg group-middle"><a class="button button-black" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="/servicios/" data-custom-scroll-to="section-see-features">Servicios</a><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="/contacto/">Contacto</a></div>
                                 </div>
                             </div>
                         </div>
@@ -382,7 +872,7 @@ class Layout_View
                         <p>podemos diseñar soluciones basadas en la nube o de contracción para productos verticales múltiples para licencias o reventa.</p>
                         <a class="button button-gray-light-outline" href="services.html">Ver mas</a>
                     </div>
-                    <div class="col-md-9 col-lg-6"><img src="images/crc4.jpg" alt="" width="652" height="491" />
+                    <div class="col-md-9 col-lg-6"><img src="<?php echo $this->data['info']['url']; ?>images/crc4.jpg" alt="" width="652" height="491" />
                     </div>
                 </div>
             </div>
@@ -426,17 +916,17 @@ class Layout_View
                     <div class="col-lg-5">
                         <h3 class="">Aplicaciones web y móviles</h3>
                         <p>Si tienes un nuevo proyecto, deje que CRC te ayude con el aspecto más desafiante de comenzar un negocio: Desarrollar su aplicación de software.</p>
-                        <a class="button button-gray-light-outline" href="services.html">Ver mas</a>
+                        <a class="button button-gray-light-outline" href="/aplicaciones/">Ver mas</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="row gallery-wrap">
-                            <div class="col-6"><img src="images/crc2.jpg" alt="" width="301" height="227" />
+                            <div class="col-6"><img src="/images/crc2.jpg" alt="" width="301" height="227" />
                             </div>
-                            <div class="col-6"><img src="images/home-default-4-301x227.jpg" alt="" width="301" height="227" />
+                            <div class="col-6"><img src="/images/home-default-4-301x227.jpg" alt="" width="301" height="227" />
                             </div>
-                            <div class="col-6"><img src="images/crc6.jpg" alt="" width="301" height="227" />
+                            <div class="col-6"><img src="/images/crc6.jpg" alt="" width="301" height="227" />
                             </div>
-                            <div class="col-6"><img src="images/app-mobile.jpg" alt="" width="301" height="227" />
+                            <div class="col-6"><img src="/images/app-mobile.jpg" alt="" width="301" height="227" />
                             </div>
                         </div>
                     </div>
@@ -448,6 +938,9 @@ class Layout_View
         ob_end_clean();
         return $method;
     }
+     
+     
+    
     
     public function getIndexPortfolio()
     {
@@ -456,7 +949,7 @@ class Layout_View
         <!-- Gallery-->
         <section class="bg-gray-dark text-center">
             <!-- RD Parallax-->
-            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="images/parallax-01.jpg">
+            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="/images/parallax-01.jpg">
                 <div class="parallax-content">
                     <div class="container section-xxl">
                         <h2>PORTAFOLIO</h2>
@@ -469,61 +962,61 @@ class Layout_View
             <div class="container-fluid">
                 <div class="row row-10 row-horizontal-10">
                     <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="images/image-original-1-1200x905.jpg">
-                            <figure><img src="images/home-default-7-472x355.jpg" alt="" width="472" height="355" />
+                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-1-1200x905.jpg">
+                            <figure><img src="/images/home-default-7-472x355.jpg" alt="" width="472" height="355" />
                             </figure>
                             <div class="thumb-modern__overlay"></div>
                         </a>
                     </div>
                     <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="images/image-original-2-1200x905.jpg">
-                            <figure><img src="images/home-default-8-472x355.jpg" alt="" width="472" height="355" />
+                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-2-1200x905.jpg">
+                            <figure><img src="/images/home-default-8-472x355.jpg" alt="" width="472" height="355" />
                             </figure>
                             <div class="thumb-modern__overlay"></div>
                         </a>
                     </div>
                     <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="images/image-original-3-1200x906.jpg">
-                            <figure><img src="images/home-default-9-472x355.jpg" alt="" width="472" height="355" />
+                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-3-1200x906.jpg">
+                            <figure><img src="/images/home-default-9-472x355.jpg" alt="" width="472" height="355" />
                             </figure>
                             <div class="thumb-modern__overlay"></div>
                         </a>
                     </div>
                     <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="images/image-original-4-1200x905.jpg">
-                            <figure><img src="images/home-default-10-472x355.jpg" alt="" width="472" height="355" />
+                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-4-1200x905.jpg">
+                            <figure><img src="/images/home-default-10-472x355.jpg" alt="" width="472" height="355" />
+                            </figure>
+                            <div class="thumb-modern__overlay"></div>
+                        </a>
+                    </div>
+                    <!--<div class="col-md-4 col-xl-3">
+                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-5-1200x905.jpg">
+                            <figure><img src="/images/home-default-11-472x355.jpg" alt="" width="472" height="355" />
                             </figure>
                             <div class="thumb-modern__overlay"></div>
                         </a>
                     </div>
                     <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="images/image-original-5-1200x905.jpg">
-                            <figure><img src="images/home-default-11-472x355.jpg" alt="" width="472" height="355" />
+                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-6-1200x905.jpg">
+                            <figure><img src="/images/home-default-12-472x355.jpg" alt="" width="472" height="355" />
                             </figure>
                             <div class="thumb-modern__overlay"></div>
                         </a>
                     </div>
                     <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="images/image-original-6-1200x905.jpg">
-                            <figure><img src="images/home-default-12-472x355.jpg" alt="" width="472" height="355" />
+                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-7-1200x906.jpg">
+                            <figure><img src="/images/home-default-13-472x355.jpg" alt="" width="472" height="355" />
                             </figure>
                             <div class="thumb-modern__overlay"></div>
                         </a>
                     </div>
                     <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="images/image-original-7-1200x906.jpg">
-                            <figure><img src="images/home-default-13-472x355.jpg" alt="" width="472" height="355" />
+                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-8-1200x906.jpg">
+                            <figure><img src="/images/home-default-14-472x355.jpg" alt="" width="472" height="355" />
                             </figure>
                             <div class="thumb-modern__overlay"></div>
                         </a>
-                    </div>
-                    <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="images/image-original-8-1200x906.jpg">
-                            <figure><img src="images/home-default-14-472x355.jpg" alt="" width="472" height="355" />
-                            </figure>
-                            <div class="thumb-modern__overlay"></div>
-                        </a>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </section>
@@ -532,6 +1025,7 @@ class Layout_View
         ob_end_clean();
         return $method;
     }
+    
     
     public function getIndexBlog()
     {
@@ -548,7 +1042,7 @@ class Layout_View
 
                     <div class="col-md-6 col-xl-4">
                         <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="images/post-minimal-1-418x315.jpg" alt="" width="418" height="315" />
+                        <article class="post-classic post-minimal"><img src="/images/post-minimal-1-418x315.jpg" alt="" width="418" height="315" />
                             <div class="post-classic-title">
                                 <h5><a href="image-post.html">¿Qué es una aplicación web?</a></h5>
                             </div>
@@ -561,7 +1055,7 @@ class Layout_View
                     </div>
                     <div class="col-md-6 col-xl-4">
                         <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="images/post-classic-1-886x668.jpg" alt="" width="886" height="668" />
+                        <article class="post-classic post-minimal"><img src="/images/post-classic-1-886x668.jpg" alt="" width="886" height="668" />
                             <div class="post-classic-title">
                                 <h5><a href="image-post.html">Getting to another  level of design and functionality.</a></h5>
                             </div>
@@ -575,14 +1069,14 @@ class Layout_View
 
                     <div class="col-md-6 col-xl-4">
                         <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="images/post-minimal-1-418x315.jpg" alt="" width="418" height="315" />
+                        <article class="post-classic post-minimal"><img src="/images/post-minimal-1-418x315.jpg" alt="" width="418" height="315" />
                             <div class="post-classic-title">
                                 <h5><a href="image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
                             </div>
                             <div class="post-meta">
                                 <div class="group">
                                     <a href="image-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="image-post.html">by Brian Williamson</a></div>
+                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="/image-post.html">by Brian Williamson</a></div>
                             </div>
                         </article>
                     </div>
@@ -623,7 +1117,7 @@ class Layout_View
         ?>
         <section class="text-center">
             <!-- RD Parallax-->
-            <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="images/crc.jpg">
+            <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="<?php echo $this->data['info']['url']; ?>/images/crc.jpg">
                 <div class="parallax-content">
                     <div class="parallax-header__inner">
                         <div class="parallax-header__content">
@@ -673,9 +1167,9 @@ class Layout_View
                     </div>
                     <div class="col-md-8 col-lg-6">
                         <div class="cat-img-group">
-                            <div><img src="images/cat-2-507x508.jpg" alt="" width="507" height="508" />
+                            <div><img src="/images/cat-2-507x508.jpg" alt="" width="507" height="508" />
                             </div>
-                            <div><img src="images/cat-1-326x427.jpg" alt="" width="326" height="427" />
+                            <div><img src="/images/cat-1-326x427.jpg" alt="" width="326" height="427" />
                             </div>
                         </div>
                     </div>
@@ -700,7 +1194,7 @@ class Layout_View
                     <div class="col-md-6 col-lg-4">
                         <!-- Thumb corporate-->
                         <div class="thumb thumb-corporate">
-                            <div class="thumb-corporate__main"><img src="images/brian-king-480x362.jpg" alt="" width="480" height="362" />
+                            <div class="thumb-corporate__main"><img src="/images/brian-king-480x362.jpg" alt="" width="480" height="362" />
                                 <div class="thumb-corporate__overlay">
                                     <ul class="list-inline-sm thumb-corporate__list">
                                         <li>
@@ -733,7 +1227,7 @@ class Layout_View
                     <div class="col-md-6 col-lg-4">
                         <!-- Thumb corporate-->
                         <div class="thumb thumb-corporate">
-                            <div class="thumb-corporate__main"><img src="images/amanda-smith-480x362.jpg" alt="" width="480" height="362" />
+                            <div class="thumb-corporate__main"><img src="/images/amanda-smith-480x362.jpg" alt="" width="480" height="362" />
                                 <div class="thumb-corporate__overlay">
                                     <ul class="list-inline-sm thumb-corporate__list">
                                         <li>
@@ -766,7 +1260,7 @@ class Layout_View
                     <div class="col-md-6 col-lg-4">
                         <!-- Thumb corporate-->
                         <div class="thumb thumb-corporate">
-                            <div class="thumb-corporate__main"><img src="images/george-nelson-418x315.jpg" alt="" width="418" height="315" />
+                            <div class="thumb-corporate__main"><img src="/images/george-nelson-418x315.jpg" alt="" width="418" height="315" />
                                 <div class="thumb-corporate__overlay">
                                     <ul class="list-inline-sm thumb-corporate__list">
                                         <li>
@@ -811,7 +1305,7 @@ class Layout_View
         ?>
         <section class="bg-gray-lighter">
             <!-- RD Parallax-->
-            <div class="parallax-container bg-image parallax-header" data-parallax-img="images/solutions-web.jpg">
+            <div class="parallax-container bg-image parallax-header" data-parallax-img="<?php echo $this->data['info']['url']; ?>images/solutions-web.jpg">
                 <div class="parallax-content">
                     <div class="parallax-header__inner">
                         <div class="parallax-header__content">
@@ -841,54 +1335,54 @@ class Layout_View
             <div class="container">
                 <div class="row row-60">
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/crc7.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/crc7.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="aplicaciones-comerciales.html">Aplicaciones comerciales a medida</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/aplicaciones/">Aplicaciones comerciales a medida</a></h5>
                                 <p> Desde aplicaciones web hasta portales de clientes y todo lo demás; somos expertos en el uso de la tecnología para desarrollar la eficiencia empresarial y la ventaja competitiva. </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/crc5.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/crc5.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="apliciones-dearrollo-de-sitios-web.html">Aplicaciones y desarrollo de sitios web</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/desarrollo-web/">Aplicaciones y desarrollo de sitios web</a></h5>
                                 <p>Nuestra especialidad es desarrollar aplicaciones web productivas, atractivas y seguras con compatibilidad entre navegadores y un diseño receptivo (para trabajar en dispositivos móviles, tabletas y computadoras de escritorio).</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/movil.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/movil.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="desarrollo-aplicaciones-moviles.html">Desarrollo de aplicaciones móviles</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/aplicaciones-moviles/">Desarrollo de aplicaciones móviles</a></h5>
                                 <p>Nuestro equipo de desarrolladores de aplicaciones móviles puede ayudarte a aumentar la participación de tu marca con una aplicación intuitiva, rápida, creativa e interactiva.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/data-base.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/data-base.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="base-de-datos.html">Bases de datos a medida</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/base-de-datos/">Bases de datos a medida</a></h5>
                                 <p>Nos especializamos en el diseño y la creación de bases de datos personalizadas de Microsoft SQL Server que impulsan la eficiencia de tu negocio, lo ayudan a ver las tendencias operacionales y escalan tu negocio.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/crm.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/crm.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="sistema-crm.html">Sistemas CRM a medida</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/sistema-crm/">Sistemas CRM a medida</a></h5>
                                 <p>logre sus objetivos de interacción con el cliente con un sistema de CRM personalizado y escalable que no requiera licencias por separado para cada nuevo usuario</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/integracion-software.jpg" alt="" width="418" height="315" />
+                    <!--<div class="col-md-6 col-xl-4">
+                        <div class="thumbnail-classic"><img src="/images/integracion-software.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="integracion-software.html">Integración de software</a></h5>
                                 <p>Si necesita procesar datos de su hardware especializado, por ejemplo, lecturas de un termómetro o dispositivo de medición, transmisión de video desde una cámara o cualquier otra cosa, crearemos un software para permitir esto.</p>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </section>
@@ -904,7 +1398,7 @@ class Layout_View
         ?>
         <section class="text-center">
             <!-- RD Parallax-->
-            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="images/crc.jpg">
+            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="/images/crc.jpg">
                 <div class="parallax-content">
                     <div class="container section-xxl">
                         <h2>Servicios de integración de sistemas</h2>
@@ -927,16 +1421,16 @@ class Layout_View
             <div class="container">
                 <div class="row row-60">
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/migracion-datos.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/migracion-datos.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="migracion-de-datos.html">Servicios de migración de datos</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/migracion-de-datos/">Servicios de migración de datos</a></h5>
                                 <p> Si necesita un servicio de migración de datos rápido, eficiente y seguro sin interrupciones en su negocio, nuestros expertos pueden ayudarlo.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/sistemas.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/sistemas.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="sistemas-operacionales.html">Sistemas operacionales</a></h5>
                                 <p>Si tiene que adaptar sus procesos o resolver brechas en la administración o funcionalidad de los sistemas, podría ser momento de considerar un nuevo sistema operativo.</p>
@@ -944,7 +1438,7 @@ class Layout_View
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/moderno.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/moderno.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="modernizacion-software.html">Modernización de software heredado</a></h5>
                                 <p>¿Harto de gastar dinero en un lento sistema de TI que no funciona? Le construiremos un reemplazo poderoso que ayude, no obstaculice su negocio.</p>
@@ -966,7 +1460,7 @@ class Layout_View
         ?>
         <section class="text-center">
             <!-- RD Parallax-->
-            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="images/crc.jpg">
+            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="/images/crc.jpg">
                 <div class="parallax-content">
                     <div class="container section-xxl">
                         <h2 class="slider">Servicios profesionales y de soporte</h2>
@@ -990,7 +1484,7 @@ class Layout_View
                 <div class="row row-60">
 
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/consultoria.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/consultoria.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5 class=""><a class="thumbnail-classic-title" href="consultoria-software.html">Consultoría de software</a></h5>
                                 <p>Si necesita ayuda para identificar las barreras tecnológicas que se interponen entre usted y un negocio más rentable, nuestros consultores de software pueden ayudarlo.
@@ -999,7 +1493,7 @@ class Layout_View
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/4.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/4.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="rescatamos-su-proyecto.html">Rescatamos su proyecto Software</a></h5>
                                 <p>Si su proyecto de software a medida ha fallado o si se ha caído con su desarrollador de software, podemos rápidamente poner su negocio nuevamente en marcha.</p>
@@ -1007,7 +1501,7 @@ class Layout_View
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/codigo.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/codigo.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="recuperacion-codigo-fuente.html">Recuperación del código fuente</a></h5>
                                 <p>Podemos ayudar a aliviar el dolor de cabeza del código fuente perdido al recuperarlo o volver a desarrollarlo para usted. También podemos reconstruir repositorios de código fuente roto.</p>
@@ -1015,7 +1509,7 @@ class Layout_View
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/mantenimiento-de-aplicaciones.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/mantenimiento-de-aplicaciones.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="soporte-de-aplicaciones.html">Soporte y mantenimiento de aplicaciones</a></h5>
                                 <p>Desde la solución de errores prioritarios hasta nuestro servicio de asistencia interna; Apoyaremos y mantendremos su software a lo largo de su ciclo de vida, incluso si no lo construimos.
@@ -1024,7 +1518,7 @@ class Layout_View
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/webhosting.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/webhosting.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="hosting.html">Hosting</a></h5>
                                 <p>Si necesita una forma simple y rentable de acceder a su nueva aplicación de software, pruebe nuestro servicio de alojamiento brindado a través de los líderes de la industria.</p>
@@ -1032,7 +1526,7 @@ class Layout_View
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="images/desarrollo-software.png" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/desarrollo-software.png" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="desarrollo-software.html">Desarrollo de software</a></h5>
                                 <p> Permítanos ayudarlo con el aspecto más desafiante de comenzar un negocio: Desarrollar su aplicación de software</p>
@@ -1145,28 +1639,6 @@ class Layout_View
             <!-- RD Navbar-->
             <div class="rd-navbar-wrap">
                 <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-stick-up-clone="false" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true" data-md-stick-up-offset="69px" data-lg-stick-up-offset="1px" data-body-class="rd-navbar-default-linked">
-                    <div class="rd-navbar-inner">
-                        <!-- RD Navbar Panel-->
-                        <div class="rd-navbar-panel">
-                            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                            <!-- RD Navbar Brand-->
-                            <div class="rd-navbar-brand">
-                                <a class="brand-name" href="index.html"><img src="images/CRCazul.png" alt="" width="174" height="32" /></a>
-                            </div>
-                        </div>
-                        <!-- RD Navbar Nav-->
-                        <div class="rd-navbar-nav-wrap">
-                            <ul class="rd-navbar-nav">
-                                <li class="active"><a href="index.html">Inicio</a></li>
-
-                                <li><a href="about.html">Nosotros</a></li>
-                                <li><a href="services.html">Servicios</a></li>
-                                <li><a href="contacts.html">Contacto</a></li>
-                                <li><a href="portfolio.html">Portfolio</a>
-                                    <li><a href="grid-blog.html">BLOG</a>
-                            </ul>
-                        </div>
-                    </div>
                 </nav>
             </div>
         </header>
@@ -1182,7 +1654,7 @@ class Layout_View
                         </ul>
                         <div class="isotope row" data-isotope-layout="fitRows" data-isotope-group="gallery">
                             <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1">
-                                <a class="img-thumbnail-variant-3" href="single-portfolio.html"><img src="images/portfolio-1-418x315.jpg" alt="" width="418" height="315" /><span class="label-custom label-white">Album</span>
+                                <a class="img-thumbnail-variant-3" href="single-portfolio.html"><img src="/images/portfolio-1-418x315.jpg" alt="" width="418" height="315" /><span class="label-custom label-white">Album</span>
                                     <div class="caption"><span class="icon hover-top-element linear-icon-folder-picture"></span>
                                         <ul class="list-inline-tag hover-top-element">
                                             <li>9 photos</li>
@@ -1195,8 +1667,8 @@ class Layout_View
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1">
-                                <a class="img-thumbnail-variant-3" href="images/slider-slide-14-1920x1080.jpg" data-lightgallery="item">
-                                    <figure><img src="images/portfolio-2-418x315.jpg" alt="" width="418" height="315" />
+                                <a class="img-thumbnail-variant-3" href="/images/slider-slide-14-1920x1080.jpg" data-lightgallery="item">
+                                    <figure><img src="/images/portfolio-2-418x315.jpg" alt="" width="418" height="315" />
                                     </figure>
                                     <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
                                         <ul class="list-inline-tag hover-top-element">
@@ -1209,7 +1681,7 @@ class Layout_View
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1">
-                                <a class="img-thumbnail-variant-3" href="single-portfolio.html"><img src="images/portfolio-3-418x315.jpg" alt="" width="418" height="315" /><span class="label-custom label-white">Album</span>
+                                <a class="img-thumbnail-variant-3" href="single-portfolio.html"><img src="/images/portfolio-3-418x315.jpg" alt="" width="418" height="315" /><span class="label-custom label-white">Album</span>
                                     <div class="caption"><span class="icon hover-top-element linear-icon-folder-picture"></span>
                                         <ul class="list-inline-tag hover-top-element">
                                             <li>9 photos</li>
@@ -1222,8 +1694,8 @@ class Layout_View
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1">
-                                <a class="img-thumbnail-variant-3" href="images/image-original-6-1200x905.jpg" data-lightgallery="item">
-                                    <figure><img src="images/portfolio-4-418x315.jpg" alt="" width="418" height="315" />
+                                <a class="img-thumbnail-variant-3" href="/images/image-original-6-1200x905.jpg" data-lightgallery="item">
+                                    <figure><img src="/images/portfolio-4-418x315.jpg" alt="" width="418" height="315" />
                                     </figure>
                                     <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
                                         <ul class="list-inline-tag hover-top-element">
@@ -1236,7 +1708,7 @@ class Layout_View
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
-                                <a class="img-thumbnail-variant-3" href="single-portfolio.html"><img src="images/portfolio-5-418x315.jpg" alt="" width="418" height="315" /><span class="label-custom label-white">Album</span>
+                                <a class="img-thumbnail-variant-3" href="single-portfolio.html"><img src="/images/portfolio-5-418x315.jpg" alt="" width="418" height="315" /><span class="label-custom label-white">Album</span>
                                     <div class="caption"><span class="icon hover-top-element linear-icon-folder-picture"></span>
                                         <ul class="list-inline-tag hover-top-element">
                                             <li>9 photos</li>
@@ -1249,8 +1721,8 @@ class Layout_View
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
-                                <a class="img-thumbnail-variant-3" href="images/portfolio-orginal-6-1200x675.jpg" data-lightgallery="item">
-                                    <figure><img src="images/portfolio-6-418x315.jpg" alt="" width="418" height="315" />
+                                <a class="img-thumbnail-variant-3" href="/images/portfolio-orginal-6-1200x675.jpg" data-lightgallery="item">
+                                    <figure><img src="/images/portfolio-6-418x315.jpg" alt="" width="418" height="315" />
                                     </figure>
                                     <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
                                         <ul class="list-inline-tag hover-top-element">
@@ -1263,8 +1735,8 @@ class Layout_View
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
-                                <a class="img-thumbnail-variant-3" href="images/gallery-post-1-886x668.jpg" data-lightgallery="item">
-                                    <figure><img src="images/portfolio-7-418x315.jpg" alt="" width="418" height="315" />
+                                <a class="img-thumbnail-variant-3" href="/images/gallery-post-1-886x668.jpg" data-lightgallery="item">
+                                    <figure><img src="/images/portfolio-7-418x315.jpg" alt="" width="418" height="315" />
                                     </figure>
                                     <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
                                         <ul class="list-inline-tag hover-top-element">
@@ -1277,8 +1749,8 @@ class Layout_View
                                 </a>
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
-                                <a class="img-thumbnail-variant-3" href="images/day-events-1-886x668.jpg" data-lightgallery="item">
-                                    <figure><img src="images/portfolio-8-418x315.jpg" alt="" width="418" height="315" />
+                                <a class="img-thumbnail-variant-3" href="/images/day-events-1-886x668.jpg" data-lightgallery="item">
+                                    <figure><img src="/images/portfolio-8-418x315.jpg" alt="" width="418" height="315" />
                                     </figure>
                                     <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
                                         <ul class="list-inline-tag hover-top-element">
@@ -1336,32 +1808,42 @@ class Layout_View
     {
         ob_start();
         ?>
+        <div class="container">
+                <div class="breadcrumbs-custom__inner">
+                    <p class="breadcrumbs-custom__title">BLOG</p>
+                    <!--<ul class="breadcrumbs-custom__path">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html#">Pages</a></li>
+              <li class="active">About</li>
+            </ul>-->
+                </div>
+            </div>
         <section class="bg-default section-lg">
             <div class="container">
                 <div class="row row-60">
                     <div class="col-md-6 col-xl-4">
                         <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="images/post-minimal-1-418x315.jpg" alt="" width="418" height="315" />
+                        <article class="post-classic post-minimal"><img src="/images/post-minimal-1-418x315.jpg" alt="" width="418" height="315" />
                             <div class="post-classic-title">
-                                <h5><a href="image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
+                                <h5><a href="/image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
                             </div>
                             <div class="post-meta">
                                 <div class="group">
-                                    <a href="image-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="image-post.html">by Brian Williamson</a></div>
+                                    <a href="/image-post.html">
+                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="/image-post.html">by Brian Williamson</a></div>
                             </div>
                         </article>
                     </div>
                     <div class="col-md-6 col-xl-4">
                         <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="images/post-classic-1-886x668.jpg" alt="" width="886" height="668" />
+                        <article class="post-classic post-minimal"><img src="/images/post-classic-1-886x668.jpg" alt="" width="886" height="668" />
                             <div class="post-classic-title">
-                                <h5><a href="image-post.html">Getting to another  level of design and functionality.</a></h5>
+                                <h5><a href="/image-post.html">Getting to another  level of design and functionality.</a></h5>
                             </div>
                             <div class="post-meta">
                                 <div class="group">
-                                    <a href="image-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="image-post.html">by Brian Williamson</a></div>
+                                    <a href="/image-post.html">
+                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="/image-post.html">by Brian Williamson</a></div>
                             </div>
                         </article>
                     </div>
@@ -1371,22 +1853,22 @@ class Layout_View
                             <!-- Owl Carousel-->
                             <div class="owl-carousel carousel-post-gallery carousel-slider-blog-post" data-autoplay="true" data-items="1" data-stage-padding="0" data-loop="false" data-margin="10px" data-mouse-drag="false" data-nav="true" data-dots="true" data-lightgallery="group">
                                 <div class="item">
-                                    <a class="img-thumbnail-variant-1" href="images/gallery-post-01-original-1354x762.jpg" data-lightgallery="item">
-                                        <figure> <img src="images/gallery-post-1-886x668.jpg" alt="" width="886" height="668" />
+                                    <a class="img-thumbnail-variant-1" href="/images/gallery-post-01-original-1354x762.jpg" data-lightgallery="item">
+                                        <figure> <img src="/images/gallery-post-1-886x668.jpg" alt="" width="886" height="668" />
                                         </figure>
                                         <div class="caption"><span class="icon icon-lg linear-icon-magnifier"></span></div>
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a class="img-thumbnail-variant-1" href="images/gallery-post-02-original-1354x762.jpg" data-lightgallery="item">
-                                        <figure> <img src="images/gallery-post-2-886x668.jpg" alt="" width="886" height="668" />
+                                    <a class="img-thumbnail-variant-1" href="/images/gallery-post-02-original-1354x762.jpg" data-lightgallery="item">
+                                        <figure> <img src="/images/gallery-post-2-886x668.jpg" alt="" width="886" height="668" />
                                         </figure>
                                         <div class="caption"><span class="icon icon-lg linear-icon-magnifier"></span></div>
                                     </a>
                                 </div>
                                 <div class="item">
-                                    <a class="img-thumbnail-variant-1" href="images/gallery-post-03-original-1354x762.jpg" data-lightgallery="item">
-                                        <figure> <img src="images/gallery-post-3-886x668.jpg" alt="" width="886" height="668" />
+                                    <a class="img-thumbnail-variant-1" href="/images/gallery-post-03-original-1354x762.jpg" data-lightgallery="item">
+                                        <figure> <img src="/images/gallery-post-3-886x668.jpg" alt="" width="886" height="668" />
                                         </figure>
                                         <div class="caption"><span class="icon icon-lg linear-icon-magnifier"></span></div>
                                     </a>
@@ -1420,27 +1902,27 @@ class Layout_View
                     </div>
                     <div class="col-md-6 col-xl-4">
                         <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="images/post-minimal-2-418x315.jpg" alt="" width="418" height="315" />
+                        <article class="post-classic post-minimal"><img src="/images/post-minimal-2-418x315.jpg" alt="" width="418" height="315" />
                             <div class="post-classic-title">
-                                <h5><a href="image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
+                                <h5><a href="/image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
                             </div>
                             <div class="post-meta">
                                 <div class="group">
-                                    <a href="image-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="image-post.html">by Brian Williamson</a></div>
+                                    <a href="/image-post.html">
+                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="/image-post.html">by Brian Williamson</a></div>
                             </div>
                         </article>
                     </div>
                     <div class="col-md-6 col-xl-4">
                         <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="images/post-minimal-3-418x315.jpg" alt="" width="418" height="315" />
+                        <article class="post-classic post-minimal"><img src="/images/post-minimal-3-418x315.jpg" alt="" width="418" height="315" />
                             <div class="post-classic-title">
-                                <h5><a href="image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
+                                <h5><a href="/image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
                             </div>
                             <div class="post-meta">
                                 <div class="group">
-                                    <a href="image-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="image-post.html">by Brian Williamson</a></div>
+                                    <a href="/image-post.html">
+                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="/image-post.html">by Brian Williamson</a></div>
                             </div>
                         </article>
                     </div>
