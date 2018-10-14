@@ -174,8 +174,6 @@ class Layout_View
                             echo self::getIndexContact();
                         break;
                                 
-                            
-                            
                         case 'contacto':
                             echo self::getContactFormES();
                         break;
@@ -190,8 +188,8 @@ class Layout_View
                             echo self::getIndexContact();
                         break;
         				
-    				        default:
-        				    break;
+                        default:
+                        break;
     			    }
                 ?>
             </main>
@@ -215,7 +213,7 @@ class Layout_View
         ob_start();
         ?>
             <!-- Stylesheets-->
-            <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Libre+Franklin:200,300,500,600,300italic">
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Libre+Franklin:200,300,500,600,300italic">
             <link rel="stylesheet" href="/css/bootstrap.css">
             <link rel="stylesheet" href="/css/style.css">
             <!--[if lt IE 10]>
@@ -842,6 +840,7 @@ class Layout_View
     {
         ob_start();
         ?>
+<<<<<<< HEAD
         <section class="section-lg bg-default text-center">
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
@@ -856,6 +855,38 @@ class Layout_View
                 <li></li>
                 <li></li>
               </ul>
+=======
+        <!-- PANEL-->
+        <!-- Page Header-->
+        <header class="page-header">
+            <!-- RD Navbar-->
+            <div class="rd-navbar-wrap">
+                <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-stick-up-clone="false" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true" data-md-stick-up-offset="69px" data-lg-stick-up-offset="1px" data-body-class="rd-navbar-default-linked">
+                    <div class="rd-navbar-inner">
+                        <!-- RD Navbar Panel-->
+                        <div class="rd-navbar-panel">
+                            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                            <!-- RD Navbar Brand-->
+                            <div class="rd-navbar-brand">
+                                <a class="brand-name" href="/"><img src="<?php echo $this->data['info']['url']; ?>/images/CRCazul.png" alt="" width="174" height="32" /></a>
+                            </div>
+                        </div>
+                        <!-- RD Navbar Nav-->
+                        <div class="rd-navbar-nav-wrap">
+                            <ul class="rd-navbar-nav">
+                                <li class="active"><a href="/">Inicio</a></li>
+
+                                <li><a href="/nosotros/">Nosotros</a></li>
+                                <li><a href="/servicios/">Servicios</a></li>
+                                
+                                <!--<li><a href="/portafolio/">Portafolio</a>-->
+                                <li><a href="#">Blog</a>
+                                <li><a href="/contacto/">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
             </div>
             <div class="col-md-10">
               <h3></h3>
@@ -882,6 +913,7 @@ class Layout_View
         ob_end_clean();
         return $header;
     }
+<<<<<<< HEAD
         
      public function getConsultoria()
     {
@@ -899,18 +931,30 @@ class Layout_View
                       <h2>Consultoria de software</h2>
                     </div>
                   </div>
+=======
+    
+    public function getFooter()
+    {
+        ob_start();
+        ?>
+        <footer class="footer-corporate">
+            <div class="container">
+                <div class="footer-corporate__inner">
+                    <p class="rights"><span>CRC-SOFTWARE</span><span>&nbsp;</span><span id="copyright-year"></span>.
+                    </p>
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </footer>
+        <!-- Global Mailform Output-->
+    		<div class="snackbars" id="form-output-global"></div>
         <?php
-        $header = ob_get_contents();
+        $footer = ob_get_contents();
         ob_end_clean();
-        return $header;
+        return $footer;
     }
     
+<<<<<<< HEAD
      public function getContenidoConsultoria()
     {
         ob_start();
@@ -950,31 +994,90 @@ class Layout_View
           </div>
         </div>
       </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getRescateSoftware()
+=======
+    public function getIndexSwipper()
     {
         ob_start();
         ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
+        <!-- Swiper-->
+        <section>
+            <div class="swiper-container swiper-slider swiper-slider_fullheight" data-simulate-touch="false" data-loop="false" data-autoplay="5500">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-gray-lighter" data-slide-bg="/images/slider1.jpg">
+                        <div class="swiper-slide-caption text-center">
+                            <div class="container">
+                                <h1 data-caption-animate="fadeInUpSmall"> <span class="slider"></span><sup class="text-accent"></sup></h1>
+                                <h3 data-caption-animate="fadeInUpSmall" data-caption-delay="200"></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide_video context-dark video-bg-overlay">
+                        <!-- RD Video-->
+                        <div class="swiper-slide bg-gray-lighter" data-slide-bg="/images/security.jpg">
+                            <!--<div class="vide_bg" data-vide-bg="video/video-lg" data-vide-options="posterType: jpg">-->
+                            <div class="swiper-slide-caption text-center">
+                                <div class="container">
+                                    <h2 data-caption-animate="fadeInUpSmall">CRC SOFTWARE</h2>
+                                    <p class="text-width-2 block-centered" data-caption-animate="fadeInUpSmall" data-caption-delay="200"><sup>No solo creamos aplicaciones de Software. Proporcionamos soporte y alojamiento, ayudando a que su sistema funcione y a que sus usuarios estén contentos todo el tiempo que nos necesite. Incluso asumiremos Software que no hemos creado, lo solucionaremos, lo mantendremos y lo ayudaremos a llevar su proyecto al siguiente nivel.</sup></p>
+                                    <div class="group-lg group-middle"><a class="button button-black" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="/servicios/" data-custom-scroll-to="section-see-features">Servicios</a><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="/contacto/">Contacto</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Swiper Pagination-->
+                <div class="swiper-pagination"></div>
+                <!-- Swiper Navigation-->
+                <div class="swiper-button-prev linear-icon-chevron-left"></div>
+                <div class="swiper-button-next linear-icon-chevron-right"></div>
+            </div>
+        </section>
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+<<<<<<< HEAD
+    public function getRescateSoftware()
+=======
+    public function getIndexServices()
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
+    {
+        ob_start();
+        ?>
+        <!-- Presentation -->
+        <section class="section-xl bg-default text-center" id="section-see-features">
+            <div class="container">
+                <div class="row justify-content-lg-center">
+                    <div class="col-lg-10 col-xl-8">
+                        <h3 class="">Nuestros Servicios</h3>
+                        <p>Diseñamos, desarrollamos y entregamos soluciones de Software a medida de alta tecnología para empresas pequeñas hasta de gran escala.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- The Power of Bootstrap Toolkit-->
+        <section class="bg-gray-lighter object-wrap">
+            <div class="section-xxl section-xxl_bigger">
                 <div class="container">
+<<<<<<< HEAD
                   <div class="row justify-content-sm-center">
                     <div class="col-md-10 col-xl-8">
                       <h2>Rescatamos su proyecto software</h2>
+=======
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <h3 class="">Software operacional</h3>
+                            <p>Si está buscando una compañía confiable y de buena reputación para construir su software operativo a medida, ha encontrado la compañía adecuada.</p>
+                            <a class="button button-gray-light-outline" href="services.html">Ver mas</a>
+                        </div>
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -1024,11 +1127,30 @@ class Layout_View
           </div>
         </div>
       </section>
+=======
+            <div class="object-wrap__body object-wrap__body-sizing-1 object-wrap__body-md-right bg-image" style="background-image: url(images/ep-img1.jpg)"></div>
+        </section>
+        <!-- Content Driven Design-->
+        <section class="negro section-xl bg-default">
+            <div class="container">
+                <div class="row justify-content-md-center flex-lg-row-reverse align-items-lg-center justify-content-lg-between row-50">
+                    <div class="col-md-9 col-lg-5">
+                        <h3>Desarrollo de productos</h3>
+                        <p>Podemos diseñar productos que se ajusten a sus necesidades, desde una página web informativa, una aplicación web con gestor de contenidos, CRM, aplicación para iOS y Android.</p>
+                        <a class="button button-gray-light-outline" href="services.html">Ver mas</a>
+                    </div>
+                    <div class="col-md-9 col-lg-6"><img src="<?php echo $this->data['info']['url']; ?>images/crc4.jpg" alt="" width="652" height="491" />
+                    </div>
+                </div>
+            </div>
+        </section>
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
         <?php
-        $header = ob_get_contents();
+        $method = ob_get_contents();
         ob_end_clean();
-        return $header;
+        return $method;
     }
+<<<<<<< HEAD
     
     public function getRecuperacionCodigo()
     {
@@ -1044,20 +1166,32 @@ class Layout_View
                   <div class="row justify-content-sm-center">
                     <div class="col-md-10 col-xl-8">
                       <h2>Recuperacion de codigo fuente</h2>
+=======
+
+    public function getIndexBanner()
+    {
+        ob_start();
+        ?>
+        <!-- Blurbs-->
+        <section class="section-xl bg-gray-lighter">
+            <div class="container">
+                <div class="row row-50">
+                    <div class="col-md-12 col-lg-12">
+                        <h4><img src="images/solutions-web.jpg"></h4>
+                        <!-- Blurb minimal-->
+
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
         <?php
-        $header = ob_get_contents();
+        $method = ob_get_contents();
         ob_end_clean();
-        return $header;
+        return $method;
     }
     
+<<<<<<< HEAD
      public function getContenidoCodigo()
     {
         ob_start();
@@ -1118,19 +1252,50 @@ class Layout_View
                   <div class="row justify-content-sm-center">
                     <div class="col-md-10 col-xl-8">
                       <h2>Soporte de aplicaciones</h2>
+=======
+    public function getIndexMoreServices()
+    {
+        ob_start();
+        ?>
+        <!-- GPL3 License advantages-->
+        <section class="negro section-xl bg-default">
+            <div class="container">
+                <div class="row row-50 align-items-lg-center justify-content-lg-between">
+                    <div class="col-lg-5">
+                        <h3 class="">Aplicaciones web y móviles</h3>
+                        <p>Si tienes un nuevo proyecto, deje que CRC te ayude con el aspecto actual más desafiante de comenzar un negocio: Desarrollar su aplicación de software.</p>
+                        <a class="button button-gray-light-outline" href="/aplicaciones/">Ver mas</a>
                     </div>
-                  </div>
+                    <div class="col-lg-6">
+                        <div class="row gallery-wrap">
+                            <div class="col-6"><img src="/images/crc2.jpg" alt="" width="301" height="227" />
+                            </div>
+                            <div class="col-6"><img src="/images/home-default-4-301x227.jpg" alt="" width="301" height="227" />
+                            </div>
+                            <div class="col-6"><img src="/images/crc6.jpg" alt="" width="301" height="227" />
+                            </div>
+                            <div class="col-6"><img src="/images/app-mobile.jpg" alt="" width="301" height="227" />
+                            </div>
+                        </div>
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
+                    </div>
                 </div>
-              </div>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </section>
          <?php
         $header = ob_get_contents();
+=======
+        </section>
+        <?php
+        $method = ob_get_contents();
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
         ob_end_clean();
-        return $header;
+        return $method;
     }
+<<<<<<< HEAD
     
      public function getContenidoSoporte()
     {
@@ -1192,9 +1357,24 @@ class Layout_View
                   <div class="row justify-content-sm-center">
                     <div class="col-md-10 col-xl-8">
                       <h2>Hosting</h2>
+=======
+     
+    public function getIndexPortfolio()
+    {
+        ob_start();
+        ?>
+        <!-- Gallery-->
+        <section class="bg-gray-dark text-center">
+            <!-- RD Parallax-->
+            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="/images/parallax-01.jpg">
+                <div class="parallax-content">
+                    <div class="container section-xxl">
+                        <h2>PORTAFOLIO</h2>
+                        <!--<p></p><a class="button button-primary" href="index.html#">View now!</a>-->
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
                     </div>
-                  </div>
                 </div>
+<<<<<<< HEAD
               </div>
             </div>
           </div>
@@ -1337,261 +1517,7 @@ class Layout_View
                 <div class="footer-corporate__inner">
                     <p class="rights"><span>CRC-SOFTWARE</span><span>&nbsp;</span><span id="copyright-year"></span>.
                     </p>
-                </div>
-            </div>
-        </footer>
-        <!-- Global Mailform Output-->
-    		<div class="snackbars" id="form-output-global"></div>
-        <?php
-        $footer = ob_get_contents();
-        ob_end_clean();
-        return $footer;
-    }
-    
-    public function getIndexSwipper()
-    {
-        ob_start();
-        ?>
-        <!-- Swiper-->
-        <section>
-            <div class="swiper-container swiper-slider swiper-slider_fullheight" data-simulate-touch="false" data-loop="false" data-autoplay="5500">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide bg-gray-lighter" data-slide-bg="/images/slider1.jpg">
-                        <div class="swiper-slide-caption text-center">
-                            <div class="container">
-                                <h1 data-caption-animate="fadeInUpSmall"> <span class="slider"></span><sup class="text-accent"></sup></h1>
-                                <h3 data-caption-animate="fadeInUpSmall" data-caption-delay="200"></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide swiper-slide_video context-dark video-bg-overlay">
-                        <!-- RD Video-->
-                        <div class="swiper-slide bg-gray-lighter" data-slide-bg="/images/security.jpg">
-                            <!--<div class="vide_bg" data-vide-bg="video/video-lg" data-vide-options="posterType: jpg">-->
-                            <div class="swiper-slide-caption text-center">
-                                <div class="container">
-                                    <h2 data-caption-animate="fadeInUpSmall">CRC SOFTAWARE</h2>
-                                    <p class="text-width-2 block-centered" data-caption-animate="fadeInUpSmall" data-caption-delay="200"><sup>No solo creamos aplicaciones de software. Proporcionamos soporte y alojamiento, ayudando a que su sistema funcione y a que sus usuarios estén contentos todo el tiempo que nos necesite. Incluso asumiremos software que no hemos creado, lo solucionaremos, lo mantendremos y lo ayudaremos a llevar su proyecto al siguiente nivel.</sup></p>
-                                    <div class="group-lg group-middle"><a class="button button-black" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="/servicios/" data-custom-scroll-to="section-see-features">Servicios</a><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="/contacto/">Contacto</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Swiper Pagination-->
-                <div class="swiper-pagination"></div>
-                <!-- Swiper Navigation-->
-                <div class="swiper-button-prev linear-icon-chevron-left"></div>
-                <div class="swiper-button-next linear-icon-chevron-right"></div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getIndexContact()
-    {
-        ob_start();
-        ?>
-        <!-- Get in touch-->
-        <section class="pre-footer-corporate">
-            <div class="container">
-                <h3>Contacto</h3>
-                <div class="row justify-content-sm-center justify-content-lg-start">
-                    <div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
-                        <ul class="list-xs">
-                            <li>
-                                <dl class="list-terms-minimal">
-                                    <dt>Telefono</dt>
-                                    <dd>
-                                        <ul class="list-semicolon">
-                                            <li><a href="callto:#">(045) 984-131-4389</a></li>
-                                            <li><a href="callto:#">(045) 984-254-9271</a></li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl class="list-terms-minimal">
-                                    <dt>Horario de atencion</dt>
-                                    <dd>lun-sab: 10 am-8 pm</dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-10 col-md-6 col-lg-5 col-xl-3">
-                        <ul class="list-xs">
-                            <li>
-                                <dl class="list-terms-minimal">
-                                    <dt>Ubicacion</dt>
-                                    <dd>Playa del Carmen, Quintana Roo. Mexico.</dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-sm-10 col-md-6 col-lg-5 col-xl-3">
-                        <ul class="list-xs">
-                            <li>
-                                <dl class="list-terms-minimal">
-                                    <dt>E-mail</dt>
-                                    <dd><a href="/contacto/">info@crc-software</a></dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!--<div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
-
-                        <ul class="list-inline-xxs">
-                            <li>
-                                <a class="icon icon-xxs icon-primary fa fa-facebook" href="/"></a>
-                            </li>
-                            <li>
-                                <a class="icon icon-xxs icon-primary fa fa-twitter" href="/"></a>
-                            </li>
-                            <li>
-                                <a class="icon icon-xxs icon-primary fa fa-instagram" href="/"></a>
-                            </li>
-                        </ul>
-
-                    </div>-->
-                </div>
-            </div>
-
-        </section>
-        
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getIndexServices()
-    {
-        ob_start();
-        ?>
-        <!-- Presentation -->
-        <section class="section-xl bg-default text-center" id="section-see-features">
-            <div class="container">
-                <div class="row justify-content-lg-center">
-                    <div class="col-lg-10 col-xl-8">
-                        <h3 class="">Nuestros Servicios</h3>
-                        <p>Diseñamos, desarrollamos y entregamos soluciones de software a medida de alta tecnología para pymes, empresas, emprendimientos financiados y emprendimientos.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- The Power of Bootstrap Toolkit-->
-        <section class="bg-gray-lighter object-wrap">
-            <div class="section-xxl section-xxl_bigger">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <h3 class="">Software operacional</h3>
-                            <p>Si está buscando una compañía confiable y de buena reputación para construir su software operativo a medida, ha encontrado la compañía adecuada.</p>
-                            <a class="button button-gray-light-outline" href="/servicios/">Ver mas</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="object-wrap__body object-wrap__body-sizing-1 object-wrap__body-md-right bg-image" style="background-image: url(images/ep-img1.jpg)"></div>
-        </section>
-        <!-- Content Driven Design-->
-        <section class="negro section-xl bg-default">
-            <div class="container">
-                <div class="row justify-content-md-center flex-lg-row-reverse align-items-lg-center justify-content-lg-between row-50">
-                    <div class="col-md-9 col-lg-5">
-                        <h3>Desarrollo de productos</h3>
-                        <p>podemos diseñar soluciones basadas en la nube o de contracción para productos verticales múltiples para licencias o reventa.</p>
-                        <a class="button button-gray-light-outline" href="/servicios/">Ver mas</a>
-                    </div>
-                    <div class="col-md-9 col-lg-6"><img src="<?php echo $this->data['info']['url']; ?>images/crc4.jpg" alt="" width="652" height="491" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-
-    public function getIndexBanner()
-    {
-        ob_start();
-        ?>
-        <!-- Blurbs-->
-        <section class="section-xl bg-gray-lighter">
-            <div class="container">
-                <div class="row row-50">
-                    <div class="col-md-12 col-lg-12">
-                        <h4><img src="images/solutions-web.jpg"></h4>
-                        <!-- Blurb minimal-->
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getIndexMoreServices()
-    {
-        ob_start();
-        ?>
-        <!-- GPL3 License advantages-->
-        <section class="negro section-xl bg-default">
-            <div class="container">
-                <div class="row row-50 align-items-lg-center justify-content-lg-between">
-                    <div class="col-lg-5">
-                        <h3 class="">Aplicaciones web y móviles</h3>
-                        <p>Si tienes un nuevo proyecto, deje que CRC te ayude con el aspecto más desafiante de comenzar un negocio: Desarrollar su aplicación de software.</p>
-                        <a class="button button-gray-light-outline" href="/aplicaciones/">Ver mas</a>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row gallery-wrap">
-                            <div class="col-6"><img src="/images/crc2.jpg" alt="" width="301" height="227" />
-                            </div>
-                            <div class="col-6"><img src="/images/home-default-4-301x227.jpg" alt="" width="301" height="227" />
-                            </div>
-                            <div class="col-6"><img src="/images/crc6.jpg" alt="" width="301" height="227" />
-                            </div>
-                            <div class="col-6"><img src="/images/app-mobile.jpg" alt="" width="301" height="227" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-     
-     
-    
-    
-    public function getIndexPortfolio()
-    {
-        ob_start();
-        ?>
-        <!-- Gallery-->
-        <section class="bg-gray-dark text-center">
-            <!-- RD Parallax-->
-            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="/images/parallax-01.jpg">
-                <div class="parallax-content">
-                    <div class="container section-xxl">
-                        <h2>PORTAFOLIO</h2>
-                        <!--<p></p><a class="button button-primary" href="index.html#">View now!</a>-->
-                    </div>
-                </div>
+=======
             </div>
 
             <!--<section class="section-xl bg-default" data-lightgallery="group">-->
@@ -1653,6 +1579,7 @@ class Layout_View
                             <div class="thumb-modern__overlay"></div>
                         </a>
                     </div>-->
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
                 </div>
             </div>
         </section>
@@ -1685,7 +1612,7 @@ class Layout_View
                             <div class="post-meta">
                                 <div class="group">
                                     <a href="image-post.html">
-                                        <time datetime="2017">Ago.20, 2018</time></a><a class="meta-author" href="image-post.html">por Raul Catro</a></div>
+                                        <time datetime="2017">Ago.20, 2018</time></a><a class="meta-author" href="image-post.html">por Raul Castro</a></div>
                             </div>
                         </article>
                     </div>
@@ -1716,6 +1643,81 @@ class Layout_View
                             </div>
                         </article>
                     </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getIndexContact()
+    {
+        ob_start();
+        ?>
+        <!-- Get in touch-->
+        <section class="pre-footer-corporate">
+            <div class="container">
+                <h3>Contacto</h3>
+                <div class="row justify-content-sm-center justify-content-lg-start">
+                    <div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
+                        <ul class="list-xs">
+                            <li>
+                                <dl class="list-terms-minimal">
+                                    <dt>Teléfono</dt>
+                                    <dd>
+                                        <ul class="list-semicolon">
+                                            <li><a href="tel:+52 1 (984) 131 4389">+52 1 (984) 131 4389</a></li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl class="list-terms-minimal">
+                                    <dt>Horario de atención</dt>
+                                    <dd>lun-sab: 10:00 am - 8:00 pm</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-10 col-md-6 col-lg-5 col-xl-3">
+                        <ul class="list-xs">
+                            <li>
+                                <dl class="list-terms-minimal">
+                                    <dt>Ubicación</dt>
+                                    <dd>Playa del Carmen, Quintana Roo. México.</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-10 col-md-6 col-lg-5 col-xl-3">
+                        <ul class="list-xs">
+                            <li>
+                                <dl class="list-terms-minimal">
+                                    <dt>E-mail</dt>
+                                    <dd><a href="/contacto/">info@crc-software</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--<div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
+
+                        <ul class="list-inline-xxs">
+                            <li>
+                                <a class="icon icon-xxs icon-primary fa fa-facebook" href="/"></a>
+                            </li>
+                            <li>
+                                <a class="icon icon-xxs icon-primary fa fa-twitter" href="/"></a>
+                            </li>
+                            <li>
+                                <a class="icon icon-xxs icon-primary fa fa-instagram" href="/"></a>
+                            </li>
+                        </ul>
+
+                    </div>-->
                 </div>
             </div>
         </section>
@@ -1760,8 +1762,8 @@ class Layout_View
                             <div class="container">
                                 <div class="row justify-content-sm-center">
                                     <div class="col-md-10 col-xl-8">
-                                        <h2>Quiénes somos y qué hacemos?</h2>
-                                        <p>Somos CRC-Software, una de las compañías de desarrollo de software a medida. Diseñamos aplicaciones web inteligentes, rentables e intuitivas, aplicaciones de escritorio y aplicaciones móviles que ayudan a optimizar los procesos para las empresas, así como a crear nuevas fuentes de ingresos para empresas nuevas y establecidas.</p>
+                                        <h2>¿Quiénes somos y qué hacemos?</h2>
+                                        <p>Somos CRC-Software, una compañía de desarrollo de software a medida. Diseñamos aplicaciones web inteligentes, rentables e intuitivas, aplicaciones móviles(iOS/Android) que ayudan a optimizar los procesos de las empresas, así como a crear nuevas fuentes de ingresos para empresas nuevas y establecidas.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1780,6 +1782,560 @@ class Layout_View
     {
         ob_start();
         ?>
+        <section class="section-lg bg-default">
+            <div class="container">
+                <div class="row row-50">
+                    <div class="col-md-6">
+                        <h3>Nuestro enfoque para software a medida</h3>
+                        <p>Adoptamos un enfoque único al fusionar los métodos tradicionales y los nuevos para desarrollar software de calidad a gran velocidad, al mismo tiempo que conservamos nuestro toque personal y nuestra actitud exigente con la planificación y desarrollo.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Agenda tu cita</h3>
+                        <p>Nos encanta conocer clientes potenciales o existentes. Llámenos y conozca al equipo que analiza, visualiza, crea y prueba su software, así como la demostración de algunos de nuestros productos únicos y emocionantes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-accent">
+            <div class="container">
+                <div class="row justify-content-md-center align-items-lg-end">
+                    <div class="col-md-8 col-lg-6 section-xl">
+                        <h3>Desarrollo de software de confianza</h3>
+                        <p>En CRC-Software hemos acumulado experiencia considerable en una variedad de sectores: públicos y privados, enfocados en los consumidores y las empresas y sin fines de lucro. Hemos ayudado a empresas que van desde empresas nuevas y empresas, pequeñas empresas administradas por sus propietarios hasta grandes organizaciones públicas</p><a class="button button-gray-light-outline" href="about.html#">Contactanos</a>
+                    </div>
+                    <div class="col-md-8 col-lg-6">
+                        <div class="cat-img-group">
+                            <div><img src="/images/cat-2-507x508.jpg" alt="" width="507" height="508" />
+                            </div>
+                            <div><img src="/images/cat-1-326x427.jpg" alt="" width="326" height="427" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getOurTeamAboutES()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+            <div class="container">
+                <h3>Nuestro equipo de trabajo</h3>
+                <p>El equipo de CRC-Software mezcla todos los ingredientes que consideramos necesarios para una empresa de desarrollo de software exitosa. Contamos con desarrolladores de software. Mentes analíticas que pueden comprender los matices de los negocios de nuestros clientes, los gerentes y diseñadores metódicos de proyectos, la gestión dirigida con un enfoque de calidad y entrega, y los innovadores que transforman la forma en que vemos las cosas.</p>
+                <div class="row row-50 justify-content-sm-center">
+                    <div class="col-md-6 col-lg-4">
+                        <!-- Thumb corporate-->
+                        <div class="thumb thumb-corporate">
+                            <div class="thumb-corporate__main"><img src="/images/brian-king-480x362.jpg" alt="" width="480" height="362" />
+                                <div class="thumb-corporate__overlay">
+                                    <ul class="list-inline-sm thumb-corporate__list">
+                                        <li>
+                                            <a class="icon-sm fa-facebook icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-twitter icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-google-plus icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-vimeo icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-youtube icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-pinterest-p icon" href="about.html#"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="thumb-corporate__caption">
+                                <p class="thumb__title"><a href="team-member-profile.html">Raul Catro</a></p>
+                                <p class="thumb__subtitle">Director</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <!-- Thumb corporate-->
+                        <div class="thumb thumb-corporate">
+                            <div class="thumb-corporate__main"><img src="/images/amanda-smith-480x362.jpg" alt="" width="480" height="362" />
+                                <div class="thumb-corporate__overlay">
+                                    <ul class="list-inline-sm thumb-corporate__list">
+                                        <li>
+                                            <a class="icon-sm fa-facebook icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-twitter icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-google-plus icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-vimeo icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-youtube icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-pinterest-p icon" href="about.html#"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="thumb-corporate__caption">
+                                <p class="thumb__title"><a href="team-member-profile.html">Cynthia Gonzalez</a></p>
+                                <p class="thumb__subtitle">Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <!-- Thumb corporate-->
+                        <div class="thumb thumb-corporate">
+                            <div class="thumb-corporate__main"><img src="/images/george-nelson-418x315.jpg" alt="" width="418" height="315" />
+                                <div class="thumb-corporate__overlay">
+                                    <ul class="list-inline-sm thumb-corporate__list">
+                                        <li>
+                                            <a class="icon-sm fa-facebook icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-twitter icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-google-plus icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-vimeo icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-youtube icon" href="about.html#"></a>
+                                        </li>
+                                        <li>
+                                            <a class="icon-sm fa-pinterest-p icon" href="about.html#"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="thumb-corporate__caption">
+                                <p class="thumb__title"><a href="team-member-profile.html">Arian Falcon</a></p>
+                                <p class="thumb__subtitle">Disenador Grafico</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        $method = ob_get_contents();
+        ob_end_clean();
+        return $method;
+    }
+    
+    public function getAplicacionesParalax()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+<<<<<<< HEAD
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <h3 class="">Software operacional</h3>
+                            <p>Si está buscando una compañía confiable y de buena reputación para construir su software operativo a medida, ha encontrado la compañía adecuada.</p>
+                            <a class="button button-gray-light-outline" href="/servicios/">Ver mas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="object-wrap__body object-wrap__body-sizing-1 object-wrap__body-md-right bg-image" style="background-image: url(images/ep-img1.jpg)"></div>
+        </section>
+        <!-- Content Driven Design-->
+        <section class="negro section-xl bg-default">
+            <div class="container">
+                <div class="row justify-content-md-center flex-lg-row-reverse align-items-lg-center justify-content-lg-between row-50">
+                    <div class="col-md-9 col-lg-5">
+                        <h3>Desarrollo de productos</h3>
+                        <p>podemos diseñar soluciones basadas en la nube o de contracción para productos verticales múltiples para licencias o reventa.</p>
+                        <a class="button button-gray-light-outline" href="/servicios/">Ver mas</a>
+                    </div>
+                    <div class="col-md-9 col-lg-6"><img src="<?php echo $this->data['info']['url']; ?>images/crc4.jpg" alt="" width="652" height="491" />
+=======
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Desarrollo de aplicaciones empresariales a medida de CRC</h2>
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getContenAplicaciones()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3>Desarrollo de aplicaciones empresariales a medida de CRC</h3>
+              <p class="texto">Ya sea que necesite un sistema para mejorar su servicio al cliente, aumentar la efectividad de su negocio, optimizar sus procesos o aumentar sus ventas (ya sea a través de la experiencia del cliente front-end o de back-end), podemos crear aplicaciones comerciales inteligentes, rentables e intuitivas para ayudarte.
+
+            Trabajaremos con usted para comprender sus procesos comerciales y el desafío que está tratando de resolver, y luego le sugeriremos el tipo de desarrollo de aplicaciones que funcionaría mejor para usted, como por ejemplo:</p>
+                <ul class="list-marked texto">
+                <li>una aplicación alojada, basada en la web con una base de datos remota, local, sincronizada o multi-tenant back-end de la base de datos</li>
+                <li>un sitio web alojado, front-end impulsado por una base de datos</li>
+                <li>una aplicación alojada, basada en web con un sistema CRM integral</li>
+                <li>una combinación de sistemas front-end, back-end y portal de proveedor / cliente alojados</li>
+                <li>una aplicación de escritorio con bases de datos remotas (en la nube) o bases de datos locales que se pueden sincronizar / replicar con sistemas centrales de bases de datos</li>
+                <li>aplicaciones para dispositivos móviles y tabletas con bases de datos locales y en la nube</li>
+              </ul>
+            </div>
+            <!--div class="col-md-10">
+              <h5>Las aplicaciones a medida que hemos creado incluyen:</h5>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong>Mensajeria Segura</strong></li>
+                <li><strong>Clientes que pueden iniciar sesión desde la oficina, el hogar o un móvil: acceso más rápido a lo que necesitan, cuando lo deseen</strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>-->
+          </div>
+        </div>
+      </section>
+        
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    
+    public function getDesarrolloWeb()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2> Desarrollo de sitios web</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getContenidoWeb()
+        {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3>¿Qué es una aplicación web?</h3>
+              <p class="texto">
+                  Una aplicación web es un programa de software que utiliza con un navegador de Internet, de la misma manera que una aplicación móvil es un programa de software que utiliza en su dispositivo móvil.<br>
+                  Los últimos años han visto una proliferación de aplicaciones web. Lo más probable es que su popularidad se deba a su facilidad de uso: cualquier persona con un navegador conectado a Internet puede acceder a ellos, atienden las necesidades de los usuarios móviles (ya que los teléfonos inteligentes son la principal forma en que las personas acceden a Internet). y se pueden implementar rápidamente y casi sin necesidad de instalación por parte del usuario.<br>
+                  Si necesita una aplicación web interna para ayudar a administrar los gastos del personal, una aplicación web que puede revender a sus clientes o una que revolucionará su servicio al cliente, trabajaremos con usted para construir rápida e inteligentemente una herramienta potente e intuitiva.<br>
+                  A partir de ahí, es un proceso simple que comienza cuando nos sentamos con usted para comprender su negocio, lo que su nueva aplicación necesita poder entregar y a quién. Las posibles opciones incluyen:
+                </p>
+                <ul class="list-marked texto">
+                <li> Una aplicación web alojada con un back-end de base de datos remoto, local, sincronizado o multitendado</li>
+                <li> Una combinación de sistemas de front-end, back-end.</li>
+                <li> Una aplicación web que incluye un completo back-end CRM</li>
+                <li> Una aplicación web que complementa un nuevo sitio web o el existente</li>
+                <li> Permitir a los usuarios agregar nuevos campos, definir cuadros desplegables, crear nuevos formularios y generar informes personalizados según sea necesario</li>
+                <li> Fuentes diarias de datos de múltiples bases de datos para asegurarse de que la aplicación siempre use la información correcta y actualizada del cliente</li>
+                <li> Usar permisos de acuerdo con el rol de una persona y los derechos de acceso</li>
+               
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3>Aplicaciones web responsivas</h3>
+              <p class="texto">
+                Como era de esperar, todas las aplicaciones web que construimos son "receptivas". Esto significa que se ven muy bien y funcionan perfectamente en cualquier tamaño de pantalla: una PC de escritorio, tableta o teléfono móvil. Hacemos esto adaptando menús, controles y otros elementos visuales para que se ajusten al dispositivo en función del ancho y alto de la pantalla actual, asegurando que el usuario siempre obtenga la mejor experiencia posible, independientemente del dispositivo que esté usando. Puede ver esto en acción cambiando el tamaño de la ventana en este sitio web o visitándola en su teléfono inteligente; vea cómo todo “simplemente funciona”.
+                </p>
+                <!--<ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>-->
+                
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getMovil()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Desarrollo de aplicaciones web</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getContenidoApp()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3>Expertos desarrolladores de aplicaciones móviles</h3>
+              <p class="texto">
+                  No hay duda de que una aplicación móvil concebida estratégicamente puede obtener grandes recompensas a la hora de establecer relaciones con sus clientes, pero como el 73% de los usuarios espera que una aplicación móvil sea más fácil de usar que un sitio web móvil, es importante que esté al día. - Ahí es donde podemos ayudarte.<br>
+
+                  Mientras creará el concepto detrás de la aplicación móvil, podemos proporcionar un enfoque completo en la experiencia del usuario. Además de tener que lucir bien, sabemos que la aplicación móvil que creamos para usted debe ser.
+                </p>
+                <ul class="list-marked texto">
+                <li>Sencilla, intuitiva y funcional</li>
+                <li>Atractiva</li>
+                <li>Rápida velocidad de carga de la aplicación</li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3>Plataformas de aplicaciones móviles: iOS y Android.</h3>
+              <p class="texto">
+                  En CRC, nos esforzamos por la eficiencia y la rentabilidad de nuestros clientes. Nos es ajeno construir la misma aplicación varias veces para atender a los "dos grandes" plataformas móviles: Android y iOS.
+                </p>
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getBaseDatos()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Base de datos a medida</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+     
+    public function getContenidoDatos()
+    {
+        ob_start();
+        ?>
+         <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto">
+                  Desde la creación de un sistema para monitorear el desperdicio de alimentos en restaurantes, hasta una aplicación que interactúa ; hemos trabajado con una amplia gama de industrias para crear soluciones integradas en hardware que impulsan la innovación, crean rentabilidad y automatizan procesos.
+                </p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>     
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getSistema()
+        {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Sistemas CRM a medida</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+        
+    public function getContenidoCRM()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getMigracion()
+    {
+        ob_start();
+        ?>
+<<<<<<< HEAD
         <section class="section-lg bg-default">
             <div class="container">
                 <div class="row row-50">
@@ -1809,20 +2365,37 @@ class Layout_View
                             <div><img src="/images/cat-1-326x427.jpg" alt="" width="326" height="427" />
                             </div>
                         </div>
+=======
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Migracion de datos</h2>
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
         <?php
-        $method = ob_get_contents();
+        $header = ob_get_contents();
         ob_end_clean();
-        return $method;
+        return $header;
     }
     
-    public function getOurTeamAboutES()
+    public function getContenidoMigracion()
     {
         ob_start();
         ?>
+<<<<<<< HEAD
         <!--<section class="section-lg bg-default text-center">
             <div class="container">
                 <h3>Nuestro equipo de trabajo</h3>
@@ -1928,13 +2501,50 @@ class Layout_View
                         </div>
                     </div>
                 </div>
+=======
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+>>>>>>> 02eb541743a9f441fc5bbeb8f407bd581b8a3196
             </div>
-        </section>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>
         <?php
-        $method = ob_get_contents();
+        $header = ob_get_contents();
         ob_end_clean();
-        return $method;
+        return $header;
     }
+    
+    
     
     public function getBanerServicesES()
     {
