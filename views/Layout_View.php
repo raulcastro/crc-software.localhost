@@ -126,10 +126,56 @@ class Layout_View
                             echo self::getIndexContact();
                         break;
                         
-                            
-                            
+                        case 'sistemas-operacionales':
+                            echo self::getOperacional();
+                            echo self::getContenidoOperacional();
+                            echo self::getIndexContact();
+                        break;
                                 
-                        
+                         case 'modernizacion-software':
+                            echo self::getModernizacion();
+                            echo self::getContenidoSoftware();
+                            echo self::getIndexContact();
+                        break;
+                                
+                        case 'consultoria-software':
+                            echo self::getConsultoria();
+                            echo self::getContenidoConsultoria();
+                            echo self::getIndexContact();
+                        break;
+                            
+                        case 'rescate-software':
+                            echo self::getRescateSoftware();
+                            echo self::getContenidoRescate();
+                            echo self::getIndexContact();
+                        break;
+                            
+                        case 'recuperacion-codigo':
+                            echo self::getRecuperacionCodigo();
+                            echo self::getContenidoCodigo();
+                            echo self::getIndexContact();
+                        break;
+                                
+                        case 'soporte-de-aplicaciones':
+                            echo self::getSoporteAplicaciones();
+                            echo self::getContenidoSoporte();
+                            echo self::getIndexContact();
+                        break;
+                            
+                        case 'hosting':
+                            echo self::getHosting();
+                            echo self::getContenidoHosting();
+                            echo self::getIndexContact();
+                        break;
+                            
+                        case 'desarrollo-de-software':
+                            echo self::getSoftware();
+                            echo self::getContenidoDe();
+                            echo self::getIndexContact();
+                        break;
+                                
+                            
+                            
                         case 'contacto':
                             echo self::getContactFormES();
                         break;
@@ -690,8 +736,598 @@ class Layout_View
         return $header;
     }
     
+     public function getOperacional()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Sistemas operacionales</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+         <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
     
+    public function getContenidoOperacional()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>
         
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+     
+    public function getModernizacion()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Modernizacion de software heredado</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getContenidoSoftware()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+        
+     public function getConsultoria()
+    {
+        ob_start();
+        ?>
+          <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Consultoria de software</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+     public function getContenidoConsultoria()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getRescateSoftware()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Rescatamos su proyecto software</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    
+    public function getContenidoRescate()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getRecuperacionCodigo()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Recuperacion de codigo fuente</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+     public function getContenidoCodigo()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>
+        
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+     public function getSoporteAplicaciones()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Soporte de aplicaciones</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+         <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+     public function getContenidoSoporte()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    
+    public function getHosting()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Hosting</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    
+    public function getContenidoHosting()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getSoftware()
+    {
+        ob_start();
+        ?>
+        <section class="text-center">
+        <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+          <div class="parallax-content">
+            <div class="parallax-header__inner">
+              <div class="parallax-header__content">
+                <div class="container">
+                  <div class="row justify-content-sm-center">
+                    <div class="col-md-10 col-xl-8">
+                      <h2>Desarrollo de software</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+     public function getContenidoDe()
+    {
+        ob_start();
+        ?>
+        <section class="section-lg bg-default text-center">
+        <div class="container">
+          <div class="row row-50 justify-content-sm-center">
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="col-md-10">
+              <h3></h3>
+              <p class="texto"></p>
+                <ul class="list-marked texto">
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                <li><strong></strong></li>
+                </ul><br><br>
+                
+                <h5></h5>
+                <p class="texto"></p><br><br><br>
+                
+              </div>
+          </div>
+        </div>
+      </section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    
+    
+    
     public function getFooter()
     {
         ob_start();
@@ -801,27 +1437,27 @@ class Layout_View
                             <li>
                                 <dl class="list-terms-minimal">
                                     <dt>E-mail</dt>
-                                    <dd><a href="mailto:#">info@crc-software</a></dd>
+                                    <dd><a href="/contacto/">info@crc-software</a></dd>
                                 </dl>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
+                    <!--<div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
 
                         <ul class="list-inline-xxs">
                             <li>
-                                <a class="icon icon-xxs icon-primary fa fa-facebook" href="services.html#"></a>
+                                <a class="icon icon-xxs icon-primary fa fa-facebook" href="/"></a>
                             </li>
                             <li>
-                                <a class="icon icon-xxs icon-primary fa fa-twitter" href="services.html#"></a>
+                                <a class="icon icon-xxs icon-primary fa fa-twitter" href="/"></a>
                             </li>
                             <li>
-                                <a class="icon icon-xxs icon-primary fa fa-instagram" href="services.html#"></a>
+                                <a class="icon icon-xxs icon-primary fa fa-instagram" href="/"></a>
                             </li>
                         </ul>
 
-                    </div>
+                    </div>-->
                 </div>
             </div>
 
@@ -856,7 +1492,7 @@ class Layout_View
                         <div class="col-lg-5">
                             <h3 class="">Software operacional</h3>
                             <p>Si está buscando una compañía confiable y de buena reputación para construir su software operativo a medida, ha encontrado la compañía adecuada.</p>
-                            <a class="button button-gray-light-outline" href="services.html">Ver mas</a>
+                            <a class="button button-gray-light-outline" href="/servicios/">Ver mas</a>
                         </div>
                     </div>
                 </div>
@@ -870,7 +1506,7 @@ class Layout_View
                     <div class="col-md-9 col-lg-5">
                         <h3>Desarrollo de productos</h3>
                         <p>podemos diseñar soluciones basadas en la nube o de contracción para productos verticales múltiples para licencias o reventa.</p>
-                        <a class="button button-gray-light-outline" href="services.html">Ver mas</a>
+                        <a class="button button-gray-light-outline" href="/servicios/">Ver mas</a>
                     </div>
                     <div class="col-md-9 col-lg-6"><img src="<?php echo $this->data['info']['url']; ?>images/crc4.jpg" alt="" width="652" height="491" />
                     </div>
@@ -1154,6 +1790,7 @@ class Layout_View
                     <div class="col-md-6">
                         <h3>Agenda tu cita</h3>
                         <p>Nos encanta conocer clientes potenciales o existentes. Llámenos y conozca al equipo que analiza, visualiza, crea y prueba su software, así como la demostración de algunos de nuestros productos únicos y emocionantes.</p>
+                        <a class="button button-gray-light-outline" href="/contacto/">Ver mas</a>
                     </div>
                 </div>
             </div>
@@ -1163,7 +1800,7 @@ class Layout_View
                 <div class="row justify-content-md-center align-items-lg-end">
                     <div class="col-md-8 col-lg-6 section-xl">
                         <h3>Desarrollo de software de confianza</h3>
-                        <p>En CRC-Software hemos acumulado experiencia considerable en una variedad de sectores: públicos y privados, enfocados en los consumidores y las empresas y sin fines de lucro. Hemos ayudado a empresas que van desde empresas nuevas y empresas, pequeñas empresas administradas por sus propietarios hasta grandes organizaciones públicas</p><a class="button button-gray-light-outline" href="about.html#">Contactanos</a>
+                        <p>En CRC-Software hemos acumulado experiencia considerable en una variedad de sectores: públicos y privados, enfocados en los consumidores y las empresas y sin fines de lucro. Hemos ayudado a empresas que van desde empresas nuevas y empresas, pequeñas empresas administradas por sus propietarios hasta grandes organizaciones públicas</p><a class="button button-gray-light-outline" href="/contacto/">Contactanos</a>
                     </div>
                     <div class="col-md-8 col-lg-6">
                         <div class="cat-img-group">
@@ -1186,14 +1823,14 @@ class Layout_View
     {
         ob_start();
         ?>
-        <section class="section-lg bg-default text-center">
+        <!--<section class="section-lg bg-default text-center">
             <div class="container">
                 <h3>Nuestro equipo de trabajo</h3>
                 <p>El equipo de CRC-Software mezcla todos los ingredientes que consideramos necesarios para una empresa de desarrollo de software exitosa. Contamos con desarrolladores de software. Mentes analíticas que pueden comprender los matices de los negocios de nuestros clientes, los gerentes y diseñadores metódicos de proyectos, la gestión dirigida con un enfoque de calidad y entrega, y los innovadores que transforman la forma en que vemos las cosas.</p>
                 <div class="row row-50 justify-content-sm-center">
                     <div class="col-md-6 col-lg-4">
                         <!-- Thumb corporate-->
-                        <div class="thumb thumb-corporate">
+                        <!--<div class="thumb thumb-corporate">
                             <div class="thumb-corporate__main"><img src="/images/brian-king-480x362.jpg" alt="" width="480" height="362" />
                                 <div class="thumb-corporate__overlay">
                                     <ul class="list-inline-sm thumb-corporate__list">
@@ -1226,7 +1863,7 @@ class Layout_View
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <!-- Thumb corporate-->
-                        <div class="thumb thumb-corporate">
+                        <!--<div class="thumb thumb-corporate">
                             <div class="thumb-corporate__main"><img src="/images/amanda-smith-480x362.jpg" alt="" width="480" height="362" />
                                 <div class="thumb-corporate__overlay">
                                     <ul class="list-inline-sm thumb-corporate__list">
@@ -1259,7 +1896,7 @@ class Layout_View
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <!-- Thumb corporate-->
-                        <div class="thumb thumb-corporate">
+                        <!--<div class="thumb thumb-corporate">
                             <div class="thumb-corporate__main"><img src="/images/george-nelson-418x315.jpg" alt="" width="418" height="315" />
                                 <div class="thumb-corporate__overlay">
                                     <ul class="list-inline-sm thumb-corporate__list">
@@ -1432,7 +2069,7 @@ class Layout_View
                     <div class="col-md-6 col-xl-4">
                         <div class="thumbnail-classic"><img src="/images/sistemas.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="sistemas-operacionales.html">Sistemas operacionales</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/sistemas-operacionales/">Sistemas operacionales</a></h5>
                                 <p>Si tiene que adaptar sus procesos o resolver brechas en la administración o funcionalidad de los sistemas, podría ser momento de considerar un nuevo sistema operativo.</p>
                             </div>
                         </div>
@@ -1440,7 +2077,7 @@ class Layout_View
                     <div class="col-md-6 col-xl-4">
                         <div class="thumbnail-classic"><img src="/images/moderno.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="modernizacion-software.html">Modernización de software heredado</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/modernizacion-software/">Modernización de software heredado</a></h5>
                                 <p>¿Harto de gastar dinero en un lento sistema de TI que no funciona? Le construiremos un reemplazo poderoso que ayude, no obstaculice su negocio.</p>
                             </div>
                         </div>
@@ -1486,16 +2123,16 @@ class Layout_View
                     <div class="col-md-6 col-xl-4">
                         <div class="thumbnail-classic"><img src="/images/consultoria.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5 class=""><a class="thumbnail-classic-title" href="consultoria-software.html">Consultoría de software</a></h5>
+                                <h5 class=""><a class="thumbnail-classic-title" href="/consultoria-software/">Consultoría de software</a></h5>
                                 <p>Si necesita ayuda para identificar las barreras tecnológicas que se interponen entre usted y un negocio más rentable, nuestros consultores de software pueden ayudarlo.
                                 </p>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
                         <div class="thumbnail-classic"><img src="/images/4.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="rescatamos-su-proyecto.html">Rescatamos su proyecto Software</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/rescate-software/">Rescatamos su proyecto Software</a></h5>
                                 <p>Si su proyecto de software a medida ha fallado o si se ha caído con su desarrollador de software, podemos rápidamente poner su negocio nuevamente en marcha.</p>
                             </div>
                         </div>
@@ -1503,7 +2140,7 @@ class Layout_View
                     <div class="col-md-6 col-xl-4">
                         <div class="thumbnail-classic"><img src="/images/codigo.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="recuperacion-codigo-fuente.html">Recuperación del código fuente</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/recuperacion-codigo/">Recuperación del código fuente</a></h5>
                                 <p>Podemos ayudar a aliviar el dolor de cabeza del código fuente perdido al recuperarlo o volver a desarrollarlo para usted. También podemos reconstruir repositorios de código fuente roto.</p>
                             </div>
                         </div>
@@ -1511,7 +2148,7 @@ class Layout_View
                     <div class="col-md-6 col-xl-4">
                         <div class="thumbnail-classic"><img src="/images/mantenimiento-de-aplicaciones.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="soporte-de-aplicaciones.html">Soporte y mantenimiento de aplicaciones</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/soporte-de-aplicaciones/">Soporte y mantenimiento de aplicaciones</a></h5>
                                 <p>Desde la solución de errores prioritarios hasta nuestro servicio de asistencia interna; Apoyaremos y mantendremos su software a lo largo de su ciclo de vida, incluso si no lo construimos.
                                 </p>
                             </div>
@@ -1520,7 +2157,7 @@ class Layout_View
                     <div class="col-md-6 col-xl-4">
                         <div class="thumbnail-classic"><img src="/images/webhosting.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="hosting.html">Hosting</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/hosting/">Hosting</a></h5>
                                 <p>Si necesita una forma simple y rentable de acceder a su nueva aplicación de software, pruebe nuestro servicio de alojamiento brindado a través de los líderes de la industria.</p>
                             </div>
                         </div>
@@ -1528,7 +2165,7 @@ class Layout_View
                     <div class="col-md-6 col-xl-4">
                         <div class="thumbnail-classic"><img src="/images/desarrollo-software.png" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="desarrollo-software.html">Desarrollo de software</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/desarrollo-de-software/">Desarrollo de software</a></h5>
                                 <p> Permítanos ayudarlo con el aspecto más desafiante de comenzar un negocio: Desarrollar su aplicación de software</p>
                             </div>
                         </div>

@@ -206,7 +206,7 @@ class generalBackend
                 
                  case 'base-de-datos':
                 $data['seo'] = array(
-                    'title'         => "abase-de-datos",
+                    'title'         => "base-de-datos",
                     'author'        => "CRC SW",
                     'description'   => "description",
                     'subject'       => "subject",
@@ -237,6 +237,93 @@ class generalBackend
                 
                 break;
                 
+                case 'sistemas-operacionales':
+                $data['seo'] = array(
+                    'title'         => "sistemas-operacionales",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
+                case 'modernizacion-software':
+                $data['seo'] = array(
+                    'title'         => "modernizacion-software",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
+                case 'consultoria-software':
+                $data['seo'] = array(
+                    'title'         => "consultoria-software",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
+                case 'rescate-software':
+                $data['seo'] = array(
+                    'title'         => "rescate-software",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
+                case 'recuperacion-codigo':
+                $data['seo'] = array(
+                    'title'         => "recuperacion-codigo",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
+                 case 'soporte-de-aplicaciones':
+                $data['seo'] = array(
+                    'title'         => "soporte de aplicaciones",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
+                 case 'hosting':
+                $data['seo'] = array(
+                    'title'         => "hosting",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
+                case 'desarrollo-de-software':
+                $data['seo'] = array(
+                    'title'         => "desarrollo de software",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
 		    
 			default:
 			break;

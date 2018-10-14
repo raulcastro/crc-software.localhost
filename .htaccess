@@ -31,6 +31,16 @@ RewriteRule ^aplicaciones-moviles/$ 		/aplicaciones-moviles.php?section=moviles
 RewriteRule ^base-de-datos/$ 		/base-de-datos.php?section=base-de-datos
 RewriteRule ^sistema-crm/$ 		/sistema-crm.php?section=sistema
 RewriteRule ^migracion-de-datos/$ 		/migracion-de-datos.php?section-=migracion-de-datos
+RewriteRule ^sistemas-operacionales/$ 	/sistemas-operacionales.php?section-=operacionales
+RewriteRule ^modernizacion-software/$ 	/modernizacion-software.php?section-=modernizacion
+RewriteRule ^consultoria-software/$ 	/consultoria-software.php?section-=consultoria
+RewriteRule ^rescate-software/$ 	/rescate-software.php?section-=rescate
+RewriteRule ^recuperacion-codigo/$ 	/recuperacion-codigo.php?section-=codigo
+RewriteRule ^soporte-de-aplicaciones/$ 	/soporte-de-aplicaciones.php?section-=soporte
+RewriteRule ^hosting/$ 	/hosting.php?section-=hosting
+RewriteRule ^desarrollo-de-software/$ 	/desarrollo-de-software.php?section-=software
+
+
 
 #RewriteRule ^gallery/from/([0-9]+)/$ /gallery.php?from=$1&section=gallery
 #RewriteRule ^gallery/from/([0-9]+)/page/([0-9]+)/$ /gallery.php?from=$1&section=gallery&page=$2
