@@ -25,6 +25,12 @@ RewriteRule ^servicios/$ 		/servicios.php?section=servicios
 RewriteRule ^contacto/$ 		/contacto.php?section=contacto
 RewriteRule ^portafolio/$ 		/portafolio.php?section=portafolio
 RewriteRule ^blog/$ 		/blog.php?section=blog
+RewriteRule ^aplicaciones/$ 		/aplicaciones.php?section=aplicaciones
+RewriteRule ^desarrollo-web/$ 		/desarrollo-web.php?section=desarrollo-web
+RewriteRule ^aplicaciones-moviles/$ 		/aplicaciones-moviles.php?section=moviles
+RewriteRule ^base-de-datos/$ 		/base-de-datos.php?section=base-de-datos
+RewriteRule ^sistema-crm/$ 		/sistema-crm.php?section=sistema
+RewriteRule ^migracion-de-datos/$ 		/migracion-de-datos.php?section-=migracion-de-datos
 
 #RewriteRule ^gallery/from/([0-9]+)/$ /gallery.php?from=$1&section=gallery
 #RewriteRule ^gallery/from/([0-9]+)/page/([0-9]+)/$ /gallery.php?from=$1&section=gallery&page=$2

@@ -82,7 +82,7 @@ class generalBackend
 		        $data['seo'] = array(
 		        'title'           => "Nosotros",
 		        'author'          => "CRC Sw",
-		        'description'     => "description",
+		        'description'     => "compañía de desarrollo de software a medida en Mexico,                     que desarrolla aplicaciones de software                                        personalizadas, aplicaciones móviles y ofrece                                  consultoría de software en todo el mundo",
 		        'subject'         => "subject",
 		        'keywords'        => "keywords"
 		            );
@@ -101,7 +101,7 @@ class generalBackend
             case 'gallery':
 		        $data['seo'] = array(
                     'title'         => "Gallery",
-                    'author'        => "Michelle",
+                    'author'        => "CRC-SOFTWARE",
                     'description'   => "description",
                     'subject'       => "subject",
                     'keywords'      => "keywords"
@@ -132,7 +132,7 @@ class generalBackend
             case 'testimonials':
 		        $data['seo'] = array(
                     'title'         => "Testimonials",
-                    'author'        => "Michelle",
+                    'author'        => "CRC-SOFTWARE",
                     'description'   => "description",
                     'subject'       => "subject",
                     'keywords'      => "keywords"
@@ -141,9 +141,9 @@ class generalBackend
                 
             case 'blog':
 		        $data['seo'] = array(
-                    'title'         => "Blog",
-                    'author'        => "Michelle",
-                    'description'   => "description",
+                    'title'         => "CRC-software",
+                    'author'        => "CRC-software",
+                    'description'   => "compañía de desarrollo de software a medida en Mexico,                     que desarrolla aplicaciones de software                                   personalizadas, aplicaciones móviles y ofrece                             consultoría de software en todo el mundo",
                     'subject'       => "subject",
                     'keywords'      => "keywords"
 		        );
@@ -151,15 +151,92 @@ class generalBackend
 		        $data['blog'] = $this->model->getAllBlogPosts();
             break;
                 
-            case 'contact':
+            case 'contacto':
 		        $data['seo'] = array(
                     'title'         => "Contact",
-                    'author'        => "Michelle",
+                    'author'        => "CRC SW",
                     'description'   => "description",
                     'subject'       => "subject",
                     'keywords'      => "keywords"
 		        );
             break;
+                
+            case 'portafolio':
+                $data['seo'] = array(
+                    'title'         => "Portafolio",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+            break;
+                
+            case 'aplicaciones':
+                $data['seo'] = array(
+                    'title'         => "Aplicaciones",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
+                case 'desarrollo-web':
+                $data['seo'] = array(
+                    'title'         => "desarrollo-web",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
+                case 'aplicaciones-moviles':
+                $data['seo'] = array(
+                    'title'         => "aplicaciones-moviles",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
+                 case 'base-de-datos':
+                $data['seo'] = array(
+                    'title'         => "abase-de-datos",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
+                case 'sistema-crm':
+                $data['seo'] = array(
+                    'title'         => "sistema-crm",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
+                case 'migracion-de-datos':
+                $data['seo'] = array(
+                    'title'         => "migracion-de-datos",
+                    'author'        => "CRC SW",
+                    'description'   => "description",
+                    'subject'       => "subject",
+                    'keywords'      => "keywords"
+		        );
+                
+                break;
+                
 		    
 			default:
 			break;
