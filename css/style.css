@@ -27348,6 +27348,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .slider{
     color: #fff;
-   
-    
+}
+
+.title-swipper {
+    color: #343434!important;
 }

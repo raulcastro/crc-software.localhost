@@ -15,22 +15,19 @@ class generalBackend
 	{
 		$data 		= array();
 		$appInfo = $this->model->getGeneralAppInfo();
-// 		Info of the Application
-		
-		
+// 		Basic app info
 		$data['info'] = array( 
-            'title' 		    => "CRC Software",
+            'title' 		=> "CRC Software",
             'siteName' 		=> "CRC Software",
-		    'url' 			=> "http://".$_SERVER['HTTP_HOST'].'/',
+		    'url' 			=> "https://".$_SERVER['HTTP_HOST'].'/',
 		    'urlMedia' 	    => $appInfo['url'],
-            'location'		=> "",
-            'creator' 		=> "CRC Software",
-            'creatorUrl' 	=> "",
+            'creator' 		=> "CRC Software, crc-software.com",
+            'creatorUrl' 	=> "https://crc-software.com",
             'twitter' 		=> "",
             'facebook' 		=> "",
             'instagram'		=> "",
-            'email'			=> "",
-            'lang'			=> "en"
+            'email'			=> "info@crc-software.com",
+            'lang'			=> "ES"
 		);
 		
 		//$data['categories'] = $this->model->getBlogCategories();
@@ -39,43 +36,12 @@ class generalBackend
 		{
 		    case 'index':
 		        $data['seo'] = array(
-                    'title'         => "Home",
-                    'author'        => "CRC Software",
-                    'description'   => "description",
-                    'subject'       => "subject",
-                    'keywords'      => "keywords"
+                    'title'         => "Inicio",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "CRC Software se especializa en programación de CRM, Página Web, SEO, Aplicaciones iOS, Android, nos encontramos en Playa del Carmen",
+                    'subject'       => "CRC Software, Ingeniería de Software",
+                    'keywords'      => "CRC Software, Playa del Carmen, Canadá, Website Development, Páginas Web, Desarrollo web, SEO"
 		        );
-                
-                
-		        
-		        $data['posts'] = $this->model->getAllBlogPosts();
-		        $data['months'] = $this->model->getMonthsBlog();
-		        
-		        $itemsPerPage = 2;
-		        $total = sizeof($data['posts']);
-		        $data['posts']['total'] = $total;
-		        $data['posts']['limit'] = $itemsPerPage;
-		        $data['posts']['ceil'] = ceil($total / $itemsPerPage);
-		        
-// 		        var_dump($data['posts']);
-		        
-		        $from = 0;
-
-		        if (!isset($_GET['from']))
-		        {
-		            $from = 0;
-		        }
-		        else
-		        {
-		            $from = $_GET['from'];
-		        }
-		        
-		        /*if ($_GET['category'] == "all")
-		        {
-		            $data['page'] = $this->model->getPostsRange($from, $data['posts']['limit']);
-		        }*/
-		        
-// 		        var_dump($data['page']);
             break;
             
 		    case 'nosotros':
