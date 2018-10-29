@@ -39,7 +39,7 @@ class Layout_View
         <meta name="format-detection" content="telephone=no">
         <meta name="description" content="<?php echo $this->data['seo']['description']; ?>">
         <meta name="keywords" content="<?php echo $this->data['seo']['keywords']; ?>">
-        <meta name="language" content="<?php echo $this->data['seo']['lang']; ?>">
+        <meta name="language" content="<?php echo $this->data['info']['lang']; ?>">
         <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
         <?php 
             echo self::getCommonStyle();

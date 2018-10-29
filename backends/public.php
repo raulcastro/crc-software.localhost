@@ -19,7 +19,7 @@ class generalBackend
 		$data['info'] = array( 
             'title' 		=> "CRC Software",
             'siteName' 		=> "CRC Software",
-		    'url' 			=> "https://".$_SERVER['HTTP_HOST'].'/',
+		    'url' 			=> "http://".$_SERVER['HTTP_HOST'].'/',
 		    'urlMedia' 	    => $appInfo['url'],
             'creator' 		=> "CRC Software, crc-software.com",
             'creatorUrl' 	=> "https://crc-software.com",
@@ -40,7 +40,8 @@ class generalBackend
                     'author'        => "CRC Software, info@crc-software.com",
                     'description'   => "CRC Software se especializa en programación de CRM, Página Web, SEO, Aplicaciones iOS, Android, nos encontramos en Playa del Carmen",
                     'subject'       => "CRC Software, Ingeniería de Software",
-                    'keywords'      => "CRC Software, Playa del Carmen, Canadá, Website Development, Páginas Web, Desarrollo web, SEO"
+                    'keywords'      => "CRC Software, Playa del Carmen, Canadá, Website Development, Páginas Web, Desarrollo web, SEO",
+                    'lang'         => "es"
 		        );
             break;
             
