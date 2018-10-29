@@ -2235,7 +2235,7 @@ class Layout_View
                     <div class="col-md-7 col-lg-8">
                         <h3>Formulario de contacto</h3>
                         <!-- RD Mailform-->
-                        <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="http://livedemo00.template-help.com/wt_62267_v4/62267-default/bat/rd-mailform.php">
+                        <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="/bat/rd-mailform.php">
                             <div class="form-wrap form-wrap_icon linear-icon-man">
                                 <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
                                 <label class="form-label" for="contact-name">Nombre</label>
