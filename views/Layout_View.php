@@ -303,7 +303,7 @@ class Layout_View
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" >
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">

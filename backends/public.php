@@ -19,7 +19,7 @@ class generalBackend
 		$data['info'] = array( 
             'title' 		=> "CRC Software",
             'siteName' 		=> "CRC Software",
-		    'url' 			=> "http://".$_SERVER['HTTP_HOST'].'/',
+		    'url' 			=> "https://".$_SERVER['HTTP_HOST'].'/',
 		    'urlMedia' 	    => $appInfo['url'],
             'creator' 		=> "CRC Software, crc-software.com",
             'creatorUrl' 	=> "https://crc-software.com",
