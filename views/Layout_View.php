@@ -1318,8 +1318,8 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                             <!--<div class="vide_bg" data-vide-bg="video/video-lg" data-vide-options="posterType: jpg">-->
                             <div class="swiper-slide-caption text-center">
                                 <div class="container">
-                                    <h2 data-caption-animate="fadeInUpSmall title-swipper">CRC SOFTWARE</h2>
-                                    <p class="text-width-2 block-centered title-swipper" data-caption-animate="fadeInUpSmall" data-caption-delay="200" style="font-weight: 400;"><sup>No solo creamos aplicaciones de software. Proporcionamos soporte y alojamiento, ayudando a que su sistema funcione y a que sus usuarios estén contentos todo el tiempo que nos necesite. Incluso asumiremos software que no hemos creado, lo solucionaremos, lo mantendremos y lo ayudaremos a llevar su proyecto al siguiente nivel.</sup></p>
+                                    <h2 data-caption-animate="fadeInUpSmall">CRC SOFTWARE</h2>
+                                    <p class="text-width-2 block-centered" data-caption-animate="fadeInUpSmall" data-caption-delay="200" style="font-weight: 400;"><sup>No solo creamos aplicaciones de software. Proporcionamos soporte y alojamiento, ayudando a que su sistema funcione y a que sus usuarios estén contentos todo el tiempo que nos necesite. Incluso asumiremos software que no hemos creado, lo solucionaremos, lo mantendremos y lo ayudaremos a llevar su proyecto al siguiente nivel.</sup></p>
                                     <div class="group-lg group-middle"><a class="button button-black" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="/servicios/">Servicios</a><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="/contacto/">Contacto</a></div>
                                 </div>
                             </div>
