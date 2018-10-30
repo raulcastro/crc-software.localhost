@@ -23,14 +23,11 @@ class generalBackend
 		    'urlMedia' 	    => $appInfo['url'],
             'creator' 		=> "CRC Software, crc-software.com",
             'creatorUrl' 	=> "https://crc-software.com",
-            'twitter' 		=> "",
-            'facebook' 		=> "",
-            'instagram'		=> "",
+            'twitter' 		=> "https://twitter.com/CrcSoftware",
+            'facebook' 		=> "https://www.facebook.com/CRC-Software-245425266129619/",
             'email'			=> "info@crc-software.com",
-            'lang'			=> "ES"
+            'lang'			=> "es"
 		);
-		
-		//$data['categories'] = $this->model->getBlogCategories();
 		
 		switch ($section) 
 		{
@@ -38,62 +35,80 @@ class generalBackend
 		        $data['seo'] = array(
                     'title'         => "Inicio",
                     'author'        => "CRC Software, info@crc-software.com",
-                    'description'   => "CRC Software se especializa en programación de CRM, Página Web, SEO, Aplicaciones iOS, Android, nos encontramos en Playa del Carmen",
+                    'description'   => "CRC Software se especializa en programación de CRM, Páginas Web, SEO, Aplicaciones iOS, Android, nos encontramos en Playa del Carmen",
                     'subject'       => "CRC Software, Ingeniería de Software",
-                    'keywords'      => "CRC Software, Playa del Carmen, Canadá, Website Development, Páginas Web, Desarrollo web, SEO",
-                    'lang'         => "es"
+                    'keywords'      => "CRC Software, Playa del Carmen, Canadá, Website Development, Páginas Web, Desarrollo Web, SEO",
 		        );
             break;
             
 		    case 'nosotros':
 		        $data['seo'] = array(
 		        'title'           => "Nosotros",
-		        'author'          => "CRC Sw",
-		        'description'     => "compañía de desarrollo de software a medida en Mexico,                     que desarrolla aplicaciones de software                                        personalizadas, aplicaciones móviles y ofrece                                  consultoría de software en todo el mundo",
-		        'subject'         => "subject",
-		        'keywords'        => "keywords"
+		        'author'          => "CRC Software, info@crc-software.com",
+		        'description'     => "CRC Software, compañía mexicana localizada en Playa del Carmen, especialista en Desarollo Web, Aplicaciones iOS/Android, Bases de Datos, Consultoría de Software",
+		        'subject'         => "¿Quienes Somos? - CRC Software, Ingeniería de Software",
+		        'keywords'        => "CRC Software, Playa del Carmen, Desarrollo Web, Aplicaciones iOS/Android, Bases de Datos"
 		            );
 	        break;
                 
             case 'servicios':
 		        $data['seo'] = array(
-		        'title'           => "servicios",
-		        'author'          => "CRC Sw",
-		        'description'     => "description",
-		        'subject'         => "subject",
-		        'keywords'        => "keywords"
+		        'title'           => "Servicios",
+		        'author'          => "CRC Software, info@crc-software.com",
+		        'description'     => "CRC Software, compañía en Playa del Carmen que ofrece servicio especializados de Ingeniería de Software desde una Página Web, CRM hasta una Aplicación iOS/Android",
+		        'subject'         => "CRC Software, Servicios",
+		        'keywords'        => "CRC Software, Playa del Carmen, Aplicaciones iOS/Android, CRM, Configuración de Servidores Web"
 		            );
 	        break;
                 
-            case 'gallery':
-		        $data['seo'] = array(
-                    'title'         => "Gallery",
-                    'author'        => "CRC-SOFTWARE",
-                    'description'   => "description",
-                    'subject'       => "subject",
-                    'keywords'      => "keywords"
+            case 'aplicaciones':
+                $data['seo'] = array(
+                    'title'         => "Desarrollo de aplicaciones empresariales a medida",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "En CRC Software podemos desarrollar cualquier aplicación de Sw totalmente personalizada a las necesidades de tu empresa",
+                    'subject'       => "CRC Software, Desarrollo de aplicaciones empresariales a medida",
+                    'keywords'      => "CRC Software, Playa del Carmen, desarrollo de aplicaciones a medida, Páginas Web, Aplicaciones iOS, Aplicaciones Android"
 		        );
-		        
-		        $data['gallery'] = $this->model->getAllGalleryPhotos();
-		        
-		        $itemsPerPage = 12;
-		        $total = sizeof($data['gallery']);
-		        $data['gallery']['total'] = $total;
-		        $data['gallery']['limit'] = $itemsPerPage;
-		        $data['gallery']['ceil'] = ceil($total / $itemsPerPage);
-		        
-		        $from = 0;
-		        
-		        if (!isset($_GET))
-		        {
-		            $from = 0;
-		        }
-		        else 
-		        {
-		            $from = $_GET['from'];
-		        }
-		       
-		        $data['page'] = $this->model->getPhotoRange($_GET['from'], $data['gallery']['limit']);
+            break;
+                
+            case 'desarrollo-web':
+                $data['seo'] = array(
+                    'title'         => "Desarrollo Web Responsivo",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "En CRC Software somos especialistas en el desarrollo de Páginas web, destinados tanto para publicidad como para aplicaciones más complejas, totalmente adaptada a sus necesidades",
+                    'subject'       => "CRC Software, Desarrollo Web Responsivo",
+                    'keywords'      => "CRC Software, Desarrollo web, Páginas Responsivas, Web Sites, Playa del Carmen"
+                );
+            break;
+                
+            case 'aplicaciones-moviles':
+                $data['seo'] = array(
+                    'title'         => "Aplicaciones Móviles",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "CRC Software, expertos en desarrollo de aplicaciones móviles en iOS y Android, tanto para fines publicitarios como completas aplicaciones ",
+                    'subject'       => "CRC Software, Desarrollo de aplicaciones moviles",
+                    'keywords'      => "CRC Software, iOS, Android, Mobile Apps, iOS Apps, Android App"
+                );
+            break;
+                
+            case 'sistema-crm':
+                $data['seo'] = array(
+                    'title'         => "Sistemas CRM",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "En CRC Software contamos con sistemas CRM diseñados por nuestra propia compañía, programación a medida",
+                    'subject'       => "CRC Software, Sistemas CRM",
+                    'keywords'      => "CRC Software, CRM, Playa del Carmen, Ingeniería de Software"
+		        );
+            break;
+                
+            case 'contacto':
+		        $data['seo'] = array(
+                    'title'         => "Contacto",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "CRC Software se encuentra en Playa del Carmen, podemos brindarle consultoría en cualquier lugar del mundo. Contáctenos",
+                    'subject'       => "CRC Software, Contacto",
+                    'keywords'      => "CRC Software, Playa del Carmen, Ingeniería de Software, iOS, Android, Páginas web"
+		        );
             break;
                 
             case 'testimonials':
@@ -118,15 +133,7 @@ class generalBackend
 		        $data['blog'] = $this->model->getAllBlogPosts();
             break;
                 
-            case 'contacto':
-		        $data['seo'] = array(
-                    'title'         => "Contact",
-                    'author'        => "CRC SW",
-                    'description'   => "description",
-                    'subject'       => "subject",
-                    'keywords'      => "keywords"
-		        );
-            break;
+            
                 
             case 'portafolio':
                 $data['seo'] = array(
@@ -137,39 +144,6 @@ class generalBackend
                     'keywords'      => "keywords"
 		        );
             break;
-                
-            case 'aplicaciones':
-                $data['seo'] = array(
-                    'title'         => "Aplicaciones",
-                    'author'        => "CRC SW",
-                    'description'   => "description",
-                    'subject'       => "subject",
-                    'keywords'      => "keywords"
-		        );
-                
-                break;
-                
-                case 'desarrollo-web':
-                $data['seo'] = array(
-                    'title'         => "desarrollo-web",
-                    'author'        => "CRC SW",
-                    'description'   => "description",
-                    'subject'       => "subject",
-                    'keywords'      => "keywords"
-		        );
-                
-                break;
-                
-                case 'aplicaciones-moviles':
-                $data['seo'] = array(
-                    'title'         => "aplicaciones-moviles",
-                    'author'        => "CRC SW",
-                    'description'   => "description",
-                    'subject'       => "subject",
-                    'keywords'      => "keywords"
-		        );
-                
-                break;
                 
                  case 'base-de-datos':
                 $data['seo'] = array(
@@ -182,16 +156,7 @@ class generalBackend
                 
                 break;
                 
-                case 'sistema-crm':
-                $data['seo'] = array(
-                    'title'         => "sistema-crm",
-                    'author'        => "CRC SW",
-                    'description'   => "description",
-                    'subject'       => "subject",
-                    'keywords'      => "keywords"
-		        );
                 
-                break;
                 
                 case 'migracion-de-datos':
                 $data['seo'] = array(

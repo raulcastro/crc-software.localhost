@@ -34,7 +34,7 @@ class Layout_View
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>
-            <?php echo $this->data['seo']['title']; ?>
+            <?php echo $this->data['seo']['title']; ?> - CRC Software
         </title>
         <meta name="format-detection" content="telephone=no">
         <meta name="description" content="<?php echo $this->data['seo']['description']; ?>">
@@ -330,50 +330,31 @@ class Layout_View
         ob_start();
         ?>
         <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3>Desarrollo de aplicaciones empresariales a medida de CRC</h3>
-              <p class="texto">Ya sea que necesite un sistema para mejorar su servicio al cliente, aumentar la efectividad de su negocio, optimizar sus procesos o aumentar sus ventas (ya sea a través de la experiencia del cliente front-end o de back-end), podemos crear aplicaciones comerciales inteligentes, rentables e intuitivas para ayudarte.
-
-            Trabajaremos con usted para comprender sus procesos comerciales y el desafío que está tratando de resolver, y luego le sugeriremos el tipo de desarrollo de aplicaciones que funcionaría mejor para usted, como por ejemplo:</p>
-                <ul class="list-marked texto">
-                <li>una aplicación alojada, basada en la web con una base de datos remota, local, sincronizada o multi-tenant back-end de la base de datos</li>
-                <li>un sitio web alojado, front-end impulsado por una base de datos</li>
-                <li>una aplicación alojada, basada en web con un sistema CRM integral</li>
-                <li>una combinación de sistemas front-end, back-end y portal de proveedor / cliente alojados</li>
-                <li>una aplicación de escritorio con bases de datos remotas (en la nube) o bases de datos locales que se pueden sincronizar / replicar con sistemas centrales de bases de datos</li>
-                <li>aplicaciones para dispositivos móviles y tabletas con bases de datos locales y en la nube</li>
-              </ul>
+            <div class="container">
+                <div class="row row-50 justify-content-sm-center">
+                    <div class="col-md-10">
+                        <h3>Desarrollo de aplicaciones empresariales a medida</h3>
+                        <p class="texto">Ya sea que necesite un sistema para mejorar su servicio al cliente, aumentar la efectividad de su negocio, optimizar sus procesos o aumentar sus ventas (ya sea a través de la experiencia del cliente front-end o de back-end), podemos crear aplicaciones comerciales inteligentes, rentables e intuitivas para ayudarte.
+                        <br>
+                        En CRC - Software, trabajaremos con usted para comprender sus procesos comerciales y el desafío que está tratando de resolver, y luego le sugeriremos el tipo de desarrollo de aplicaciones que funcionaría mejor para usted, como por ejemplo:</p>
+                        <ul class="list-marked texto">
+                            <li>Una aplicación alojada, basada en la web con una base de datos remota, local, sincronizada o multi-tenant back-end de la base de datos</li>
+                            <li>Un sitio web alojado, front-end impulsado por una base de datos</li>
+                            <li>Una aplicación alojada, basada en web con un sistema CRM integral</li>
+                            <li>Una combinación de sistemas front-end, back-end y portal de proveedor / cliente alojados</li>
+                            <li>Una aplicación de escritorio con bases de datos remotas (en la nube) o bases de datos locales que se pueden sincronizar / replicar con sistemas centrales de bases de datos</li>
+                            <li>Aplicaciones para dispositivos móviles y tabletas iOS / Android con bases de datos locales y en la nube</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <!--div class="col-md-10">
-              <h5>Las aplicaciones a medida que hemos creado incluyen:</h5>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li><strong>Mensajeria Segura</strong></li>
-                <li><strong>Clientes que pueden iniciar sesión desde la oficina, el hogar o un móvil: acceso más rápido a lo que necesitan, cuando lo deseen</strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>
-                
-              </div>-->
-          </div>
-        </div>
-      </section>
-        
+        </section>
         <?php
         $header = ob_get_contents();
         ob_end_clean();
         return $header;
     }
-    
-    
+
     public function getDesarrolloWeb()
     {
         ob_start();
@@ -403,57 +384,43 @@ class Layout_View
     }
     
     public function getContenidoWeb()
-        {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
+    {
+    ob_start();
+    ?>
+    <section class="section-lg bg-default text-center">
         <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3>¿Qué es una aplicación web?</h3>
-              <p class="texto">
-                  Una aplicación web es un programa de software que utiliza con un navegador de Internet, de la misma manera que una aplicación móvil es un programa de software que utiliza en su dispositivo móvil.<br>
-                  Los últimos años han visto una proliferación de aplicaciones web. Lo más probable es que su popularidad se deba a su facilidad de uso: cualquier persona con un navegador conectado a Internet puede acceder a ellos, atienden las necesidades de los usuarios móviles (ya que los teléfonos inteligentes son la principal forma en que las personas acceden a Internet). y se pueden implementar rápidamente y casi sin necesidad de instalación por parte del usuario.<br>
-                  Si necesita una aplicación web interna para ayudar a administrar los gastos del personal, una aplicación web que puede revender a sus clientes o una que revolucionará su servicio al cliente, trabajaremos con usted para construir rápida e inteligentemente una herramienta potente e intuitiva.<br>
-                  A partir de ahí, es un proceso simple que comienza cuando nos sentamos con usted para comprender su negocio, lo que su nueva aplicación necesita poder entregar y a quién. Las posibles opciones incluyen:
-                </p>
-                <ul class="list-marked texto">
-                <li> Una aplicación web alojada con un back-end de base de datos remoto, local, sincronizado o multitendado</li>
-                <li> Una combinación de sistemas de front-end, back-end.</li>
-                <li> Una aplicación web que incluye un completo back-end CRM</li>
-                <li> Una aplicación web que complementa un nuevo sitio web o el existente</li>
-                <li> Permitir a los usuarios agregar nuevos campos, definir cuadros desplegables, crear nuevos formularios y generar informes personalizados según sea necesario</li>
-                <li> Fuentes diarias de datos de múltiples bases de datos para asegurarse de que la aplicación siempre use la información correcta y actualizada del cliente</li>
-                <li> Usar permisos de acuerdo con el rol de una persona y los derechos de acceso</li>
-               
-              </ul>
+            <div class="row row-50 justify-content-sm-center">
+                <div class="col-md-10">
+                    <h3>¿Qué es una aplicación web?</h3>
+                    <p class="texto">
+                        Una aplicación web es un programa de software que se utiliza con un navegador de Internet, de la misma manera que una aplicación móvil es un programa de software que se utiliza en un dispositivo móvil.<br>
+                        Los últimos años han visto una proliferación de aplicaciones web. Lo más probable es que su popularidad se deba a su facilidad de uso: cualquier persona con un navegador conectado a Internet puede acceder a ellos, atienden las necesidades de los usuarios móviles (ya que los teléfonos inteligentes son la principal forma en que las personas acceden a Internet) y se pueden implementar rápidamente y casi sin necesidad de instalación por parte del usuario.<br>
+                        Si necesita una página web tanto para fines de publicidad, hasta algo más avanzado como un CRM podemos darte esa solución.
+                        <br>
+                        Trabajaremos con usted para construir rápida e inteligentemente una herramienta potente e intuitiva.<br>
+                        A partir de ahí, es un proceso simple que comienza cuando nos sentamos con usted para comprender su negocio, lo que su nueva aplicación necesita poder entregar y a quién. Las posibles opciones incluyen:
+                    </p>
+                    <ul class="list-marked texto">
+                        <li> Una aplicación web alojada con un back-end de base de datos remoto, local, sincronizado o multitendado</li>
+                        <li> Una combinación de sistemas de front-end, back-end.</li>
+                        <li> Una aplicación web que incluye un completo back-end CRM</li>
+                        <li> Una aplicación web que complementa un nuevo sitio web o el existente</li>
+                        <li> Permitir a los usuarios agregar nuevos campos, definir cuadros desplegables, crear nuevos formularios y generar informes personalizados según sea necesario</li>
+                    </ul>
+                </div>
+                <div class="col-md-10">
+                    <h3>Aplicaciones web responsivas</h3>
+                    <p class="texto">
+                        Como era de esperar, todas las aplicaciones web que construimos son "responsivas". Esto significa que se ven muy bien y funcionan perfectamente en cualquier tamaño de pantalla: una PC de escritorio, tableta o teléfono móvil. Hacemos esto adaptando menús, controles y otros elementos visuales para que se ajusten al dispositivo en función del ancho y alto de la pantalla actual, asegurando que el usuario siempre obtenga la mejor experiencia posible, independientemente del dispositivo que esté usando. Puede ver esto en acción cambiando el tamaño de la ventana en este sitio web o visitándola en su teléfono inteligente; vea cómo todo "simplemente funciona".
+                    </p>
+                </div>
             </div>
-            <div class="col-md-10">
-              <h3>Aplicaciones web responsivas</h3>
-              <p class="texto">
-                Como era de esperar, todas las aplicaciones web que construimos son "receptivas". Esto significa que se ven muy bien y funcionan perfectamente en cualquier tamaño de pantalla: una PC de escritorio, tableta o teléfono móvil. Hacemos esto adaptando menús, controles y otros elementos visuales para que se ajusten al dispositivo en función del ancho y alto de la pantalla actual, asegurando que el usuario siempre obtenga la mejor experiencia posible, independientemente del dispositivo que esté usando. Puede ver esto en acción cambiando el tamaño de la ventana en este sitio web o visitándola en su teléfono inteligente; vea cómo todo “simplemente funciona”.
-                </p>
-                <!--<ul class="list-marked texto">
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>-->
-                
-              </div>
-          </div>
         </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
+    </section>
+    <?php
+    $header = ob_get_contents();
+    ob_end_clean();
+    return $header;
     }
     
     public function getMovil()
@@ -630,34 +597,21 @@ class Layout_View
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
             <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+              <h3>Sistemas CRM perfectamente adaptable a tus necesidades</h3>
+              <p class="texto">
+                El software Customer Relationship Management, o CRM, es un programa diseñado para reunir todos los aspectos de la información de su cliente en un solo lugar. Una solución de CRM ayuda a su empresa a organizar interacciones y relaciones con clientes y prospectos por igual.
+                  <br>
+
+El software de CRM centraliza todos los datos pertenecientes a sus clientes actuales y futuros, para que su equipo pueda mantenerse al tanto de sus tareas. Los agentes podrán registrar cuentas de compras de clientes, llamadas, correos electrónicos, chats, tickets de soporte, etc. De esta manera, ningún detalle de la relación de un cliente con su negocio se resquebrajará.
+<br>
+Las soluciones de CRM están disponibles para incluir negocios de todos los tamaños y presupuestos: desde un pequeño modelo basado en suscripción SaaS hasta una instalación empresarial a gran escala. Las empresas nuevas y establecidas se beneficiarán del uso de la solución CRM.
+<br>
+
+
+Este software facilita la cooperación, aumenta la eficiencia y aumenta la satisfacción del cliente a lo largo de todo su ciclo de vida. S
+                </p>
             </div>
-            <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>
-                
-              </div>
+
           </div>
         </div>
       </section>
@@ -1336,13 +1290,14 @@ class Layout_View
         <footer class="footer-corporate">
             <div class="container">
                 <div class="footer-corporate__inner">
-                    <p class="rights"><span>CRC-SOFTWARE</span><span>&nbsp;</span><span id="copyright-year"></span>.
-                    </p>
+                    <p class="rights"><span>CRC-SOFTWARE</span><span>&nbsp;</span><span id="copyright-year"></span>.</p>
+                    <ul class="list-inline-xxs">
+                        <li><a class="icon icon-xxs icon-primary fa fa-facebook" href="<?php echo $this->data['info']['facebook']; ?>" target="_blank"></a></li>
+                        <li><a class="icon icon-xxs icon-primary fa fa-twitter" href="<?php echo $this->data['info']['twitter']; ?>" target="_blank"></a></li>
+                    </ul>
                 </div>
             </div>
         </footer>
-        <!-- Global Mailform Output-->
-    		<div class="snackbars" id="form-output-global"></div>
         <?php
         $footer = ob_get_contents();
         ob_end_clean();
@@ -1968,7 +1923,7 @@ class Layout_View
         <section class="negro section-lg bg-default">
             <div class="container">
                 <div class="row row-60">
-                    <div class="col-md-6 col-xl-4">
+                    <div class="col-md-6 col-xl-3">
                         <div class="thumbnail-classic"><img src="/images/crc7.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/aplicaciones/">Aplicaciones comerciales a medida</a></h5>
@@ -1976,7 +1931,7 @@ class Layout_View
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl-4">
+                    <div class="col-md-6 col-xl-3">
                         <div class="thumbnail-classic"><img src="/images/crc5.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/desarrollo-web/">Aplicaciones y desarrollo de sitios web</a></h5>
@@ -1984,7 +1939,7 @@ class Layout_View
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl-4">
+                    <div class="col-md-6 col-xl-3">
                         <div class="thumbnail-classic"><img src="/images/movil.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/aplicaciones-moviles/">Desarrollo de aplicaciones móviles</a></h5>
@@ -1992,7 +1947,7 @@ class Layout_View
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-xl-4">
+                    <!--<div class="col-md-6 col-xl-4">
                         <div class="thumbnail-classic"><img src="/images/data-base.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/base-de-datos/">Bases de datos a medida</a></h5>
@@ -2000,12 +1955,12 @@ class Layout_View
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
+                    </div>-->
+                    <div class="col-md-6 col-xl-3">
                         <div class="thumbnail-classic"><img src="/images/crm.jpg" alt="" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/sistema-crm/">Sistemas CRM a medida</a></h5>
-                                <p>logre sus objetivos de interacción con el cliente con un sistema de CRM personalizado y escalable que no requiera licencias por separado para cada nuevo usuario</p>
+                                <p>Logre sus objetivos de interacción con el cliente con un sistema de CRM personalizado y escalable que no requiera licencias por separado para cada nuevo usuario</p>
                             </div>
                         </div>
                     </div>
