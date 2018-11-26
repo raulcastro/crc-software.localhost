@@ -17,7 +17,7 @@ class generalBackend
 		$appInfo = $this->model->getGeneralAppInfo();
 // 		Basic app info
 		$data['info'] = array( 
-            'title' 		=> "CRC Software",
+            'title' => "Servicios de programacion web y aplicaciones moviles | CRC Software",
             'siteName' 		=> "CRC Software",
 		    'url' 			=> "http://".$_SERVER['HTTP_HOST'].'/',
 		    'urlMedia' 	    => $appInfo['url'],
@@ -33,31 +33,52 @@ class generalBackend
 		{
 		    case 'index':
 		        $data['seo'] = array(
-                    'title'         => "Paginas web y aplicaciones moviles",
-                    'author'        => "CRC Software, info@crc-software.com",
-                    'description'   => "Especialistas en programación de CRM, Páginas Web, SEO, Aplicaciones iOS, Android en Playa del Carmen",
-                    'subject'       => "CRC Software, Ingeniería de Software",
-                    'keywords'      => "CRC Software, Playa del Carmen, Canadá, Website Development, Páginas Web, Desarrollo Web, SEO",
+                    'title' => "Servicios de programacion web y aplicaciones moviles | CRC- Software",
+                    'author' => "CRC-Software",
+                    'description' => "Especialistas en programación de CRM, Páginas Web, SEO, Aplicaciones moviles iOS y Android en Playa del Carmen",
+                    'subject' => "subject",
+                    'og-type' => "website",
+                    'og-title' => "Servicios de programacion web y aplicaciones moviles | CRC Software",
+                    'og-description' => "Desarrollo web en playa del carmen, base de datos, sistema CRM, apliacaciones moviles, SEO, pocisionamiento web, Riviera Maya",
+                    'og-url' => "https://crc-software.com",
+                    'og-site_name' =>"CRC-Software",
+                     'twitter:card' => "summary",
+                    'twitter:description' => "Especialistas en programación de CRM, Páginas Web, SEO, Aplicaciones moviles iOS y Android en Playa del Carmen",
+                    'twitter:title' => "CRC-Software"
 		        );
             break;
             
 		    case 'nosotros':
 		        $data['seo'] = array(
-		        'title'           => "Nosotros",
-		        'author'          => "CRC Software, info@crc-software.com",
-		        'description'     => "CRC Software, compañía mexicana localizada en Playa del Carmen, especialista en Desarollo Web, Aplicaciones iOS/Android, Bases de Datos, Consultoría de Software",
-		        'subject'         => "¿Quienes Somos? - CRC Software, Ingeniería de Software",
-		        'keywords'        => "CRC Software, Playa del Carmen, Desarrollo Web, Aplicaciones iOS/Android, Bases de Datos"
+                    'title' => "Servicios de programacion web y aplicaciones moviles playa del carmen | CRC-Software",
+                    'author' => "CRC-Software",
+                    'description' => "CRC Software, compañía mexicana localizada en Playa del Carmen, especialista en Desarollo Web, Aplicaciones iOS/Android, Bases de Datos, Consultoría de Software",
+                    'subject' => "¿Quienes Somos? - CRC Software, Ingeniería de Software",
+                    'og-type' => "artitle",
+                    'og-title' => "Nosotros",
+                    'og-description' => "Desarrollo web en playa del carmen, base de datos, sistema CRM, apliacaciones moviles, SEO, pocisionamiento web, Riviera Maya",
+                    'og-url' => "https://crc-software.com/nosotros",
+                    'og-site_name' =>"CRC-Software",
+                     'twitter:card' => "summary",
+                    'twitter:description' => "Especialistas en programación de CRM, Páginas Web, SEO, Aplicaciones moviles iOS y Android en Playa del Carmen",
+                    'twitter:title' => "CRC-Software"   
 		            );
 	        break;
                 
             case 'servicios':
 		        $data['seo'] = array(
-		        'title'           => "Servicios de programacion web y apliaciones moviles",
-		        'author'          => "CRC Software, info@crc-software.com",
-		        'description'     => "CRC Software, compañía en Playa del Carmen que ofrece servicio especializados de Ingeniería de Software desde una Página Web, CRM hasta una Aplicación iOS/Android",
-		        'subject'         => "CRC Software, Servicios",
-		        'keywords'        => "CRC Software, Playa del Carmen, Aplicaciones iOS/Android, CRM, Configuración de Servidores Web"
+                    'title' => "Servicios de programacion web y aplicaciones moviles playa del carmen | CRC-Software, info@crc-software.com",
+                    'author' => "CRC-Software",
+                    'description' => "CRC Software, compañía en Playa del Carmen que ofrece servicio especializados de Ingeniería de Software desde una Página Web, CRM hasta una Aplicación iOS/Android",
+                    'subject' => "CRC Software, Servicios",
+                    'og-type' => "artitle",
+                    'og-title' => "servicios",
+                    'og-description' => "CRC Software, compañía en Playa del Carmen que ofrece servicio especializados de Ingeniería de Software desde una Página Web, CRM hasta una Aplicación iOS/Android",
+                    'og-url' => "https://crc-software.com/servicios",
+                    'og-site_name' =>"CRC-Software",
+                     'twitter:card' => "summary",
+                    'twitter:description' => "Especialistas en programación de CRM, Páginas Web, SEO, Aplicaciones moviles iOS y Android en Playa del Carmen",
+                    'twitter:title' => "CRC-Software"   
 		            );
 	        break;
                 
@@ -201,16 +222,6 @@ class generalBackend
                     'description'   => "CRC Software se encuentra en Playa del Carmen, podemos brindarle consultoría en cualquier lugar del mundo. Contáctenos",
                     'subject'       => "CRC Software, Contacto",
                     'keywords'      => "CRC Software, Playa del Carmen, Ingeniería de Software, iOS, Android, Páginas web"
-		        );
-            break;
-                
-            case 'testimonials':
-		        $data['seo'] = array(
-                    'title'         => "Testimonials",
-                    'author'        => "CRC-SOFTWARE",
-                    'description'   => "description",
-                    'subject'       => "subject",
-                    'keywords'      => "keywords"
 		        );
             break;
                 
