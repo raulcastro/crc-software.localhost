@@ -19,7 +19,7 @@ class generalBackend
 		$data['info'] = array( 
             'title' 		=> "CRC Software",
             'siteName' 		=> "CRC Software",
-		    'url' 			=> "https://".$_SERVER['HTTP_HOST'].'/',
+		    'url' 			=> "http://".$_SERVER['HTTP_HOST'].'/',
 		    'urlMedia' 	    => $appInfo['url'],
             'creator' 		=> "CRC Software, crc-software.com",
             'creatorUrl' 	=> "https://crc-software.com",
@@ -33,9 +33,9 @@ class generalBackend
 		{
 		    case 'index':
 		        $data['seo'] = array(
-                    'title'         => "Inicio",
+                    'title'         => "Paginas web y aplicaciones moviles",
                     'author'        => "CRC Software, info@crc-software.com",
-                    'description'   => "CRC Software se especializa en programación de CRM, Páginas Web, SEO, Aplicaciones iOS, Android, nos encontramos en Playa del Carmen",
+                    'description'   => "Especialistas en programación de CRM, Páginas Web, SEO, Aplicaciones iOS, Android en Playa del Carmen",
                     'subject'       => "CRC Software, Ingeniería de Software",
                     'keywords'      => "CRC Software, Playa del Carmen, Canadá, Website Development, Páginas Web, Desarrollo Web, SEO",
 		        );
@@ -53,7 +53,7 @@ class generalBackend
                 
             case 'servicios':
 		        $data['seo'] = array(
-		        'title'           => "Servicios",
+		        'title'           => "Servicios de programacion web y apliaciones moviles",
 		        'author'          => "CRC Software, info@crc-software.com",
 		        'description'     => "CRC Software, compañía en Playa del Carmen que ofrece servicio especializados de Ingeniería de Software desde una Página Web, CRM hasta una Aplicación iOS/Android",
 		        'subject'         => "CRC Software, Servicios",
@@ -87,7 +87,7 @@ class generalBackend
                     'author'        => "CRC Software, info@crc-software.com",
                     'description'   => "CRC Software, expertos en desarrollo de aplicaciones móviles en iOS y Android, tanto para fines publicitarios como completas aplicaciones ",
                     'subject'       => "CRC Software, Desarrollo de aplicaciones moviles",
-                    'keywords'      => "CRC Software, iOS, Android, Mobile Apps, iOS Apps, Android App"
+                    'keywords'      => "CRC Software, iOS, Android, Mobile Apps, iOS Apps, aplicaciones moviles, Android App"
                 );
             break;
                 
@@ -100,6 +100,99 @@ class generalBackend
                     'keywords'      => "CRC Software, CRM, Playa del Carmen, Ingeniería de Software"
 		        );
             break;
+                
+             case 'migracion-de-datos':
+                $data['seo'] = array(
+                    'title'         => "Servicio de migracion de datos",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "En CRC tenemos servicio de migración de datos rápido, eficiente y seguro ",
+                    'subject'       => "CRC Software, migracion de datos",
+                    'keywords'      => "CRC Software, base de datos, Playa del Carmen, Ingeniería de Software"
+		        );
+            break;
+                
+                 case 'sistemas-operacionales':
+                $data['seo'] = array(
+                    'title'         => "Sistemas operacionales",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "En CRC adaptar sus procesos y funcionalidad de los sistemas ",
+                    'subject'       => "CRC Software, Sistemas operacionales",
+                    'keywords'      => "CRC Software, sistemas operacionales , Playa del Carmen, Ingeniería de Software"
+		        );
+            break;
+                
+                 case 'modernizacion-software':
+                $data['seo'] = array(
+                    'title'         => "Modernización de software heredado",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "En CRC construimos un remplazo poderoso que no gaste dinero ni tiempo",
+                    'subject'       => "CRC Software, Software",
+                    'keywords'      => "CRC Software, Software, Playa del Carmen, Ingeniería de Software"
+		        );
+            break;
+                
+                 case 'consultoria-software':
+                $data['seo'] = array(
+                    'title'         => "Consultoria de software",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "En CRC ayudamos para identificar barreras tecnológicas que se interponen entre el cliente y un negocio rentable",
+                    'subject'       => "CRC Software, consultoria",
+                    'keywords'      => "CRC Software, consultoria, Playa del Carmen, Ingeniería de Software"
+		        );
+            break;
+                
+                case 'rescate-software':
+                $data['seo'] = array(
+                    'title'         => "Rescatamos su proyecto software",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "En CRC podemos rápidamente poner su negocio nuevamente en marcha.",
+                    'subject'       => "CRC Software, proyecto software",
+                    'keywords'      => "CRC Software, proyectos software, Playa del Carmen, Ingeniería de Software"
+		        );
+            break;
+                
+                case 'recuperacion-codigo':
+                $data['seo'] = array(
+                    'title'         => "Rescuperacion del codigo fuente",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "En CRC recuperamos o desarrollmos codigo fuente perdido.",
+                    'subject'       => "CRC Software, codigo fuente",
+                    'keywords'      => "CRC Software, codigo fuente, Playa del Carmen, Ingeniería de Software"
+		        );
+            break;
+                
+                case 'soporte-de-aplicaciones':
+                $data['seo'] = array(
+                    'title'         => "Soporte y mantenimiento de aplicaciones",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "En CRC mantenemos su software activo y funcional",
+                    'subject'       => "CRC Software, aplicaciones",
+                    'keywords'      => "CRC Software, aplicaciones, soporte y mantenimiento, Playa del Carmen, Ingeniería de Software"
+		        );
+            break;
+                
+                 case 'hosting':
+                $data['seo'] = array(
+                    'title'         => "Hosting",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "En CRC brindamos servicio de alojamiento web hosting",
+                    'subject'       => "CRC Software, hosting",
+                    'keywords'      => "CRC Software, hosting, Playa del Carmen, Ingeniería de Software"
+		        );
+            break;
+                
+                case 'desarrollo-de-software':
+                $data['seo'] = array(
+                    'title'         => "Desarrollo de software",
+                    'author'        => "CRC Software, info@crc-software.com",
+                    'description'   => "En CRC desarrollamos su proyecto software",
+                    'subject'       => "CRC Software, desarrollo de software",
+                    'keywords'      => "CRC Software, desarrollo de software, paginas web, Playa del Carmen, Ingeniería de Software"
+		        );
+            break;
+                
+                
+                
                 
             case 'contacto':
 		        $data['seo'] = array(

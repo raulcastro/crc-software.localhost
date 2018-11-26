@@ -303,6 +303,7 @@ class Layout_View
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/aplicaciones-empresariales.jpg">
         <div class="parallax-container bg-image parallax-header rd-parallax-light" >
           <div class="parallax-content">
             <div class="parallax-header__inner">
@@ -317,6 +318,7 @@ class Layout_View
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
         <?php
@@ -333,7 +335,7 @@ class Layout_View
             <div class="container">
                 <div class="row row-50 justify-content-sm-center">
                     <div class="col-md-10">
-                        <h3>Desarrollo de aplicaciones empresariales a medida</h3>
+                        <h3><strong>Desarrollo de aplicaciones empresariales a medida</strong></h3>
                         <p class="texto">Ya sea que necesite un sistema para mejorar su servicio al cliente, aumentar la efectividad de su negocio, optimizar sus procesos o aumentar sus ventas (ya sea a través de la experiencia del cliente front-end o de back-end), podemos crear aplicaciones comerciales inteligentes, rentables e intuitivas para ayudarte.
                         <br>
                         En CRC - Software, trabajaremos con usted para comprender sus procesos comerciales y el desafío que está tratando de resolver, y luego le sugeriremos el tipo de desarrollo de aplicaciones que funcionaría mejor para usted, como por ejemplo:</p>
@@ -361,7 +363,7 @@ class Layout_View
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/sitio-web.jpg">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
@@ -391,7 +393,7 @@ class Layout_View
         <div class="container">
             <div class="row row-50 justify-content-sm-center">
                 <div class="col-md-10">
-                    <h3>¿Qué es una aplicación web?</h3>
+                    <h3><strong>¿Qué es una aplicación web?</strong></h3>
                     <p class="texto">
                         Una aplicación web es un programa de software que se utiliza con un navegador de Internet, de la misma manera que una aplicación móvil es un programa de software que se utiliza en un dispositivo móvil.<br>
                         Los últimos años han visto una proliferación de aplicaciones web. Lo más probable es que su popularidad se deba a su facilidad de uso: cualquier persona con un navegador conectado a Internet puede acceder a ellos, atienden las necesidades de los usuarios móviles (ya que los teléfonos inteligentes son la principal forma en que las personas acceden a Internet) y se pueden implementar rápidamente y casi sin necesidad de instalación por parte del usuario.<br>
@@ -409,7 +411,7 @@ class Layout_View
                     </ul>
                 </div>
                 <div class="col-md-10">
-                    <h3>Aplicaciones web responsivas</h3>
+                    <h3><strong>Aplicaciones web responsivas</strong></h3>
                     <p class="texto">
                         Como era de esperar, todas las aplicaciones web que construimos son "responsivas". Esto significa que se ven muy bien y funcionan perfectamente en cualquier tamaño de pantalla: una PC de escritorio, tableta o teléfono móvil. Hacemos esto adaptando menús, controles y otros elementos visuales para que se ajusten al dispositivo en función del ancho y alto de la pantalla actual, asegurando que el usuario siempre obtenga la mejor experiencia posible, independientemente del dispositivo que esté usando. Puede ver esto en acción cambiando el tamaño de la ventana en este sitio web o visitándola en su teléfono inteligente; vea cómo todo "simplemente funciona".
                     </p>
@@ -429,14 +431,14 @@ class Layout_View
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/movil2.jpg">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
                 <div class="container">
                   <div class="row justify-content-sm-center">
                     <div class="col-md-10 col-xl-8">
-                      <h2>Desarrollo de aplicaciones web</h2>
+                      <h2>Desarrollo de aplicaciones moviles</h2>
                     </div>
                   </div>
                 </div>
@@ -459,7 +461,7 @@ class Layout_View
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
             <div class="col-md-10">
-              <h3>Expertos desarrolladores de aplicaciones móviles</h3>
+              <h3><strong>Expertos desarrolladores de aplicaciones móviles</strong></h3>
               <p class="texto">
                   No hay duda de que una aplicación móvil concebida estratégicamente puede obtener grandes recompensas a la hora de establecer relaciones con sus clientes, pero como el 73% de los usuarios espera que una aplicación móvil sea más fácil de usar que un sitio web móvil, es importante que esté al día. - Ahí es donde podemos ayudarte.<br>
 
@@ -472,7 +474,7 @@ class Layout_View
               </ul>
             </div>
             <div class="col-md-10">
-              <h3>Plataformas de aplicaciones móviles: iOS y Android.</h3>
+              <h3><strong>Plataformas de aplicaciones móviles: iOS y Android.</strong></h3>
               <p class="texto">
                   En CRC, nos esforzamos por la eficiencia y la rentabilidad de nuestros clientes. Nos es ajeno construir la misma aplicación varias veces para atender a los "dos grandes" plataformas móviles: Android y iOS.
                 </p>
@@ -499,7 +501,7 @@ class Layout_View
                 <div class="container">
                   <div class="row justify-content-sm-center">
                     <div class="col-md-10 col-xl-8">
-                      <h2>Base de datos a medida</h2>
+                      <h2></h2>
                     </div>
                   </div>
                 </div>
@@ -524,7 +526,7 @@ class Layout_View
             <div class="col-md-10">
               <h3></h3>
               <p class="texto">
-                  Desde la creación de un sistema para monitorear el desperdicio de alimentos en restaurantes, hasta una aplicación que interactúa ; hemos trabajado con una amplia gama de industrias para crear soluciones integradas en hardware que impulsan la innovación, crean rentabilidad y automatizan procesos.
+                  
                 </p>
                 <ul class="list-marked texto">
                 <li></li>
@@ -567,7 +569,7 @@ class Layout_View
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/sistemas-crm-playa-del-carmen.jpg">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
@@ -597,18 +599,18 @@ class Layout_View
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
             <div class="col-md-10">
-              <h3>Sistemas CRM perfectamente adaptable a tus necesidades</h3>
+              <h3><strong>Sistemas CRM perfectamente adaptable a tus necesidades</strong></h3>
               <p class="texto">
                 El software Customer Relationship Management, o CRM, es un programa diseñado para reunir todos los aspectos de la información de su cliente en un solo lugar. Una solución de CRM ayuda a su empresa a organizar interacciones y relaciones con clientes y prospectos por igual.
                   <br>
 
-El software de CRM centraliza todos los datos pertenecientes a sus clientes actuales y futuros, para que su equipo pueda mantenerse al tanto de sus tareas. Los agentes podrán registrar cuentas de compras de clientes, llamadas, correos electrónicos, chats, tickets de soporte, etc. De esta manera, ningún detalle de la relación de un cliente con su negocio se resquebrajará.
-<br>
-Las soluciones de CRM están disponibles para incluir negocios de todos los tamaños y presupuestos: desde un pequeño modelo basado en suscripción SaaS hasta una instalación empresarial a gran escala. Las empresas nuevas y establecidas se beneficiarán del uso de la solución CRM.
-<br>
+                  El software de CRM centraliza todos los datos pertenecientes a sus clientes actuales y futuros, para que su equipo pueda mantenerse al tanto de sus tareas. Los agentes podrán registrar cuentas de compras de clientes, llamadas, correos electrónicos, chats, tickets de soporte, etc. De esta manera, ningún detalle de la relación de un cliente con su negocio se resquebrajará.
+                  <br>
+                  Las soluciones de CRM están disponibles para incluir negocios de todos los tamaños y presupuestos: desde un pequeño modelo basado en suscripción SaaS hasta una instalación empresarial a gran escala. Las empresas nuevas y establecidas se beneficiarán del uso de la solución CRM.
+                  <br>
 
 
-Este software facilita la cooperación, aumenta la eficiencia y aumenta la satisfacción del cliente a lo largo de todo su ciclo de vida. S
+                  Este software facilita la cooperación, aumenta la eficiencia y aumenta la satisfacción del cliente a lo largo de todo su ciclo de vida. S
                 </p>
             </div>
 
@@ -627,7 +629,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/migraciondatos2.jpg">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
@@ -657,32 +659,26 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
             <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
+              <h3><strong>¿Cuándo es necesaria la migración de datos?</strong></h3>
+              <p class="texto">Hay muchas razones por las que puede surgir la necesidad de migración de datos, ya sea:</p>
                 <ul class="list-marked texto">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Está modernizando su sistema heredado y necesita que los datos se migren del sistema anterior al nuevo</li>
+                <li>Sus datos deben sincronizarse entre el antiguo sistema heredado y el nuevo sistema para que se pueda llevar a cabo una implementación paralela del sistema.</li>
+                <li>Tienes una nueva aplicación de negocios y quieres integrar los datos de una aplicación anterior.</li>
+                <li>Ha adquirido una nueva filial, o se está fusionando y necesita que los datos se transfieran de muchos sistemas a uno.</li>
+                <li>Está trasladando sus plataformas de TI a la nube para ayudar a la escalabilidad y requiere la migración de datos y aplicaciones.</li>
+                <li>Mueve datos de un servidor existente a un sistema de almacenamiento nuevo o existente, o está consolidando datos de manera centralizada.</li>
               </ul>
             </div>
             <div class="col-md-10">
-              <h3></h3>
+              <h3><strong>Proceso de migración de datos</strong></h3>
               <p class="texto"></p>
                 <ul class="list-marked texto">
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
+                <li><strong>Comprender para qué se usan tus datos.</strong> Evaluaremos el entorno de información, aprenderemos cómo y dónde usa sus datos y quién los usa. También determinaremos si es posible que haya un uso diferente para los datos en el futuro.</li>
+                <li><strong>Asegurar la calidad de los datos (especialmente en sistemas heredados).</strong> No tiene sentido mover datos que no usa, o que están duplicados o son incorrectos. Realizaremos una evaluación exhaustiva de la calidad para garantizar la estandarización que respalde a sus usuarios ahora y en el futuro.</li>
+                <li><strong>Constantemente validando.</strong> Reparar errores después de que haya ocurrido la migración es costoso. En el caso de la migración de datos de un sistema antiguo a uno nuevo, crearemos un prototipo visual del nuevo sistema para garantizar que los datos se utilicen exactamente como lo había previsto. Se pueden hacer cambios a lo largo del proceso.</li>
+                <li><strong>Pruebas con usuarios finales.</strong> Le recomendamos que comparta el prototipo con sus usuarios finales para que, además de validar todo el proceso, ellos y otras partes interesadas puedan realizar la migración final de la Prueba de aceptación del usuario para garantizar que cumpla con los requisitos.</li>
                 </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>
                 
               </div>
           </div>
@@ -700,7 +696,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/sistema-operativo2.jpg">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
@@ -730,33 +726,26 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
             <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
+              <h3><strong>Razones para considerar un nuevo sistema operacional</strong></h3>
+              <p class="texto">Todas las empresas cambian, ya sea debido al crecimiento, la reestructuración o la respuesta a las tendencias del mercado. Los procesos de flujo de trabajo cambian para reflejar el cambio; para mantener una ventaja competitiva, también deben hacerlo sus sistemas de software de soporte.</p>
                 <ul class="list-marked texto">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>Está creciendo y se da cuenta de que las hojas de cálculo de Excel, las bases de datos de Access y los sistemas fragmentados ya no satisfacen sus necesidades.</li>
+                <li>Tiene un sistema heredado existente que es anticuado, usa tecnología antigua que no puede interactuar y tiene un flujo de trabajo que ya no complementa sus procesos de negocios.</li>
+                <li>Has pasado por una fusión y las compañías fusionadas utilizan diferentes sistemas.</li>
+                <li>Has adquirido una nueva empresa que utiliza un sistema diferente.</li>
               </ul>
             </div>
             <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
+              <h3><strong>Los pros y los contras de un nuevo sistema operativo.</strong></h3>
+              <p class="texto">Su sistema operativo es la piedra angular de su estrategia, operaciones y ventaja competitiva. Si no está seguro de cuál es la mejor opción para su negocio, podemos asesorarlo y ayudarlo a garantizar que obtenga un sistema que funcione para su negocio ahora y que sea fácilmente escalable para continuar trabajando duro para usted en el futuro.</p>
                 <ul class="list-marked texto">
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
+                <li><strong>Puede valer la pena considerar la modernización</strong> de software heredado si su sistema existente aún refleja con precisión sus prácticas comerciales, o contiene propiedad intelectual significativa.</li>
+                <li><strong>La integración de sistemas heredados</strong>significa que brindará continuidad y minimizará la necesidad de una capacitación costosa. Pero probablemente duplicará la cantidad de personal de soporte para sistemas antiguos y nuevos, lo que dará como resultado pocos ahorros de costos.</li>
+                <li><strong>Mantener los sistemas de una compañía</strong> sobre otros después de una fusión puede llevar a la insatisfacción en algunos rincones. Algunos usuarios serán competentes y otros necesitarán capacitación.</li>
+                <li><strong>
+                    Mantener las mejores partes del sistema</strong> de cada compañía después de una adquisición puede llevar a una funcionalidad superpuesta, o brechas en la provisión. Puede terminar agregando nuevos sistemas a la mezcla para compensar, aumentando el tiempo y los costos de capacitación, pero habrá cosas familiares y nuevas para todos.</li>
+                <li><strong>Un sistema operativo de reemplazo</strong> significará un nuevo sistema para que todo el personal aprenda, pero traerá agilidad para potenciar su negocio. Puede ser una excelente manera de racionalizar las plataformas que entran en el negocio como resultado de fusiones y adquisiciones.</li>
                 </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>
-                
               </div>
           </div>
         </div>
@@ -774,7 +763,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/software-heredado.jpg">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
@@ -804,32 +793,22 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
             <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+              <h3><strong>¿Por qué es hora de actualizar sus aplicaciones heredadas?</strong></h3>
+              <p class="texto">La modernización de software heredado es su primer paso hacia        la agilidad empresarial. Podrá responder rápidamente a los cambios en el        mercado, producir fácilmente informes significativos, tener menos costos y      personal más feliz; piense en todas las soluciones manuales frustrantes y       lentas que desaparecerán y les ayudará a brindar un mejor servicio al           cliente en menos tiempo. Gana, gana<br>
+                Su sistema actualizado también le permitirá ser parte de las innovaciones recientes que proporcionan un valor comercial significativo, como la computación en la nube, las redes sociales, el big data y la tecnología móvil.</p>
             </div>
             <div class="col-md-10">
-              <h3></h3>
+              <h3><strong>Cómo te podemos ayudar</strong></h3>
               <p class="texto"></p>
                 <ul class="list-marked texto">
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>
+                <li><strong>lleve cierta funcionalidad</strong>, por ejemplo, procesos o fórmulas comerciales patentados, a un nuevo sistema que pueda interactuar eficazmente con las tecnologías más nuevas</li>
+                <li><strong>cree un sistema completamente nuevo</strong> con la opción de "apagar" el antiguo sistema heredado al final del proceso</li>
+                <li><strong>controlando la entrada de datos</strong></li>
+                <li><strong>agilizando cómo los datos fluyen a través de las etapas del flujo de trabajo</strong></li>
+                <li><strong>Asegurándose de que su equipo complete las tareas de manera efectiva</strong></li>
+                <li><strong>advirtiéndote cuando algo parece anormal</strong></li>
+                <li><strong>Guiar al usuario a través de cada tarea</strong> para que nada caiga en las grietas, se interprete mal o se ingrese incorrectamente</li>
+                </ul>
                 
               </div>
           </div>
@@ -847,7 +826,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         ?>
           <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/consulta.jpg">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
@@ -877,32 +856,24 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
             <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
+              <h3><strong>Cómo nuestros Consultores de Software pueden ayudarle</strong></h3>
+              <p class="texto">Podemos consultar con su empresa por el tiempo que necesite y brindarle el apoyo de extremo a extremo que sea necesario, incluyendo:</p>
                 <ul class="list-marked texto">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li>consultar con usted durante un período de tiempo para comprender su negocio, revisar su tecnología actual y proporcionar una recomendación independiente para mejorar</li>
+                <li>Agregar recursos expertos para permitir una entrega más rápida del proyecto</li>
+                <li>Trabajar con usted de principio a fin para analizar sus requisitos, realizar evaluaciones y crear la solución de software a medida resultante.</li>
               </ul>
             </div>
             <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
+              <h3><strong>Entendiendo tu negocio</strong></h3>
+              <p class="texto">Antes de siquiera pensar en hacer recomendaciones, pasamos tiempo hablando con la administración y el personal y conociendo su negocio. Luego, analizamos las capacidades de su sistema existente y analizamos las operaciones de su negocio para determinar dónde se podrían realizar eficiencias y qué es lo que, actualmente, impide que esto se logre.<br>
+
+            Al tener este panorama más amplio, nos aseguramos de que nuestras recomendaciones cumplan de manera precisa y efectiva las necesidades de su negocio y los requisitos de su organización en particular.</p>
                 <ul class="list-marked texto">
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>
+                <li><strong>Analisis de negocios</strong></li>
+                <li><strong>Análisis de sistemas</strong></li>
+                <li><strong>Analisis operacional</strong></li>
+                </ul>
                 
               </div>
           </div>
@@ -920,7 +891,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/rescate.jpg">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
@@ -951,34 +922,18 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
             <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
+              <h3><strong>Cómo te podemos ayudar</strong></h3>
+              <p class="texto">Hay muchas razones por las cuales los proyectos de software a medida fallan, o su nuevo software no es adecuado para su propósito, pero la consecuencia es que te quedas en un lío con un sistema incompleto o defectuoso. </p>
                 <ul class="list-marked texto">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
+                <li><strong>Recuperar código fuente "perdido"</strong> de ejecutables compilados o servidores web</li>
+                <li><strong>Reconstruyendo repositorios de código fuente</strong> rotos para que los equipos internos puedan trabajar en el sistema nuevamente</li>
+                <li><strong>Ajuste de bases de datos de bajo rendimiento</strong></li>
+                <li><strong>Asumir sistemas antiguos</strong>escritos en lenguajes de programación obsoletos, mantenerlos y luego actualizarlos con nueva tecnología</li>
+                <li><strong>Reescribiendo o arreglando errores en sistemas de mala calidad.</strong></li>
+                <li><strong>Documentar código</strong></li>
+                <li><strong>Decodificación de archivos binarios</strong> complicados para que nuestro cliente pueda leer y procesar los datos que supuestamente perdieron.</li>
                 </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>
-                
-              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -994,7 +949,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/code.jpg">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
@@ -1024,25 +979,21 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
             <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
+              <h3><strong>Cómo nuestros desarrolladores de software pueden ayudarlo</strong></h3>
+              <p class="texto">Ya sea que decida intentar recuperar su código perdido o volver a desarrollarlo, podemos ayudarlo. Inicialmente, si no está seguro de qué servicio necesita, le explicaremos las ventajas y desventajas de cada uno y le recomendaremos cuál creemos que es la mejor opción para su situación individual. Cualquiera que sea la opción que elija, nuestro servicio incluirá:</p>
                 <ul class="list-marked texto">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li><strong>Protegiendo sus activos - manteniendo el código fuente seguro</strong></li>
+                <li><strong>Acceso seguro: proporcionar acceso seguro en línea a él.</strong></li>
               </ul>
             </div>
             <div class="col-md-10">
-              <h3></h3>
+              <h3><strong>Recuperar código fuente perdido</strong></h3>
               <p class="texto"></p>
                 <ul class="list-marked texto">
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
+                <li><strong>Preservar la lógica del programa original: recuperar el código fuente</strong></li>
+                <li><strong>Recuperar código fuente "perdido"</strong> de ejecutables compilados o servidores web</li>
+                <li><strong>Reconstruir repositorios de código fuente rotos</strong> para que los desarrolladores internos puedan trabajar en el sistema nuevamente</li>
+                <li><strong>Descodificar archivos binarios complicados</strong> para que pueda leer y procesar datos que pensó que estaban "perdidos"</li>
                 <li><strong></strong></li>
                 <li><strong></strong></li>
                 <li><strong></strong></li>
@@ -1068,7 +1019,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/soporteaplicaciones.jpg">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
@@ -1098,34 +1049,24 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
             <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+              <h3><strong>Sobre nuestra aplicación de soporte</strong></h3>
+              <p class="texto">Las actualizaciones tecnológicas y las actualizaciones, junto con los cambios en su negocio, pueden significar que su aplicación de software no funciona tan bien como antes. Por esta razón, es importante que su software se mantenga y sea compatible para que sus usuarios continúen obteniendo los máximos beneficios de toda la funcionalidad.</p>
             </div>
-            <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
+              <ul class="list-marked texto">
+                <li><strong>Corrección de errores de prioridad</strong></li>
+                <li><strong>Asistencia con cualquier funcionalidad que usted no conozca</strong></li>
+                <li><strong>Acceso a nuestro servicio de asistencia interno.</strong></li>
+                <li><strong>Soporte telefónico y por correo electrónico</strong></li>
+                <li><strong>Mantenimiento del sistema de fondo</strong></li>
+                <li><strong>Mantenimiento y análisis de bases de datos</strong></li>
+                <li><strong>Soporte remoto: tomar el control de su PC para resolver problemas directamente</strong></li>
+                <li><strong>Restauración de la copia de seguridad, si es necesario</strong></li>
+                <li><strong>Revertir datos o fusionar datos de versiones anteriores, cuando sea necesario</strong></li>
+                <li><strong>Importando y exportando datos</strong></li>
+                <li><strong>Gestión de cuentas y reuniones</strong></li>
+                <li><strong>Retención de código fuente (físico), o conocimiento (comprensión de)</strong></li>
+                
                 </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>
-                
-              </div>
           </div>
         </div>
       </section>
@@ -1142,7 +1083,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/hosting2.png">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
@@ -1173,32 +1114,16 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
             <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
+              <h3><strong>Sobre nuestro servicio de alojamiento.</strong></h3>
+              <p class="texto">Como una empresa líder en desarrollo de software a medida, queríamos poder ofrecerle un servicio de extremo a extremo: construir su software y luego ofrecerle la opción de hospedarlo para que no tenga que preocuparse por poseer, instalar y gestionando tus propios servidores. Es por eso que hemos invertido mucho para crear un entorno de servidor de la más alta calidad con Rackspace, los líderes de la industria en alojamiento.<br>
+
+                  El servicio de alojamiento en la nube que ofrecemos es completamente opcional; no hay presión sobre usted para usarla si prefiere alojar su aplicación en otro lugar.</p>
                 <ul class="list-marked texto">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>
+                <li><strong>Funcionalidad y rendimiento de alta calidad a bajo costo.</strong></li>
+                <li><strong>Alta disponibilidad: </strong>no hay llamadas de clientes que indiquen que no pueden acceder a su aplicación</li>
+                <li><strong>Escalabilidad:</strong> aumente o disminuya la cantidad de servidores que necesita según el tráfico</li>
+                <li><strong>Un enfoque de licencia de software sin complicaciones y sin inversiones.</strong></li>
+                </ul>
                 
               </div>
           </div>
@@ -1216,7 +1141,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         ?>
         <section class="text-center">
         <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
+        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/solutions-web.jpg">
           <div class="parallax-content">
             <div class="parallax-header__inner">
               <div class="parallax-header__content">
@@ -1246,34 +1171,15 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         <div class="container">
           <div class="row row-50 justify-content-sm-center">
             <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
+              <h3><strong>Cómo podemos ayudarte.</strong></h3>
+              <p class="texto">Hemos creado software de marca blanca a medida para una amplia gama de negocios, ayudando a nuevas empresas y empresas de nueva creación a crear sistemas empresariales y aplicaciones móviles que proporcionan ingresos a largo plazo.</p>
                 <ul class="list-marked texto">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+                <li><strong>Cree un MVP (producto mínimo viable)</strong>para demostrar que su modelo comercial y técnico funcionará. Una vez que se haya probado el mercado, podemos pasar a la siguiente fase del desarrollo completo de funciones</li>
+                <li><strong>Aproveche cualquier trabajo ya realizado </strong>tomando una versión de prueba simple de su software, tal vez escrita rápidamente con habilidades o recursos limitados, y conviértalo en un producto sólido y confiable.</li>
+                <li><strong>Velocidad de entrega.</strong> Podemos conceptualizar, diseñar y construir de manera rápida y eficiente una aplicación terminada para usted.</li>
+                <li><strong>Servicio totalmente alojado.</strong> Podemos eliminar cualquier problema de hardware del servidor instalando y ejecutando la aplicación en su nombre en nuestro entorno de centro de datos Rackspace altamente resistente.</li>
               </ul>
             </div>
-            <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>
-                
-              </div>
           </div>
         </div>
       </section>
@@ -1441,25 +1347,25 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5">
-                            <h3 class="">Software operacional</h3>
-                            <p>Si está buscando una compañía confiable y de buena reputación para construir uu software a medida, ha encontrado la compañía adecuada.</p>
+                            <h3 class="">Programacion de software </h3>
+                            <p>Si está buscando una compañía confiable y de buena reputación para construir un software a medida, ha encontrado la compañía adecuada.</p>
                             <a class="button button-gray-light-outline" href="/servicios/">Ver mas</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="object-wrap__body object-wrap__body-sizing-1 object-wrap__body-md-right bg-image" style="background-image: url(images/ep-img1.jpg)"></div>
+            <div class="object-wrap__body object-wrap__body-sizing-1 object-wrap__body-md-right bg-image" style="background-image: url(images/desarro-de-paginas-web.jpg)"></div>
         </section>
         <!-- Content Driven Design-->
         <section class="negro section-xl bg-default">
             <div class="container">
                 <div class="row justify-content-md-center flex-lg-row-reverse align-items-lg-center justify-content-lg-between row-50">
                     <div class="col-md-9 col-lg-5">
-                        <h3>Desarrollo de productos</h3>
+                        <h3>Desarrollo de software</h3>
                         <p>Podemos diseñar productos que se ajusten a sus necesidades; desde p&aacute;ginas web informativas, aplicaci&oacute;nes web con administrador de contenidos, CRM, así como también aplicaciones para las plataformas iOS y Android. </p>
                         <a class="button button-gray-light-outline" href="/servicios/">Ver mas</a>
                     </div>
-                    <div class="col-md-9 col-lg-6"><img src="<?php echo $this->data['info']['url']; ?>images/crc4.jpg" alt="CRC Software, desarrollo de productos" width="652" height="491" />
+                    <div class="col-md-9 col-lg-6"><img src="<?php echo $this->data['info']['url']; ?>images/paginas-web-playa-del-carmen.jpg" alt="CRC Software, desarrollo de productos" width="652" height="491" />
                     </div>
                 </div>
             </div>
@@ -1501,19 +1407,19 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
             <div class="container">
                 <div class="row row-50 align-items-lg-center justify-content-lg-between">
                     <div class="col-lg-5">
-                        <h3 class="">Aplicaciones web y móviles</h3>
+                        <h3 class=""> Desarrollo de aplicaciones web y móviles</h3>
                         <p>Si tienes un nuevo proyecto, deje que CRC Software te ayude con el aspecto actual más desafiante de comenzar un negocio: desarrollar su aplicación de software.</p>
                         <a class="button button-gray-light-outline" href="/aplicaciones/">Ver mas</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="row gallery-wrap">
-                            <div class="col-6"><img src="/images/crc2.jpg" alt="" width="301" height="227" />
+                            <div class="col-6"><img src="/images/desarrollo-de-aplicaciones-web-playa-del-carmen.jpg" alt="" width="301" height="227" />
                             </div>
-                            <div class="col-6"><img src="/images/home-default-4-301x227.jpg" alt="" width="301" height="227" />
+                            <div class="col-6"><img src="/images/desarrollo-de-aplicaciones-web.jpg" alt="desarrollo de aplicaciones web" width="301" height="227" />
                             </div>
-                            <div class="col-6"><img src="/images/crc6.jpg" alt="" width="301" height="227" />
+                            <div class="col-6"><img src="/images/desarrolladores-de-paginas-web.jpg" alt="desarrollo de paginas web" width="301" height="227" />
                             </div>
-                            <div class="col-6"><img src="/images/app-mobile.jpg" alt="" width="301" height="227" />
+                            <div class="col-6"><img src="/images/app-mobile.jpg" alt="aplicaciones moviles" width="301" height="227" />
                             </div>
                         </div>
                     </div>
@@ -1701,7 +1607,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
         ?>
         <section class="text-center">
             <!-- RD Parallax-->
-            <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="<?php echo $this->data['info']['url']; ?>/images/crc.jpg">
+            <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="<?php echo $this->data['info']['url']; ?>/images/quienes-somos-diseno-web.jpg">
                 <div class="parallax-content">
                     <div class="parallax-header__inner">
                         <div class="parallax-header__content">
@@ -1756,9 +1662,9 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                     </div>
                     <div class="col-md-8 col-lg-6">
                         <div class="cat-img-group">
-                            <div><img src="/images/cat-2-507x508.jpg" alt="" width="507" height="508" />
+                            <div><img src="/images/ingenierio-en-sitemas.jpg" alt="ingenieria en sistemas playa del carmen" width="507" height="508" />
                             </div>
-                            <div><img src="/images/cat-1-326x427.jpg" alt="" width="326" height="427" />
+                            <div><img src="/images/ingenieria-en-software.jpg" alt="ingenieria en software en playa del carmen" width="326" height="427" />
                             </div>
                         </div>
                     </div>
@@ -1892,8 +1798,9 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
     {
         ob_start();
         ?>
-        <section class="bg-gray-lighter">
+        
             <!-- RD Parallax-->
+        <section class="bg-gray-lighter">
             <div class="parallax-container bg-image parallax-header" data-parallax-img="<?php echo $this->data['info']['url']; ?>images/services-header.jpg">
                 <div class="parallax-content">
                     <div class="parallax-header__inner">
@@ -1901,7 +1808,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                             <div class="container">
                                 <div class="row justify-content-sm-center">
                                     <div class="col-md-10 col-xl-8">
-                                        <h2 class="slider"> Servicios de desarrollo de aplicaciones comerciales y software</h2>
+                                        <h2 class="slider"> Servicios de desarrollo web y aplicaciones moviles </h2>
                                     </div>
                                 </div>
                             </div>
@@ -1924,15 +1831,15 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
             <div class="container">
                 <div class="row row-60">
                     <div class="col-md-6 col-xl-3">
-                        <div class="thumbnail-classic"><img src="/images/crc7.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/aplicaciones-y-desarrollo-web.jpg" alt="paginas web responsivas" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/aplicaciones/">Aplicaciones comerciales a medida</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/aplicaciones/">Aplicaciones moviles y desarrollo web</a></h5>
                                 <p> Desde aplicaciones web hasta portales de clientes y todo lo demás; somos expertos en el uso de la tecnología para desarrollar la eficiencia empresarial y la ventaja competitiva. </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3">
-                        <div class="thumbnail-classic"><img src="/images/crc5.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/sitios-y-desarrollo-web.jpg" alt="desarrollo de sitios web y aplicaciones moviles" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/desarrollo-web/">Aplicaciones y desarrollo de sitios web</a></h5>
                                 <p>Nuestra especialidad es desarrollar aplicaciones web productivas, atractivas y seguras con compatibilidad entre navegadores y un diseño responsivo (diseños que se adaptan en dispositivos móviles, tabletas y computadoras de escritorio).</p>
@@ -1940,7 +1847,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3">
-                        <div class="thumbnail-classic"><img src="/images/movil.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/programacion-de-aplicacion-movil.jpg" alt="programacion de aplicaciones moviles" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/aplicaciones-moviles/">Desarrollo de aplicaciones móviles</a></h5>
                                 <p>Nuestro equipo de desarrolladores de aplicaciones móviles puede ayudarte a aumentar la participación de tu marca con una aplicación intuitiva, rápida, creativa e interactiva.</p>
@@ -1957,9 +1864,9 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                         </div>
                     </div>-->
                     <div class="col-md-6 col-xl-3">
-                        <div class="thumbnail-classic"><img src="/images/crm.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/sistemas-crm.jpg" alt="sistemas crm" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/sistema-crm/">Sistemas CRM a medida</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/sistema-crm/">Sistemas CRM</a></h5>
                                 <p>Logre sus objetivos de interacción con el cliente con un sistema de CRM personalizado y escalable que no requiera licencias por separado para cada nuevo usuario</p>
                             </div>
                         </div>
@@ -2010,7 +1917,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
             <div class="container">
                 <div class="row row-60">
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/migracion-datos.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/migracion-datos.jpg" alt="servicio de base de datos" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/migracion-de-datos/">Servicios de migración de datos</a></h5>
                                 <p> Si necesita un servicio de migración de datos rápido, eficiente y seguro sin interrupciones en su negocio, nuestros expertos pueden ayudarlo.
@@ -2019,7 +1926,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/sistemas.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/sistemas.jpg" alt="sistemas operativos" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/sistemas-operacionales/">Sistemas operacionales</a></h5>
                                 <p>Si tiene que adaptar sus procesos o resolver brechas en la administración o funcionalidad de los sistemas, podría ser momento de considerar un nuevo sistema operativo.</p>
@@ -2027,9 +1934,9 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/moderno.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/actualizacion-de-software.jpg" alt="" width="418" height="315" />
                             <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/modernizacion-software/">Modernización de software heredado</a></h5>
+                                <h5><a class="thumbnail-classic-title" href="/modernizacion-software/">Actualizacion de software heredado</a></h5>
                                 <p>¿Harto de gastar dinero en un lento sistema de TI que no funciona? Le construiremos un reemplazo poderoso que ayude, no obstaculice su negocio.</p>
                             </div>
                         </div>
@@ -2073,7 +1980,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                 <div class="row row-60">
 
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/consultoria.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/consultoria.jpg" alt="consultoria de software" width="418" height="315" />
                             <div class="caption">
                                 <h5 class=""><a class="thumbnail-classic-title" href="/consultoria-software/">Consultoría de software</a></h5>
                                 <p>Si necesita ayuda para identificar las barreras tecnológicas que se interponen entre usted y un negocio más rentable, nuestros consultores de software pueden ayudarlo.
@@ -2082,7 +1989,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/4.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/proyecto-software.jpg" alt="proyecto de ingenieria en software" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/rescate-software/">Rescatamos su proyecto Software</a></h5>
                                 <p>Si su proyecto de software a medida ha fallado o si se ha caído con su desarrollador de software, podemos rápidamente poner su negocio nuevamente en marcha.</p>
@@ -2090,7 +1997,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/codigo.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/codigo.jpg" alt="codigo fuente de paginas web" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/recuperacion-codigo/">Recuperación del código fuente</a></h5>
                                 <p>Podemos ayudar a aliviar el dolor de cabeza del código fuente perdido al recuperarlo o volver a desarrollarlo para usted. También podemos reconstruir repositorios de código fuente roto.</p>
@@ -2098,7 +2005,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/mantenimiento-de-aplicaciones.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/mantenimiento-de-aplicaciones.jpg" alt="soporte y mantenimiento de aplicaciones" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/soporte-de-aplicaciones/">Soporte y mantenimiento de aplicaciones</a></h5>
                                 <p>Desde la solución de errores prioritarios hasta nuestro servicio de asistencia interna; Apoyaremos y mantendremos su software a lo largo de su ciclo de vida, incluso si no lo construimos.
@@ -2107,7 +2014,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/webhosting.jpg" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/webhosting.jpg" alt="web hosting" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/hosting/">Hosting</a></h5>
                                 <p>Si necesita una forma simple y rentable de acceder a su nueva aplicación de software, pruebe nuestro servicio de alojamiento brindado a través de los líderes de la industria.</p>
@@ -2115,7 +2022,7 @@ Este software facilita la cooperación, aumenta la eficiencia y aumenta la satis
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/desarrollo-software.png" alt="" width="418" height="315" />
+                        <div class="thumbnail-classic"><img src="/images/desarrollo-software.png" alt="desarrollo de software" width="418" height="315" />
                             <div class="caption">
                                 <h5><a class="thumbnail-classic-title" href="/desarrollo-de-software/">Desarrollo de software</a></h5>
                                 <p> Permítanos ayudarlo con el aspecto más desafiante de comenzar un negocio: Desarrollar su aplicación de software</p>
