@@ -33,14 +33,22 @@ class Layout_View
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
         <title>
             <?php echo $this->data['seo']['title']; ?> - CRC Software
         </title>
         <meta name="format-detection" content="telephone=no">
         <meta name="description" content="<?php echo $this->data['seo']['description']; ?>">
-        <meta name="keywords" content="<?php echo $this->data['seo']['keywords']; ?>">
         <meta name="language" content="<?php echo $this->data['info']['lang']; ?>">
-        <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+        <meta property="og:type" content="<?php echo $this->data['seo']['og-type']; ?>"/>
+        <meta property="og:title" content="<?php echo $this->data['seo']['og-title']; ?>"/>
+        <meta property="og:description" content="<?php echo $this->data['seo']['og-description']; ?>"/>
+        <meta property="og:url" content="<?php echo $this->data['seo']['og-url']; ?>"/>
+        <meta property="og:site_name" content="<?php echo $this->data['seo']['og-site_name']; ?>"/>
+        <meta name="twitter:card" content="<?php echo $this->data['seo']['twitter:card']; ?>">
+        <meta name="twitter:description" content="<?php echo $this->data['seo']['twitter:description']; ?>">
+        <meta name="twitter:title" content="<?php echo $this->data['seo']['twitter:title']; ?>">
+       
         <?php 
             echo self::getCommonStyle();
         ?>
