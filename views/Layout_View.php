@@ -33,166 +33,53 @@ class Layout_View
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-         <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
         <title>
-            <?php echo $this->data['seo']['title']; ?> - CRC Software
+            <?php echo $this->data['seo']['title']; ?>  Adriana Alvarado
         </title>
         <meta name="format-detection" content="telephone=no">
         <meta name="description" content="<?php echo $this->data['seo']['description']; ?>">
+        <meta name="keywords" content="<?php echo $this->data['seo']['keywords']; ?>">
         <meta name="language" content="<?php echo $this->data['info']['lang']; ?>">
-        <meta property="og:type" content="<?php echo $this->data['seo']['og-type']; ?>"/>
-        <meta property="og:title" content="<?php echo $this->data['seo']['og-title']; ?>"/>
-        <meta property="og:description" content="<?php echo $this->data['seo']['og-description']; ?>"/>
-        <meta property="og:url" content="<?php echo $this->data['seo']['og-url']; ?>"/>
-        <meta property="og:site_name" content="<?php echo $this->data['seo']['og-site_name']; ?>"/>
-        <meta name="twitter:card" content="<?php echo $this->data['seo']['twitter:card']; ?>">
-        <meta name="twitter:description" content="<?php echo $this->data['seo']['twitter:description']; ?>">
-        <meta name="twitter:title" content="<?php echo $this->data['seo']['twitter:title']; ?>">
-       
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <?php 
             echo self::getCommonStyle();
         ?>
     </head>
 
-    <body>
+    <body id="body" class="animsition">
         <!-- Page -->
-        <div class="page">
+        <div id="body-content">
             <?php 
                 echo self::getCommonHeader();
             ?>
             <!--========================================================
                                   CONTENT
             =========================================================-->
-            <main>
+           <main>
                 <?php
                     switch ($section) 
                     {
                         case 'index':
-                            echo self::getIndexSwipper();
-                            echo self::getIndexServices();
-                            echo self::getIndexBanner();
-                            echo self::getIndexMoreServices();
-                            echo self::getIndexPortfolio();
-                            echo self::getIndexContact();
+                            echo self::getIndexSlider();
+                            echo self::getIndexWelcome();
+                            echo self::getIndexProyectos();
                         break;
         				    
-                        case 'nosotros':
-                            echo self::getBreadcrumbsAboutES();
-                            echo self::getWhoWeAreTextAboutES();
-                            echo self::getWhoWeAreColumnsAboutES();
-                            echo self::getOurTeamAboutES();
-                            echo self::getIndexContact();
-                        break;
-                        
-                        case 'servicios':
-                            echo self::getBanerServicesES();
-                            echo self::getGridServicesOneES();
-                            echo self::getTextSectionOneServicesES();
-                            echo self::getGridServicesTwoES();
-                            echo self::getTextSectionTwoServicesES();
-                            echo self::getGridServicesThreeES();
-                            echo self::getIndexContact();
-                        break;
-                                
-                        case 'aplicaciones':
-                            echo self::getAplicacionesParalax();
-                            echo self::getContenAplicaciones();
-                            echo self::getIndexContact();
-                        break;
-                                
-                        case 'desarrollo-web':
-                            echo self::getDesarrolloWeb();
-                            echo self::getContenidoWeb();
-                            echo self::getIndexContact();
-                        break;
-                        
-                        case 'aplicaciones-moviles':
-                            echo self::getMovil();
-                            echo self::getContenidoApp();
-                            echo self::getIndexContact();
-                        break;
-                        
-                        case 'base-de-datos':
-                            echo self::getBaseDatos();
-                            echo self::getContenidoDatos();
-                            echo self::getIndexContact();
-                        break;
-                        
-                        case 'sistema-crm':
-                            echo self::getSistema();
-                            echo self::getContenidoCRM();
-                            echo self::getIndexContact();
-                        break;
-                        
-                        case 'migracion-de-datos':
-                            echo self::getMigracion();
-                            echo self::getContenidoMigracion();
-                            echo self::getIndexContact();
-                        break;
-                        
-                        case 'sistemas-operacionales':
-                            echo self::getOperacional();
-                            echo self::getContenidoOperacional();
-                            echo self::getIndexContact();
-                        break;
-                                
-                         case 'modernizacion-software':
-                            echo self::getModernizacion();
-                            echo self::getContenidoSoftware();
-                            echo self::getIndexContact();
-                        break;
-                                
-                        case 'consultoria-software':
-                            echo self::getConsultoria();
-                            echo self::getContenidoConsultoria();
-                            echo self::getIndexContact();
-                        break;
+                        case 'about':
+                            echo self::getAboutES();
+                            echo self::getSocial();
                             
-                        case 'rescate-software':
-                            echo self::getRescateSoftware();
-                            echo self::getContenidoRescate();
-                            echo self::getIndexContact();
-                        break;
-                            
-                        case 'recuperacion-codigo':
-                            echo self::getRecuperacionCodigo();
-                            echo self::getContenidoCodigo();
-                            echo self::getIndexContact();
-                        break;
-                                
-                        case 'soporte-de-aplicaciones':
-                            echo self::getSoporteAplicaciones();
-                            echo self::getContenidoSoporte();
-                            echo self::getIndexContact();
-                        break;
-                            
-                        case 'hosting':
-                            echo self::getHosting();
-                            echo self::getContenidoHosting();
-                            echo self::getIndexContact();
-                        break;
-                            
-                        case 'desarrollo-de-software':
-                            echo self::getSoftware();
-                            echo self::getContenidoDe();
-                            echo self::getIndexContact();
-                        break;
-                                
-                        case 'contacto':
-                            echo self::getContactFormES();
                         break;
                         
                         case 'portafolio':
-                            echo self::getPortfolioES();
-                            echo self::getIndexContact();
+                            echo self::getSlider();
+                            
+                            
                         break;
+                            
                         
-                        case 'blog':
-                            echo self::getBlog();
-                            echo self::getIndexContact();
-                        break;
-        				
-    				    default:
+                        default:
         				break;
     			    }
                 ?>
@@ -217,13 +104,22 @@ class Layout_View
         ob_start();
         ?>
             <!-- Stylesheets-->
-            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Libre+Franklin:200,300,500,600,300italic">
-            <link rel="stylesheet" href="/css/bootstrap.css">
-            <link rel="stylesheet" href="/css/style.css">
-            <!--[if lt IE 10]>
-            <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-            <script src="js/html5shiv.min.js"></script>
-        	<![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+	<link rel="stylesheet" href="assets/vendor/rd-navbar/css/rd-navbar.css">
+	<link rel="stylesheet" href="assets/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/vendor/lightgallery/css/lightgallery.min.css">
+	<link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="assets/vendor/ytplayer/css/jquery.mb.YTPlayer.min.css">
+	<link rel="stylesheet" href="assets/vendor/animate.min.css">
+
+	<link rel="stylesheet" href="/assets/css/helper.css">
+	<link rel="stylesheet" href="/assets/css/theme.css"><link rel="stylesheet" href="/assets/css/dark-style.css">
         <?php
         $style = ob_get_contents();
         ob_end_clean();
@@ -235,8 +131,17 @@ class Layout_View
         ob_start();
         ?>
         <!-- Javascript-->
-        <script src="/js/core.min.js"></script>
-        <script src="/js/script.js"></script>
+        <div class="snackbars" id="form-output-global"></div>
+        <script src="assets/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/vendor/animsition/js/animsition.min.js"></script>
+        <script src="assets/vendor/jquery.easing.min.js"></script>
+        <script src="assets/vendor/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/vendor/jquery.mousewheel.min.js"></script>
+        <script src="assets/vendor/ytplayer/js/jquery.mb.YTPlayer.min.js"></script>
+        <script src="assets/js/core.min.js"></script>
+        <script src="assets/js/script.js"></script>
         <?php
         	$scripts = ob_get_contents();
         	ob_end_clean();
@@ -248,15 +153,7 @@ class Layout_View
 		ob_start();
 		?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127811234-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-127811234-1');
-    </script>
-
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9FT69"height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P9FT69');</script>
         <?php 
 		$google = ob_get_contents();
 		ob_end_clean();
@@ -269,2176 +166,771 @@ class Layout_View
         ?>
         <!-- PANEL-->
         <!-- Page Header-->
-        <header class="page-header">
+        <header class="section page-header">
             <!-- RD Navbar-->
-            <div class="rd-navbar-wrap">
-                <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-stick-up-clone="false" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true" data-md-stick-up-offset="69px" data-lg-stick-up-offset="1px" data-body-class="rd-navbar-default-linked">
-                    <div class="rd-navbar-inner">
-                        <!-- RD Navbar Panel-->
-                        <div class="rd-navbar-panel">
-                            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                            <!-- RD Navbar Brand-->
-                            <div class="rd-navbar-brand">
-                                <a class="brand-name" href="/"><img src="<?php echo $this->data['info']['url']; ?>/images/CRCazul.png" alt="" width="174" height="32" /></a>
+	<div class="rd-navbar-wrap">
+		<nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+				 data-md-layout="rd-navbar-static" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+				 data-lg-device-layout="rd-navbar-static" data-md-stick-up-offset="80px" data-lg-stick-up-offset="46px"
+				 data-md-stick-up="true" data-lg-stick-up="true">
+			<div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse">
+				<span></span></div>
+
+			<div class="rd-navbar-main-outer">
+				<div class="rd-navbar-main">
+					<!-- RD Navbar Panel-->
+					<div class="rd-navbar-panel">
+						<!-- RD Navbar Toggle-->
+						<button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+						<!-- RD Navbar Brand -->
+						<div class="rd-navbar-brand"><a class="brand" href="index.html">
+							<img class="brand-logo-dark" src="/assets/img/logo-dark.png" alt="" width="172" height="32"/>
+							<img class="brand-logo-light" src="/assets/img/logo-light.png" alt="" width="172" height="32"/>
+						</a>
+						</div>
+					</div>
+					<div class="rd-navbar-main-element">
+						<div class="rd-navbar-nav-wrap">
+							<!-- RD Navbar Nav-->
+							<ul class="rd-navbar-nav">
+								<li><a href="/">Home</a>
+									<!-- RD Navbar Dropdown-->
+								</li>
+
+								<li>
+									<a href="/about/">About</a>
+								</li>
+
+								<li class="">
+									<a href="/portafolio/">Portafolio</a>
+
+
+								<li>
+									<a href="blog-list-classic.html">Blog</a>
+								</li>
+
+								<li>
+									<a href="page-pricing.html">Pages</a>
+								</li>
+
+								<li>
+									<a href="contact.html">Contact</a>
+								</li>
+
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+     public function getFooter()
+    {
+        ob_start();
+        ?>
+        <section id="footer" class="footer-dark no-margin-top">
+		<div class="footer-inner">
+			<div class="footer-container tt-wrap">
+				<div class="row">
+					<div class="col-md-3">
+
+						<div id="footer-logo">
+							<a href="/" class="logo-dark"><img src="/assets/img/logo-dark.png" alt="logo"></a>
+							<a href="/" class="logo-light"><img src="/assets/img/logo-light.png" alt="logo"></a>
+                        </div>
+
+					</div>
+					<div class="col-md-5">
+
+						<div class="footer-text">
+							<h4>Creative Photo Studio</h4>
+							We are a team of creative photographers specializing in producing quality photography content, which varies in styles and genres. We can handle one-day shoots as well as long term relationships.
+						</div>
+
+					</div>
+					<div class="col-md-4">
+
+						<div class="social-buttons">
+							<ul>
+								<li><a href=""
+											 class="btn btn-social-min btn-default btn-rounded-full" title="Follow me on Facebook"
+											 target="_blank"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="home-landing.html#" class="btn btn-social-min btn-default btn-rounded-full"
+											 title="Follow me on Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="home-landing.html#" class="btn btn-social-min btn-default btn-rounded-full"
+											 title="Follow me on Google+" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="home-landing.html#"
+											 class="btn btn-social-min btn-default btn-rounded-full" title="Follow me on Pinterest"
+											 target="_blank"><i class="fa fa-pinterest"></i></a></li>
+								<li><a href="home-landing.html#" class="btn btn-social-min btn-default btn-rounded-full"
+											 title="Follow me on Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="contact.html" class="btn btn-social-min btn-default btn-rounded-full"
+											 title="Drop me a line" target="_blank"><i class="fa fa-envelope"></i></a></li>
+							</ul>
+						</div>
+
+
+						<form class="rd-form rd-mailform form-inline" data-form-output="form-output-global" data-form-type="contact" method="post" action="https://livedemo00.template-help.com/wt_65120/assets/bat/rd-mailform.php">
+
+							<div class="form-wrap">
+								<input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+								<label class="form-label" for="contact-email">E-mail</label>
+							</div>
+
+							<button class="button btn btn-primary form-button" type="submit">Send</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-container tt-wrap">
+					<div class="row">
+						<div class="col-md-6 col-md-push-6">
+
+							<ul class="footer-menu">
+								<li><a href="/">Home</a></li>
+								<li><a href="/about-me/">About</a></li>
+								<li><a href="albums-grid-fluid-2.html">Portfolio</a></li>
+								<li><a href="blog-list-grid.html">Blog</a></li>
+								<li><a href="page-faq.html">FAQ</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+
+						</div>
+						<div class="col-md-6 col-md-pull-6">
+
+							<div class="footer-copyright">
+								<p>&copy; 2018 / All rights reserved</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a href="home-landing.html#body" class="scrolltotop sm-scroll" title="Scroll to top"><i class="fa fa-chevron-up"></i></a>
+	</section>
+
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getSlider()
+    {
+        ob_start();
+        ?>
+        <section id="page-header">
+				
+				<div class="page-header-image  bg-image" style="background-image: url(/assets/img/misc/page-header-bg-3.jpg);">
+					<div class="cover bg-transparent-5-dark"></div>
+				</div>
+				    <div class="page-header-inner tt-wrap">
+					   <div class="page-header-caption ph-caption-lg parallax-5 fade-out-scroll-3">
+						<h1 class="page-header-title">Portfolio</h1>
+						<hr class="hr-short">
+						<div class="page-header-description" data-max-words="40">
+							<p>Fusce imperdiet, arcu non tempor aliquam, justo tortor cursus est, sed facilisis eros purus et felis. Sed eros sapien, iaculis eget gravida euismod, dapibus vitae turpis. Pellentesque men egestas odio mi, vitae egestas massa elementum.</p>
+						</div>
+					</div>
+				</div> 
+				
+			</section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getAboutES()
+    {
+        ob_start();
+        ?>
+        <section id="about-me-section" class="about-me-simple">
+            <div class="about-me-inner"> 
+				<div class="split-box about-me">
+				    <div class="container-fluid">
+							<div class="row">
+								<div class="row-lg-height">
+									<div class="col-lg-6 col-lg-height split-box-image no-padding bg-image" style="background-image: url(/assets/img/misc/me-3.jpg); background-position: 50% 50%;">
+								    <div class="sbi-height full-height-vh"></div>
+									</div> 
+									
+									<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+										
+										<div class="split-box-content sb-content-right shifted-left">
+											
+											<div class="custom-heading">
+												<div class="custom-heading-inner">
+													<h1 class="custom-heading-title">John Priston</h1>
+													<div class="custom-heading-subtitle">Artist &amp; Photographer</div>
+													<hr class="hr-short">
+												</div> 
+											</div>
+											
+											<div class="margin-top-30">
+												<p>I am an artist and photographer. Sollicitudin diam vitae, amet lacus donec eu, donec vulputate duis nullam nulla, suscipit nulla orci, ornare maecenas eget gravida. Curae sollicitudin lobortis phasellus. Fusce sapien, metus mi et libero enim sed lorem.</p>
+											</div>
+											<a href="contact-simple.html" class="btn btn-primary margin-top-20">Contact</a>
+											<a href="categories-carousel.html" class="btn btn-dark margin-top-20">View Work</a>
+											
+
+											
+										</div>
+										
+									</div> 
+								</div> 
+							</div>
+						</div> 
+					</div>
+					
+				</div> 
+			</section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+     
+    
+    
+    public function getSocial()
+    {
+        ob_start();
+        ?>
+        <section id="footer" class="footer-minimal no-margin-top bg-transparent">
+				<div class="footer-inner">
+					<div class="footer-container tt-wrap">
+						<div class="row">
+							<div class="col-md-6 col-md-push-6">
+								
+								<div class="social-buttons">
+									<ul>
+										<li><a href="about-me-2-fluid.html#" class="btn btn-social-min btn-default btn-link" title="Follow me on Facebook" target="_blank"><i class="/fa fa-facebook"></i></a></li>
+										<li><a href="about-me-2-fluid.html#" class="btn btn-social-min btn-default btn-link" title="Follow me on Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="about-me-2-fluid.html#" class="btn btn-social-min btn-default btn-link" title="Follow me on Google+" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+										<li><a href="about-me-2-fluid.html#" class="btn btn-social-min btn-default btn-link" title="Follow me on Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+										<li><a href="about-me-2-fluid.html#" class="btn btn-social-min btn-default btn-link" title="Follow me on Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+										<li><a href="contact.html" class="btn btn-social-min btn-default btn-link" title="Drop me a line" target="_blank"><i class="fa fa-envelope"></i></a></li>
+									</ul>
+								</div>
+								
+							</div> 
+							<div class="col-md-6 col-md-pull-6">
+								
+								<div class="footer-copyright">
+									<p>&copy; 2018 / All rights reserved</p>
+
+								</div>
+								
+							</div> 
+						</div> 
+					</div> 
+				</div> 
+				
+				<a href="about-me-2-fluid.html#body" class="scrolltotop sm-scroll" title="Scroll to top"><i class="fa fa-chevron-up"></i></a>
+			</section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    
+    
+    public function getIndexSlider()
+    {
+        ob_start();
+        ?>
+        <section id="tt-intro" class="slideshow-intro">
+		<div class="tt-intro-inner">
+			<div class="gl-carousel-wrap no-padding">
+
+				<div class="owl-carousel cc-height-5 dots-right bg-dark" data-xl-items="1" data-loop="true"
+						 data-nav="true" data-nav-speed="500" data-mouse-drag="false" data-dots-speed="500" data-autoplay="true"
+						 data-autoplay-timeout="8000"  data-dots="true" data-animation-in="fadeIn"
+						 data-autoplay-hover-pause="true">
+
+					<div class="cc-item">
+
+						<span class="cover bg-transparent-3-dark"></span>
+
+						<div class="cc-image bg-image"
+								 style="background-image: url(assets/img/intro/intro-10.jpg); background-position: 50% 50%;"></div>
+
+						<div class="intro-caption caption-animate intro-caption-xxlg center-left">
+							<h1 class="intro-title">Studio Photos</h1>
+							<h2 class="intro-subtitle">We can help you make great photos!</h2>
+							<p class="intro-description max-width-1000">
+								Studio photography requires special art of the photographer,<br>
+								and a studio genre is perhaps of greatest popularity...
+							</p>
+							<div class="margin-top-30">
+								<a href="home-landing.html#"
+									 class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Book a Photo Shoot</a>
+								<a href="albums-grid-fluid-2.html" class="btn btn-white-bordered margin-top-5">View More</a>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="cc-item">
+
+						<span class="cover bg-transparent-3-dark"></span>
+
+						<div class="cc-image bg-image"
+								 style="background-image: url(assets/img/intro/intro-9.jpg); background-position: 50% 75%;"></div>
+
+						<div class="intro-caption caption-animate intro-caption-xxlg center-left">
+							<h1 class="intro-title">Wedding</h1>
+							<h2 class="intro-subtitle">We can help you make great photos!</h2>
+							<p class="intro-description max-width-1000">
+								Wedding photographs give an excellent opportunity to experience <br>
+								the joyful moments of the special day again and again.
+							</p>
+							<div class="margin-top-30">
+								<a href="home-landing.html#"
+									 class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Book a Photo Shoot</a>
+								<a href="albums-grid-fluid-2.html" class="btn btn-white-bordered margin-top-5">View More</a>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="cc-item">
+
+						<span class="cover bg-transparent-3-dark"></span>
+
+						<div class="cc-image bg-image"
+								 style="background-image: url(assets/img/intro/intro-11.jpg); background-position: 50% 50%;"></div>
+
+						<div class="intro-caption caption-animate intro-caption-xxlg center-left">
+							<h1 class="intro-title">Advertising </h1>
+							<h2 class="intro-subtitle">We can help you make great photos!</h2>
+							<p class="intro-description max-width-1000">
+								Advertising photography provides necessary material for the promotion  <br>
+								of your company on the worldwide market regardless of your business sphere.
+							</p>
+							<div class="margin-top-30">
+								<a href="home-landing.html#"
+									 class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Book a Photo Shoot</a>
+								<a href="albums-grid-fluid-2.html" class="btn btn-white-bordered margin-top-5">View More</a>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="cc-item">
+
+						<span class="cover bg-transparent-3-dark"></span>
+
+						<div class="cc-image bg-image"
+								 style="background-image: url(assets/img/intro/intro-12.jpg); background-position: 50% 37%;"></div>
+
+						<div class="intro-caption caption-animate intro-caption-xxlg center-left">
+							<h1 class="intro-title">Catalog Shoot</h1>
+							<h2 class="intro-subtitle">We can help you make great photos!</h2>
+							<p class="intro-description max-width-1000">
+								You need to carry out a professional subject shooting, <br>
+								as it is said - catalog shoot? We can help you with it!
+							</p>
+							<div class="margin-top-30">
+								<a href="home-landing.html#"
+									 class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Book a Photo Shoot</a>
+								<a href="albums-grid-fluid-2.html" class="btn btn-white-bordered margin-top-5">View More</a>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="cc-item">
+
+						<span class="cover bg-transparent-3-dark"></span>
+
+						<div class="cc-image bg-image"
+								 style="background-image: url(assets/img/intro/intro-13.jpg); background-position: 50% 45%;"></div>
+
+						<div class="intro-caption caption-animate intro-caption-xxlg center-left">
+							<h1 class="intro-title">Studio Shooting</h1>
+							<h2 class="intro-subtitle">We can help you make great photos!</h2>
+							<p class="intro-description max-width-1000">
+								Studio photography requires special art of the photographer, <br>
+								and a studio genre is perhaps of the greatest popularity.
+							</p>
+							<div class="margin-top-30">
+								<a href="home-landing.html#"
+									 class="btn btn-primary margin-top-5 margin-right-10" target="_blank">Book a Photo Shoot</a>
+								<a href="albums-grid-fluid-2.html" class="btn btn-white-bordered margin-top-5">View More</a>
+							</div>
+						</div>
+
+					</div>
+
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getIndexWelcome()
+    {
+        ob_start();
+        ?>
+        <section id="about-me-section">
+		<div class="about-me-inner tt-wrap">
+
+
+			<div class="split-box about-me">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="row-lg-height">
+
+							<div class="col-lg-6 col-lg-height split-box-image no-padding bg-image  wow fadeInUp" data-wow-delay=".3s"
+									 style="background-image: url(assets/img/misc/me-1.jpg); background-position: 50% 50%;">
+
+								<div class="sbi-height padding-height-85"></div>
+							</div>
+
+							<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+
+								<div class="split-box-content sb-content-right">
+
+									<div class="custom-heading">
+										<div class="custom-heading-inner">
+											<h1 class="custom-heading-title  wow fadeInUp" data-wow-delay=".3s">Welcome to Our Photo Studio</h1>
+											<div class="custom-heading-subtitle  wow fadeInUp" data-wow-delay=".5s">We are a creative team passionate about photography.</div>
+											<hr class="hr-short  wow fadeInUp" data-wow-delay=".7s">
+										</div>
+									</div>
+
+									<div class="margin-top-30  wow fadeInUp" data-wow-delay=".9s">
+										<p class="" data-wow-delay="1.1s">We put our heart and soul into our works. We hope that you can feel it while looking through the
+											portfolio. Enjoy the emotions transmitted through every shot.</p>
+										<p class="" data-wow-delay="1.3s">We specialize in producing quality photography content such as fashion and beauty, collection shooting for clothing designers, actor’s headshots, model tests, retail advertising and online commerce, wedding photos – from one-day shoots to long term relationships. Our clients include ad agencies, fashion retailers, fashion houses, cosmetic companies and individual customers. Working with many industry experts, our team can help you organize your shoot.</p>
+									</div>
+
+									<a href="about-me.html" class="btn btn-primary margin-top-20  wow fadeInUp" data-wow-delay="1.1s">Read more</a>
+                                </div>
                             </div>
-                        </div>
-                        <!-- RD Navbar Nav-->
-                        <div class="rd-navbar-nav-wrap">
-                            <ul class="rd-navbar-nav">
-                                <li class="active"><a href="/">Inicio</a></li>
+						</div>
+					</div>
+				</div>
+			</div>
+            
+            <div class="split-box what-i-do">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="row-lg-height">
+                            <div class="col-lg-6 col-lg-push-6 col-lg-height split-box-image no-padding bg-image  wow fadeInUp" data-wow-delay=".3s"
+									 style="background-image: url(assets/img/misc/me-2.jpg); background-position: 50% 50%;">
+                                <div class="sbi-height padding-height-85"></div>
+							</div>
 
-                                <li><a href="/nosotros/">Nosotros</a></li>
-                                <li><a href="/servicios/">Servicios</a></li>
-                                
-                                <!--<li><a href="/portafolio/">Portafolio</a>-->
-                                <!--<li><a href="/#/">Blog</a>-->
-                                <li><a href="/contacto/">Contacto</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getAplicacionesParalax()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/aplicaciones-empresariales.jpg">
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" >
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2>Desarrollo de aplicaciones empresariales a medida de CRC</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getContenAplicaciones()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
-            <div class="container">
-                <div class="row row-50 justify-content-sm-center">
-                    <div class="col-md-10">
-                        <h3><strong>Desarrollo de aplicaciones empresariales a medida</strong></h3>
-                        <p class="texto">Ya sea que necesite un sistema para mejorar su servicio al cliente, aumentar la efectividad de su negocio, optimizar sus procesos o aumentar sus ventas (ya sea a través de la experiencia del cliente front-end o de back-end), podemos crear aplicaciones comerciales inteligentes, rentables e intuitivas para ayudarte.
-                        <br>
-                        En CRC - Software, trabajaremos con usted para comprender sus procesos comerciales y el desafío que está tratando de resolver, y luego le sugeriremos el tipo de desarrollo de aplicaciones que funcionaría mejor para usted, como por ejemplo:</p>
-                        <ul class="list-marked texto">
-                            <li>Una aplicación alojada, basada en la web con una base de datos remota, local, sincronizada o multi-tenant back-end de la base de datos</li>
-                            <li>Un sitio web alojado, front-end impulsado por una base de datos</li>
-                            <li>Una aplicación alojada, basada en web con un sistema CRM integral</li>
-                            <li>Una combinación de sistemas front-end, back-end y portal de proveedor / cliente alojados</li>
-                            <li>Una aplicación de escritorio con bases de datos remotas (en la nube) o bases de datos locales que se pueden sincronizar / replicar con sistemas centrales de bases de datos</li>
-                            <li>Aplicaciones para dispositivos móviles y tabletas iOS / Android con bases de datos locales y en la nube</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+							<div class="col-lg-6 col-lg-pull-6 col-lg-height col-lg-middle no-padding">
+
+								<div class="split-box-content sb-content-left">
+
+									<div class="custom-heading">
+										<div class="custom-heading-inner">
+											<h1 class="custom-heading-title  wow fadeInUp" data-wow-delay=".3s">What We Do</h1>
+											<div class="custom-heading-subtitle  wow fadeInUp" data-wow-delay=".5s">Professional photography services</div>
+											<hr class="hr-short  wow fadeInUp" data-wow-delay=".7s">
+										</div>
+									</div>
+
+									<div class="margin-top-30  wow fadeInUp" data-wow-delay=".9s">
+										<p>As a professional photo studio, we provide a variety of photography related services including photo shoots organization, makeup services etc. We specialize in a wide variety of photo shoot genres. Our constant attention to the latest trends in the industry helps us make the photos of our clients look really awesome and thanks to our vast experience we know how to satisfy even the most demanding clients.</p>
+										<p>We often say that a picture is worth a thousand words. With the help of camera shots we can
+											literally freeze the moment in our hands. We collect captures in the photo albums or on the hard
+											drives in order to get magically transported into the past while looking trough them. Photography
+											has a truly magical effect on each of us. By looking at it we can recall the scenes from the past
+											in greater details.</p>
+									</div>
+									<a href="contact.html" class="btn btn-primary margin-top-20  wow fadeInUp" data-wow-delay="1.1s">Contact Us</a>
+									<a href="categories-grid.html" class="btn btn-dark margin-top-20  wow fadeInUp" data-wow-delay="1.3s">View Our Works</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
         <?php
         $header = ob_get_contents();
         ob_end_clean();
         return $header;
     }
 
-    public function getDesarrolloWeb()
+    public function getIndexProyectos()
     {
         ob_start();
         ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/sitio-web.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2> Desarrollo de sitios web</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        <section id="gallery-single-section" class="margin-top-100">
+		<div class="custom-heading custom-heading-lg  text-center">
+			<div class="custom-heading-inner tt-wrap">
+				<h1 class="custom-heading-title">Our Projects</h1>
+				<div class="custom-heading-subtitle">Our latest photos / <a href="categories-grid.html">View All</a></div>
+				<hr class="hr-short">
+			</div>
+		</div>
+
+		<div class="isotope-wrap ">
+			<div class="isotope col-3 gutter-3">
+				<div id="gallery" class="isotope-items-wrap lightgallery gsi-color" data-lightgallery="group">
+
+					<div class="grid-sizer"></div>
+
+					<div class="isotope-item ">
+
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-1.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item"
+							 data-sub-html="<p>Love story</p>">
+
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-1.jpg" class="gs-item-image" alt="">
+
+
+							<div class="gsi-image-caption">Love story</div>
+
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+
+						</a>
+
+					</div>
+
+
+					<div class="isotope-item">
+
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-2.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item">
+
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-2.jpg" class="gs-item-image" alt="">
+
+
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+
+						</a>
+
+					</div>
+
+
+					<div class="isotope-item">
+
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-3.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item">
+
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-3.jpg" class="gs-item-image" alt="">
+
+
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+
+						</a>
+
+					</div>
+
+
+					<div class="isotope-item">
+
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-4.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item">
+
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-4.jpg" class="gs-item-image" alt="">
+
+
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+
+						</a>
+
+					</div>
+
+
+					<div class="isotope-item">
+
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-5.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item">
+
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-5.jpg" class="gs-item-image" alt="">
+
+
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+
+						</a>
+
+					</div>
+
+
+					<div class="isotope-item">
+
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-6.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item">
+
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-6.jpg" class="gs-item-image" alt="">
+
+
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+
+						</a>
+
+					</div>
+					<div class="isotope-item">
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-7.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item">
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-7.jpg" class="gs-item-image" alt="">
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+						</a>
+					</div>
+					<div class="isotope-item">
+
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-8.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item"
+							 data-sub-html="<p>Professional photography for everyone</p>">
+
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-8.jpg" class="gs-item-image" alt="">
+
+
+							<div class="gsi-image-caption">Professional photography for everyone</div>
+
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+
+						</a>
+
+					</div>
+
+
+					<div class="isotope-item">
+
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-9.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item">
+
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-9.jpg" class="gs-item-image" alt="">
+
+
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+
+						</a>
+
+					</div>
+					<div class="isotope-item">
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-10.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item">
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-10.jpg" class="gs-item-image" alt="">
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+						</a>
+					</div>
+					<div class="isotope-item">
+
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-11.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item">
+
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-11.jpg" class="gs-item-image" alt="">
+
+
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+
+						</a>
+
+					</div>
+
+
+					<div class="isotope-item">
+
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-12.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item">
+
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-12.jpg" class="gs-item-image" alt="">
+
+
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+
+						</a>
+
+					</div>
+
+
+					<div class="isotope-item">
+
+						<a href="assets/img/gallery/gallery-single/grid/big/gallery-single-big-13.jpg"
+							 class="gallery-single-item lg-trigger wow fadeInUp" data-wow-delay=".3s"
+							 data-lightgallery="item">
+
+							<img src="assets/img/gallery/gallery-single/grid/gallery-single-13.jpg" class="gs-item-image" alt="">
+
+
+							<div class="gs-item-icon"><i class="fa fa-search"></i></div>
+
+						</a>
+
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+	</section>
         <?php
         $header = ob_get_contents();
         ob_end_clean();
         return $header;
     }
     
-    public function getContenidoWeb()
+    public function getIndexServices()
     {
     ob_start();
     ?>
-    <section class="section-lg bg-default text-center">
-        <div class="container">
-            <div class="row row-50 justify-content-sm-center">
-                <div class="col-md-10">
-                    <h3><strong>¿Qué es una aplicación web?</strong></h3>
-                    <p class="texto">
-                        Una aplicación web es un programa de software que se utiliza con un navegador de Internet, de la misma manera que una aplicación móvil es un programa de software que se utiliza en un dispositivo móvil.<br>
-                        Los últimos años han visto una proliferación de aplicaciones web. Lo más probable es que su popularidad se deba a su facilidad de uso: cualquier persona con un navegador conectado a Internet puede acceder a ellos, atienden las necesidades de los usuarios móviles (ya que los teléfonos inteligentes son la principal forma en que las personas acceden a Internet) y se pueden implementar rápidamente y casi sin necesidad de instalación por parte del usuario.<br>
-                        Si necesita una página web tanto para fines de publicidad, hasta algo más avanzado como un CRM podemos darte esa solución.
-                        <br>
-                        Trabajaremos con usted para construir rápida e inteligentemente una herramienta potente e intuitiva.<br>
-                        A partir de ahí, es un proceso simple que comienza cuando nos sentamos con usted para comprender su negocio, lo que su nueva aplicación necesita poder entregar y a quién. Las posibles opciones incluyen:
-                    </p>
-                    <ul class="list-marked texto">
-                        <li> Una aplicación web alojada con un back-end de base de datos remoto, local, sincronizado o multitendado</li>
-                        <li> Una combinación de sistemas de front-end, back-end.</li>
-                        <li> Una aplicación web que incluye un completo back-end CRM</li>
-                        <li> Una aplicación web que complementa un nuevo sitio web o el existente</li>
-                        <li> Permitir a los usuarios agregar nuevos campos, definir cuadros desplegables, crear nuevos formularios y generar informes personalizados según sea necesario</li>
-                    </ul>
-                </div>
-                <div class="col-md-10">
-                    <h3><strong>Aplicaciones web responsivas</strong></h3>
-                    <p class="texto">
-                        Como era de esperar, todas las aplicaciones web que construimos son "responsivas". Esto significa que se ven muy bien y funcionan perfectamente en cualquier tamaño de pantalla: una PC de escritorio, tableta o teléfono móvil. Hacemos esto adaptando menús, controles y otros elementos visuales para que se ajusten al dispositivo en función del ancho y alto de la pantalla actual, asegurando que el usuario siempre obtenga la mejor experiencia posible, independientemente del dispositivo que esté usando. Puede ver esto en acción cambiando el tamaño de la ventana en este sitio web o visitándola en su teléfono inteligente; vea cómo todo "simplemente funciona".
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <?php
     $header = ob_get_contents();
     ob_end_clean();
     return $header;
     }
     
-    public function getMovil()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/movil2.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2>Desarrollo de aplicaciones moviles</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getContenidoApp()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3><strong>Expertos desarrolladores de aplicaciones móviles</strong></h3>
-              <p class="texto">
-                  No hay duda de que una aplicación móvil concebida estratégicamente puede obtener grandes recompensas a la hora de establecer relaciones con sus clientes, pero como el 73% de los usuarios espera que una aplicación móvil sea más fácil de usar que un sitio web móvil, es importante que esté al día. - Ahí es donde podemos ayudarte.<br>
-
-                  Mientras creará el concepto detrás de la aplicación móvil, podemos proporcionar un enfoque completo en la experiencia del usuario. Además de tener que lucir bien, sabemos que la aplicación móvil que creamos para usted debe ser.
-                </p>
-                <ul class="list-marked texto">
-                <li>Sencilla, intuitiva y funcional</li>
-                <li>Atractiva</li>
-                <li>Rápida velocidad de carga de la aplicación</li>
-              </ul>
-            </div>
-            <div class="col-md-10">
-              <h3><strong>Plataformas de aplicaciones móviles: iOS y Android.</strong></h3>
-              <p class="texto">
-                  En CRC, nos esforzamos por la eficiencia y la rentabilidad de nuestros clientes. Nos es ajeno construir la misma aplicación varias veces para atender a los "dos grandes" plataformas móviles: Android y iOS.
-                </p>
-              </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getBaseDatos()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/parallax-05.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2></h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-     
-    public function getContenidoDatos()
-    {
-        ob_start();
-        ?>
-         <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3></h3>
-              <p class="texto">
-                  
-                </p>
-                <ul class="list-marked texto">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <div class="col-md-10">
-              <h3></h3>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>
-                
-              </div>
-          </div>
-        </div>
-      </section>     
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getSistema()
-        {
-        ob_start();
-        ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/sistemas-crm-playa-del-carmen.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2>Sistemas CRM a medida</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-        
-    public function getContenidoCRM()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3><strong>Sistemas CRM perfectamente adaptable a tus necesidades</strong></h3>
-              <p class="texto">
-                El software Customer Relationship Management, o CRM, es un programa diseñado para reunir todos los aspectos de la información de su cliente en un solo lugar. Una solución de CRM ayuda a su empresa a organizar interacciones y relaciones con clientes y prospectos por igual.
-                  <br>
-
-                  El software de CRM centraliza todos los datos pertenecientes a sus clientes actuales y futuros, para que su equipo pueda mantenerse al tanto de sus tareas. Los agentes podrán registrar cuentas de compras de clientes, llamadas, correos electrónicos, chats, tickets de soporte, etc. De esta manera, ningún detalle de la relación de un cliente con su negocio se resquebrajará.
-                  <br>
-                  Las soluciones de CRM están disponibles para incluir negocios de todos los tamaños y presupuestos: desde un pequeño modelo basado en suscripción SaaS hasta una instalación empresarial a gran escala. Las empresas nuevas y establecidas se beneficiarán del uso de la solución CRM.
-                  <br>
-
-
-                  Este software facilita la cooperación, aumenta la eficiencia y aumenta la satisfacción del cliente a lo largo de todo su ciclo de vida. S
-                </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getMigracion()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/migraciondatos2.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2>Migracion de datos</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getContenidoMigracion()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3><strong>¿Cuándo es necesaria la migración de datos?</strong></h3>
-              <p class="texto">Hay muchas razones por las que puede surgir la necesidad de migración de datos, ya sea:</p>
-                <ul class="list-marked texto">
-                <li>Está modernizando su sistema heredado y necesita que los datos se migren del sistema anterior al nuevo</li>
-                <li>Sus datos deben sincronizarse entre el antiguo sistema heredado y el nuevo sistema para que se pueda llevar a cabo una implementación paralela del sistema.</li>
-                <li>Tienes una nueva aplicación de negocios y quieres integrar los datos de una aplicación anterior.</li>
-                <li>Ha adquirido una nueva filial, o se está fusionando y necesita que los datos se transfieran de muchos sistemas a uno.</li>
-                <li>Está trasladando sus plataformas de TI a la nube para ayudar a la escalabilidad y requiere la migración de datos y aplicaciones.</li>
-                <li>Mueve datos de un servidor existente a un sistema de almacenamiento nuevo o existente, o está consolidando datos de manera centralizada.</li>
-              </ul>
-            </div>
-            <div class="col-md-10">
-              <h3><strong>Proceso de migración de datos</strong></h3>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li><strong>Comprender para qué se usan tus datos.</strong> Evaluaremos el entorno de información, aprenderemos cómo y dónde usa sus datos y quién los usa. También determinaremos si es posible que haya un uso diferente para los datos en el futuro.</li>
-                <li><strong>Asegurar la calidad de los datos (especialmente en sistemas heredados).</strong> No tiene sentido mover datos que no usa, o que están duplicados o son incorrectos. Realizaremos una evaluación exhaustiva de la calidad para garantizar la estandarización que respalde a sus usuarios ahora y en el futuro.</li>
-                <li><strong>Constantemente validando.</strong> Reparar errores después de que haya ocurrido la migración es costoso. En el caso de la migración de datos de un sistema antiguo a uno nuevo, crearemos un prototipo visual del nuevo sistema para garantizar que los datos se utilicen exactamente como lo había previsto. Se pueden hacer cambios a lo largo del proceso.</li>
-                <li><strong>Pruebas con usuarios finales.</strong> Le recomendamos que comparta el prototipo con sus usuarios finales para que, además de validar todo el proceso, ellos y otras partes interesadas puedan realizar la migración final de la Prueba de aceptación del usuario para garantizar que cumpla con los requisitos.</li>
-                </ul><br><br>
-                
-              </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-     public function getOperacional()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/sistema-operativo2.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2>Sistemas operacionales</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-         <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getContenidoOperacional()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3><strong>Razones para considerar un nuevo sistema operacional</strong></h3>
-              <p class="texto">Todas las empresas cambian, ya sea debido al crecimiento, la reestructuración o la respuesta a las tendencias del mercado. Los procesos de flujo de trabajo cambian para reflejar el cambio; para mantener una ventaja competitiva, también deben hacerlo sus sistemas de software de soporte.</p>
-                <ul class="list-marked texto">
-                <li>Está creciendo y se da cuenta de que las hojas de cálculo de Excel, las bases de datos de Access y los sistemas fragmentados ya no satisfacen sus necesidades.</li>
-                <li>Tiene un sistema heredado existente que es anticuado, usa tecnología antigua que no puede interactuar y tiene un flujo de trabajo que ya no complementa sus procesos de negocios.</li>
-                <li>Has pasado por una fusión y las compañías fusionadas utilizan diferentes sistemas.</li>
-                <li>Has adquirido una nueva empresa que utiliza un sistema diferente.</li>
-              </ul>
-            </div>
-            <div class="col-md-10">
-              <h3><strong>Los pros y los contras de un nuevo sistema operativo.</strong></h3>
-              <p class="texto">Su sistema operativo es la piedra angular de su estrategia, operaciones y ventaja competitiva. Si no está seguro de cuál es la mejor opción para su negocio, podemos asesorarlo y ayudarlo a garantizar que obtenga un sistema que funcione para su negocio ahora y que sea fácilmente escalable para continuar trabajando duro para usted en el futuro.</p>
-                <ul class="list-marked texto">
-                <li><strong>Puede valer la pena considerar la modernización</strong> de software heredado si su sistema existente aún refleja con precisión sus prácticas comerciales, o contiene propiedad intelectual significativa.</li>
-                <li><strong>La integración de sistemas heredados</strong>significa que brindará continuidad y minimizará la necesidad de una capacitación costosa. Pero probablemente duplicará la cantidad de personal de soporte para sistemas antiguos y nuevos, lo que dará como resultado pocos ahorros de costos.</li>
-                <li><strong>Mantener los sistemas de una compañía</strong> sobre otros después de una fusión puede llevar a la insatisfacción en algunos rincones. Algunos usuarios serán competentes y otros necesitarán capacitación.</li>
-                <li><strong>
-                    Mantener las mejores partes del sistema</strong> de cada compañía después de una adquisición puede llevar a una funcionalidad superpuesta, o brechas en la provisión. Puede terminar agregando nuevos sistemas a la mezcla para compensar, aumentando el tiempo y los costos de capacitación, pero habrá cosas familiares y nuevas para todos.</li>
-                <li><strong>Un sistema operativo de reemplazo</strong> significará un nuevo sistema para que todo el personal aprenda, pero traerá agilidad para potenciar su negocio. Puede ser una excelente manera de racionalizar las plataformas que entran en el negocio como resultado de fusiones y adquisiciones.</li>
-                </ul><br><br>
-              </div>
-          </div>
-        </div>
-      </section>
-        
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-     
-    public function getModernizacion()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/software-heredado.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2>Modernizacion de software heredado</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getContenidoSoftware()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3><strong>¿Por qué es hora de actualizar sus aplicaciones heredadas?</strong></h3>
-              <p class="texto">La modernización de software heredado es su primer paso hacia        la agilidad empresarial. Podrá responder rápidamente a los cambios en el        mercado, producir fácilmente informes significativos, tener menos costos y      personal más feliz; piense en todas las soluciones manuales frustrantes y       lentas que desaparecerán y les ayudará a brindar un mejor servicio al           cliente en menos tiempo. Gana, gana<br>
-                Su sistema actualizado también le permitirá ser parte de las innovaciones recientes que proporcionan un valor comercial significativo, como la computación en la nube, las redes sociales, el big data y la tecnología móvil.</p>
-            </div>
-            <div class="col-md-10">
-              <h3><strong>Cómo te podemos ayudar</strong></h3>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li><strong>lleve cierta funcionalidad</strong>, por ejemplo, procesos o fórmulas comerciales patentados, a un nuevo sistema que pueda interactuar eficazmente con las tecnologías más nuevas</li>
-                <li><strong>cree un sistema completamente nuevo</strong> con la opción de "apagar" el antiguo sistema heredado al final del proceso</li>
-                <li><strong>controlando la entrada de datos</strong></li>
-                <li><strong>agilizando cómo los datos fluyen a través de las etapas del flujo de trabajo</strong></li>
-                <li><strong>Asegurándose de que su equipo complete las tareas de manera efectiva</strong></li>
-                <li><strong>advirtiéndote cuando algo parece anormal</strong></li>
-                <li><strong>Guiar al usuario a través de cada tarea</strong> para que nada caiga en las grietas, se interprete mal o se ingrese incorrectamente</li>
-                </ul>
-                
-              </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-        
-     public function getConsultoria()
-    {
-        ob_start();
-        ?>
-          <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/consulta.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2>Consultoria de software</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-     public function getContenidoConsultoria()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3><strong>Cómo nuestros Consultores de Software pueden ayudarle</strong></h3>
-              <p class="texto">Podemos consultar con su empresa por el tiempo que necesite y brindarle el apoyo de extremo a extremo que sea necesario, incluyendo:</p>
-                <ul class="list-marked texto">
-                <li>consultar con usted durante un período de tiempo para comprender su negocio, revisar su tecnología actual y proporcionar una recomendación independiente para mejorar</li>
-                <li>Agregar recursos expertos para permitir una entrega más rápida del proyecto</li>
-                <li>Trabajar con usted de principio a fin para analizar sus requisitos, realizar evaluaciones y crear la solución de software a medida resultante.</li>
-              </ul>
-            </div>
-            <div class="col-md-10">
-              <h3><strong>Entendiendo tu negocio</strong></h3>
-              <p class="texto">Antes de siquiera pensar en hacer recomendaciones, pasamos tiempo hablando con la administración y el personal y conociendo su negocio. Luego, analizamos las capacidades de su sistema existente y analizamos las operaciones de su negocio para determinar dónde se podrían realizar eficiencias y qué es lo que, actualmente, impide que esto se logre.<br>
-
-            Al tener este panorama más amplio, nos aseguramos de que nuestras recomendaciones cumplan de manera precisa y efectiva las necesidades de su negocio y los requisitos de su organización en particular.</p>
-                <ul class="list-marked texto">
-                <li><strong>Analisis de negocios</strong></li>
-                <li><strong>Análisis de sistemas</strong></li>
-                <li><strong>Analisis operacional</strong></li>
-                </ul>
-                
-              </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getRescateSoftware()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/rescate.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2>Rescatamos su proyecto software</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    
-    public function getContenidoRescate()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3><strong>Cómo te podemos ayudar</strong></h3>
-              <p class="texto">Hay muchas razones por las cuales los proyectos de software a medida fallan, o su nuevo software no es adecuado para su propósito, pero la consecuencia es que te quedas en un lío con un sistema incompleto o defectuoso. </p>
-                <ul class="list-marked texto">
-                <li><strong>Recuperar código fuente "perdido"</strong> de ejecutables compilados o servidores web</li>
-                <li><strong>Reconstruyendo repositorios de código fuente</strong> rotos para que los equipos internos puedan trabajar en el sistema nuevamente</li>
-                <li><strong>Ajuste de bases de datos de bajo rendimiento</strong></li>
-                <li><strong>Asumir sistemas antiguos</strong>escritos en lenguajes de programación obsoletos, mantenerlos y luego actualizarlos con nueva tecnología</li>
-                <li><strong>Reescribiendo o arreglando errores en sistemas de mala calidad.</strong></li>
-                <li><strong>Documentar código</strong></li>
-                <li><strong>Decodificación de archivos binarios</strong> complicados para que nuestro cliente pueda leer y procesar los datos que supuestamente perdieron.</li>
-                </ul><br><br>
-            </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getRecuperacionCodigo()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/code.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2>Recuperacion de codigo fuente</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-     public function getContenidoCodigo()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3><strong>Cómo nuestros desarrolladores de software pueden ayudarlo</strong></h3>
-              <p class="texto">Ya sea que decida intentar recuperar su código perdido o volver a desarrollarlo, podemos ayudarlo. Inicialmente, si no está seguro de qué servicio necesita, le explicaremos las ventajas y desventajas de cada uno y le recomendaremos cuál creemos que es la mejor opción para su situación individual. Cualquiera que sea la opción que elija, nuestro servicio incluirá:</p>
-                <ul class="list-marked texto">
-                <li><strong>Protegiendo sus activos - manteniendo el código fuente seguro</strong></li>
-                <li><strong>Acceso seguro: proporcionar acceso seguro en línea a él.</strong></li>
-              </ul>
-            </div>
-            <div class="col-md-10">
-              <h3><strong>Recuperar código fuente perdido</strong></h3>
-              <p class="texto"></p>
-                <ul class="list-marked texto">
-                <li><strong>Preservar la lógica del programa original: recuperar el código fuente</strong></li>
-                <li><strong>Recuperar código fuente "perdido"</strong> de ejecutables compilados o servidores web</li>
-                <li><strong>Reconstruir repositorios de código fuente rotos</strong> para que los desarrolladores internos puedan trabajar en el sistema nuevamente</li>
-                <li><strong>Descodificar archivos binarios complicados</strong> para que pueda leer y procesar datos que pensó que estaban "perdidos"</li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                <li><strong></strong></li>
-                </ul><br><br>
-                
-                <h5></h5>
-                <p class="texto"></p><br><br><br>
-                
-              </div>
-          </div>
-        </div>
-      </section>
-        
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-     public function getSoporteAplicaciones()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/soporteaplicaciones.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2>Soporte de aplicaciones</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-         <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-     public function getContenidoSoporte()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3><strong>Sobre nuestra aplicación de soporte</strong></h3>
-              <p class="texto">Las actualizaciones tecnológicas y las actualizaciones, junto con los cambios en su negocio, pueden significar que su aplicación de software no funciona tan bien como antes. Por esta razón, es importante que su software se mantenga y sea compatible para que sus usuarios continúen obteniendo los máximos beneficios de toda la funcionalidad.</p>
-            </div>
-              <ul class="list-marked texto">
-                <li><strong>Corrección de errores de prioridad</strong></li>
-                <li><strong>Asistencia con cualquier funcionalidad que usted no conozca</strong></li>
-                <li><strong>Acceso a nuestro servicio de asistencia interno.</strong></li>
-                <li><strong>Soporte telefónico y por correo electrónico</strong></li>
-                <li><strong>Mantenimiento del sistema de fondo</strong></li>
-                <li><strong>Mantenimiento y análisis de bases de datos</strong></li>
-                <li><strong>Soporte remoto: tomar el control de su PC para resolver problemas directamente</strong></li>
-                <li><strong>Restauración de la copia de seguridad, si es necesario</strong></li>
-                <li><strong>Revertir datos o fusionar datos de versiones anteriores, cuando sea necesario</strong></li>
-                <li><strong>Importando y exportando datos</strong></li>
-                <li><strong>Gestión de cuentas y reuniones</strong></li>
-                <li><strong>Retención de código fuente (físico), o conocimiento (comprensión de)</strong></li>
-                
-                </ul><br><br>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    
-    public function getHosting()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/hosting2.png">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2>Hosting</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    
-    public function getContenidoHosting()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3><strong>Sobre nuestro servicio de alojamiento.</strong></h3>
-              <p class="texto">Como una empresa líder en desarrollo de software a medida, queríamos poder ofrecerle un servicio de extremo a extremo: construir su software y luego ofrecerle la opción de hospedarlo para que no tenga que preocuparse por poseer, instalar y gestionando tus propios servidores. Es por eso que hemos invertido mucho para crear un entorno de servidor de la más alta calidad con Rackspace, los líderes de la industria en alojamiento.<br>
-
-                  El servicio de alojamiento en la nube que ofrecemos es completamente opcional; no hay presión sobre usted para usarla si prefiere alojar su aplicación en otro lugar.</p>
-                <ul class="list-marked texto">
-                <li><strong>Funcionalidad y rendimiento de alta calidad a bajo costo.</strong></li>
-                <li><strong>Alta disponibilidad: </strong>no hay llamadas de clientes que indiquen que no pueden acceder a su aplicación</li>
-                <li><strong>Escalabilidad:</strong> aumente o disminuya la cantidad de servidores que necesita según el tráfico</li>
-                <li><strong>Un enfoque de licencia de software sin complicaciones y sin inversiones.</strong></li>
-                </ul>
-                
-              </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getSoftware()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-        <!-- RD Parallax-->
-        <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="/images/solutions-web.jpg">
-          <div class="parallax-content">
-            <div class="parallax-header__inner">
-              <div class="parallax-header__content">
-                <div class="container">
-                  <div class="row justify-content-sm-center">
-                    <div class="col-md-10 col-xl-8">
-                      <h2>Desarrollo de software</h2>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-     public function getContenidoDe()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default text-center">
-        <div class="container">
-          <div class="row row-50 justify-content-sm-center">
-            <div class="col-md-10">
-              <h3><strong>Cómo podemos ayudarte.</strong></h3>
-              <p class="texto">Hemos creado software de marca blanca a medida para una amplia gama de negocios, ayudando a nuevas empresas y empresas de nueva creación a crear sistemas empresariales y aplicaciones móviles que proporcionan ingresos a largo plazo.</p>
-                <ul class="list-marked texto">
-                <li><strong>Cree un MVP (producto mínimo viable)</strong>para demostrar que su modelo comercial y técnico funcionará. Una vez que se haya probado el mercado, podemos pasar a la siguiente fase del desarrollo completo de funciones</li>
-                <li><strong>Aproveche cualquier trabajo ya realizado </strong>tomando una versión de prueba simple de su software, tal vez escrita rápidamente con habilidades o recursos limitados, y conviértalo en un producto sólido y confiable.</li>
-                <li><strong>Velocidad de entrega.</strong> Podemos conceptualizar, diseñar y construir de manera rápida y eficiente una aplicación terminada para usted.</li>
-                <li><strong>Servicio totalmente alojado.</strong> Podemos eliminar cualquier problema de hardware del servidor instalando y ejecutando la aplicación en su nombre en nuestro entorno de centro de datos Rackspace altamente resistente.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-        <?php
-        $header = ob_get_contents();
-        ob_end_clean();
-        return $header;
-    }
-    
-    public function getFooter()
-    {
-        ob_start();
-        ?>
-        <footer class="footer-corporate">
-            <div class="container">
-                <div class="footer-corporate__inner">
-                    <p class="rights"><span>CRC-SOFTWARE</span><span>&nbsp;</span><span id="copyright-year"></span>.</p>
-                    <ul class="list-inline-xxs">
-                        <li><a class="icon icon-xxs icon-primary fa fa-facebook" href="<?php echo $this->data['info']['facebook']; ?>" target="_blank"></a></li>
-                        <li><a class="icon icon-xxs icon-primary fa fa-twitter" href="<?php echo $this->data['info']['twitter']; ?>" target="_blank"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <?php
-        $footer = ob_get_contents();
-        ob_end_clean();
-        return $footer;
-    }
-    
-    public function getIndexSwipper()
-    {
-        ob_start();
-        ?>
-        <!-- Swiper-->
-        <section>
-            <div class="swiper-container swiper-slider swiper-slider_fullheight" data-simulate-touch="false" data-loop="false" data-autoplay="7500">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide swiper-slide_video context-dark video-bg-overlay">
-                        <!-- RD Video-->
-                        <div class="swiper-slide bg-gray-lighter" data-slide-bg="/images/security.jpg">
-                            <!--<div class="vide_bg" data-vide-bg="video/video-lg" data-vide-options="posterType: jpg">-->
-                            <div class="swiper-slide-caption text-center">
-                                <div class="container">
-                                    <h2 data-caption-animate="fadeInUpSmall">CRC SOFTWARE</h2>
-                                    <p class="text-width-2 block-centered" data-caption-animate="fadeInUpSmall" data-caption-delay="200" style="font-weight: 400;"><sup>No solo creamos aplicaciones de software. Proporcionamos soporte y alojamiento, ayudando a que su sistema funcione y a que sus usuarios estén contentos todo el tiempo que nos necesite. Incluso asumiremos software que no hemos creado, lo solucionaremos, lo mantendremos y lo ayudaremos a llevar su proyecto al siguiente nivel.</sup></p>
-                                    <div class="group-lg group-middle"><a class="button button-black" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="/servicios/">Servicios</a><a class="button button-primary" data-caption-animate="fadeInUpSmall" data-caption-delay="350" href="/contacto/">Contacto</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide bg-gray-lighter" data-slide-bg="/images/slider1.jpg">
-                        <div class="swiper-slide-caption text-center">
-                            <div class="container">
-                                <h1 data-caption-animate="fadeInUpSmall"> <span class="slider"></span><sup class="text-accent"></sup></h1>
-                                <h3 data-caption-animate="fadeInUpSmall" data-caption-delay="200"></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Swiper Pagination-->
-                <div class="swiper-pagination"></div>
-                <!-- Swiper Navigation-->
-                <div class="swiper-button-prev linear-icon-chevron-left"></div>
-                <div class="swiper-button-next linear-icon-chevron-right"></div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getIndexContact()
-    {
-        ob_start();
-        ?>
-        <!-- Get in touch-->
-        <section class="pre-footer-corporate">
-            <div class="container">
-                <h3>Contacto</h3>
-                <div class="row justify-content-sm-center justify-content-lg-start">
-                    <div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
-                        <ul class="list-xs">
-                            <li>
-                                <dl class="list-terms-minimal">
-                                    <dt>Teléfono</dt>
-                                    <dd>
-                                        <ul class="list-semicolon">
-                                            <li><a href="tel:+52 1 (984)-131-4389">+52 1 (984)-131-4389</a></li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl class="list-terms-minimal">
-                                    <dt>Horario de atenci&oacute;n</dt>
-                                    <dd>lun-sab: 10:00 am - 08:00 pm</dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-10 col-md-6 col-lg-5 col-xl-3">
-                        <ul class="list-xs">
-                            <li>
-                                <dl class="list-terms-minimal">
-                                    <dt>Ubicaci&oacute;n</dt>
-                                    <dd>Playa del Carmen, Quintana Roo. México.</dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-sm-10 col-md-6 col-lg-5 col-xl-3">
-                        <ul class="list-xs">
-                            <li>
-                                <dl class="list-terms-minimal">
-                                    <dt>E-mail</dt>
-                                    <dd><a href="/contacto/">info@crc-software.com</a></dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!--<div class="col-sm-10 col-md-6 col-lg-4 col-xl-3">
-                        <ul class="list-inline-xxs">
-                            <li>
-                                <a class="icon icon-xxs icon-primary fa fa-facebook" href="/"></a>
-                            </li>
-                            <li>
-                                <a class="icon icon-xxs icon-primary fa fa-twitter" href="/"></a>
-                            </li>
-                            <li>
-                                <a class="icon icon-xxs icon-primary fa fa-instagram" href="/"></a>
-                            </li>
-                        </ul>
-                    </div>-->
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getIndexServices()
-    {
-        ob_start();
-        ?>
-        <!-- Presentation -->
-        <section class="section-xl bg-default text-center" id="section-see-features">
-            <div class="container">
-                <div class="row justify-content-lg-center">
-                    <div class="col-lg-10 col-xl-8">
-                        <h3 class="">Nuestros Servicios</h3>
-                        <p>Diseñamos, desarrollamos y entregamos soluciones de Software a medida de alta tegnologia para empresas pequeñas y como también de gran escala.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- The Power of Bootstrap Toolkit-->
-        <section class="bg-gray-lighter object-wrap">
-            <div class="section-xxl section-xxl_bigger">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <h3 class="">Programacion de software </h3>
-                            <p>Si está buscando una compañía confiable y de buena reputación para construir un software a medida, ha encontrado la compañía adecuada.</p>
-                            <a class="button button-gray-light-outline" href="/servicios/">Ver mas</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="object-wrap__body object-wrap__body-sizing-1 object-wrap__body-md-right bg-image" style="background-image: url(images/desarro-de-paginas-web.jpg)"></div>
-        </section>
-        <!-- Content Driven Design-->
-        <section class="negro section-xl bg-default">
-            <div class="container">
-                <div class="row justify-content-md-center flex-lg-row-reverse align-items-lg-center justify-content-lg-between row-50">
-                    <div class="col-md-9 col-lg-5">
-                        <h3>Desarrollo de software</h3>
-                        <p>Podemos diseñar productos que se ajusten a sus necesidades; desde p&aacute;ginas web informativas, aplicaci&oacute;nes web con administrador de contenidos, CRM, así como también aplicaciones para las plataformas iOS y Android. </p>
-                        <a class="button button-gray-light-outline" href="/servicios/">Ver mas</a>
-                    </div>
-                    <div class="col-md-9 col-lg-6"><img src="<?php echo $this->data['info']['url']; ?>images/paginas-web-playa-del-carmen.jpg" alt="CRC Software, desarrollo de productos" width="652" height="491" />
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-
-    public function getIndexBanner()
-    {
-        ob_start();
-        ?>
-        <!-- Blurbs-->
-        <section class="section-xl bg-gray-lighter">
-            <div class="container">
-                <div class="row row-50">
-                    <div class="col-md-12 col-lg-12">
-                        <h4><img src="images/solutions-web.jpg"></h4>
-                        <!-- Blurb minimal-->
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getIndexMoreServices()
-    {
-        ob_start();
-        ?>
-        <!-- GPL3 License advantages-->
-        <section class="negro section-xl bg-default">
-            <div class="container">
-                <div class="row row-50 align-items-lg-center justify-content-lg-between">
-                    <div class="col-lg-5">
-                        <h3 class=""> Desarrollo de aplicaciones web y móviles</h3>
-                        <p>Si tienes un nuevo proyecto, deje que CRC Software te ayude con el aspecto actual más desafiante de comenzar un negocio: desarrollar su aplicación de software.</p>
-                        <a class="button button-gray-light-outline" href="/aplicaciones/">Ver mas</a>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row gallery-wrap">
-                            <div class="col-6"><img src="/images/desarrollo-de-aplicaciones-web-playa-del-carmen.jpg" alt="" width="301" height="227" />
-                            </div>
-                            <div class="col-6"><img src="/images/desarrollo-de-aplicaciones-web.jpg" alt="desarrollo de aplicaciones web" width="301" height="227" />
-                            </div>
-                            <div class="col-6"><img src="/images/desarrolladores-de-paginas-web.jpg" alt="desarrollo de paginas web" width="301" height="227" />
-                            </div>
-                            <div class="col-6"><img src="/images/app-mobile.jpg" alt="aplicaciones moviles" width="301" height="227" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getIndexPortfolio()
-    {
-        ob_start();
-        ?>
-        <!-- Gallery-->
-        <section class="bg-gray-dark text-center">
-            <!-- RD Parallax-->
-            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="/images/parallax-01.jpg">
-                <div class="parallax-content">
-                    <div class="container section-xxl">
-                        <h2>PORTAFOLIO</h2>
-                        <!--<p></p><a class="button button-primary" href="index.html#">View now!</a>-->
-                    </div>
-                </div>
-            </div>
-
-            <!--<section class="section-xl bg-default" data-lightgallery="group">-->
-            <div class="container-fluid">
-                <div class="row row-10 row-horizontal-10">
-                    <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-1-1200x905.jpg">
-                            <figure><img src="/images/home-default-7-472x355.jpg" alt="" width="472" height="355" />
-                            </figure>
-                            <div class="thumb-modern__overlay"></div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-2-1200x905.jpg">
-                            <figure><img src="/images/home-default-8-472x355.jpg" alt="" width="472" height="355" />
-                            </figure>
-                            <div class="thumb-modern__overlay"></div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-3-1200x906.jpg">
-                            <figure><img src="/images/home-default-9-472x355.jpg" alt="" width="472" height="355" />
-                            </figure>
-                            <div class="thumb-modern__overlay"></div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-4-1200x905.jpg">
-                            <figure><img src="/images/home-default-10-472x355.jpg" alt="" width="472" height="355" />
-                            </figure>
-                            <div class="thumb-modern__overlay"></div>
-                        </a>
-                    </div>
-                    <!--<div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-5-1200x905.jpg">
-                            <figure><img src="/images/home-default-11-472x355.jpg" alt="" width="472" height="355" />
-                            </figure>
-                            <div class="thumb-modern__overlay"></div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-6-1200x905.jpg">
-                            <figure><img src="/images/home-default-12-472x355.jpg" alt="" width="472" height="355" />
-                            </figure>
-                            <div class="thumb-modern__overlay"></div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-7-1200x906.jpg">
-                            <figure><img src="/images/home-default-13-472x355.jpg" alt="" width="472" height="355" />
-                            </figure>
-                            <div class="thumb-modern__overlay"></div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 col-xl-3">
-                        <a class="thumb-modern" data-lightgallery="item" href="/images/image-original-8-1200x906.jpg">
-                            <figure><img src="/images/home-default-14-472x355.jpg" alt="" width="472" height="355" />
-                            </figure>
-                            <div class="thumb-modern__overlay"></div>
-                        </a>
-                    </div>-->
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    
     public function getIndexBlog()
     {
         ob_start();
         ?>
-        <!-- Post Your Latest News-->
-
-        <section class="negro bg-default section-lg">
-            <div>
-                <h2 class="slider blog">BLOG</h2>
-            </div>
-            <div class="container">
-                <div class="row row-60">
-
-                    <div class="col-md-6 col-xl-4">
-                        <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="/images/post-minimal-1-418x315.jpg" alt="" width="418" height="315" />
-                            <div class="post-classic-title">
-                                <h5><a href="image-post.html">¿Qué es una aplicación web?</a></h5>
-                            </div>
-                            <div class="post-meta">
-                                <div class="group">
-                                    <a href="image-post.html">
-                                        <time datetime="2017">Ago.20, 2018</time></a><a class="meta-author" href="image-post.html">por Raul Catro</a></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="/images/post-classic-1-886x668.jpg" alt="" width="886" height="668" />
-                            <div class="post-classic-title">
-                                <h5><a href="image-post.html">Getting to another  level of design and functionality.</a></h5>
-                            </div>
-                            <div class="post-meta">
-                                <div class="group">
-                                    <a href="image-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="image-post.html">by Brian Williamson</a></div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="col-md-6 col-xl-4">
-                        <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="/images/post-minimal-1-418x315.jpg" alt="" width="418" height="315" />
-                            <div class="post-classic-title">
-                                <h5><a href="image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
-                            </div>
-                            <div class="post-meta">
-                                <div class="group">
-                                    <a href="image-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="/image-post.html">by Brian Williamson</a></div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getBreadcrumbsAboutES()
-    {
-        ob_start();
-        ?>
-        <section class="breadcrumbs-custom">
-            <div class="container">
-                <div class="breadcrumbs-custom__inner">
-                    <p class="breadcrumbs-custom__title">Nosotros</p>
-                    <!--<ul class="breadcrumbs-custom__path">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html#">Pages</a></li>
-              <li class="active">About</li>
-            </ul>-->
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getWhoWeAreTextAboutES()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-            <!-- RD Parallax-->
-            <div class="parallax-container bg-image parallax-header rd-parallax-light" data-parallax-img="<?php echo $this->data['info']['url']; ?>/images/quienes-somos-diseno-web.jpg">
-                <div class="parallax-content">
-                    <div class="parallax-header__inner">
-                        <div class="parallax-header__content">
-                            <div class="container">
-                                <div class="row justify-content-sm-center">
-                                    <div class="col-md-10 col-xl-8">
-                                        <h2>¿Quiénes somos y qué hacemos?</h2>
-                                        <p>Somos CRC-Software, una compañía de desarrollo de software a medida. Diseñamos aplicaciones web inteligentes, rentables e intuitivas, aplicaciones móviles (iOS/Android) que ayudan a optimizar los procesos para las empresas, así como a crear nuevas fuentes de ingresos para empresas nuevas y establecidas.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getWhoWeAreColumnsAboutES()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default">
-            <div class="container">
-                <div class="row row-50">
-                    <div class="col-md-6">
-                        <h3>Nuestro enfoque para software a medida</h3>
-                        <p>Adoptamos un enfoque único al fusionar los métodos tradicionales y los nuevos para desarrollar software de calidad a gran velocidad, al mismo tiempo que conservamos nuestro toque personal y nuestra actitud exigente con la planificacióny desarrollo.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <h3>Agenda tu cita</h3>
-                        <p>Nos encanta conocer clientes potenciales o existentes. Llámenos y conozca al equipo que analiza, visualiza, crea y prueba su software, así como la demostración de algunos de nuestros productos únicos y emocionantes.</p>
-                        <a class="button button-gray-light-outline" href="/contacto/">Ver mas</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="bg-accent">
-            <div class="container">
-                <div class="row justify-content-md-center align-items-lg-end">
-                    <div class="col-md-8 col-lg-6 section-xl">
-                        <h3>Desarrollo de software de confianza</h3>
-
-                        <p>En CRC Software hemos acumulado experiencia considerable en una variedad de sectores: turismo, científico, bienes y raíces, entretenimiento, alojamiento. 
-                        <br>    
-                        Hemos ayudado a empresas que van desde empresas nuevas, pequeñas empresas administradas por sus propietarios hasta grandes organizaciones ya establecidas</p>
-                        <a class="button button-gray-light-outline" href="/contacto/">Contactanos</a>
-                    </div>
-                    <div class="col-md-8 col-lg-6">
-                        <div class="cat-img-group">
-                            <div><img src="/images/ingenierio-en-sitemas.jpg" alt="ingenieria en sistemas playa del carmen" width="507" height="508" />
-                            </div>
-                            <div><img src="/images/ingenieria-en-software.jpg" alt="ingenieria en software en playa del carmen" width="326" height="427" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getOurTeamAboutES()
-    {
-        ob_start();
-        ?>
-        <!--<section class="section-lg bg-default text-center">
-            <div class="container">
-                <h3>Nuestro equipo de trabajo</h3>
-                <p>El equipo de CRC-Software mezcla todos los ingredientes que consideramos necesarios para una empresa de desarrollo de software exitosa. Contamos con desarrolladores de software. Mentes analíticas que pueden comprender los matices de los negocios de nuestros clientes, los gerentes y diseñadores metódicos de proyectos, la gestión dirigida con un enfoque de calidad y entrega, y los innovadores que transforman la forma en que vemos las cosas.</p>
-                <div class="row row-50 justify-content-sm-center">
-                    <div class="col-md-6 col-lg-4">
-                        <!-- Thumb corporate-->
-                        <!--<div class="thumb thumb-corporate">
-                            <div class="thumb-corporate__main"><img src="/images/brian-king-480x362.jpg" alt="" width="480" height="362" />
-                                <div class="thumb-corporate__overlay">
-                                    <ul class="list-inline-sm thumb-corporate__list">
-                                        <li>
-                                            <a class="icon-sm fa-facebook icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-twitter icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-google-plus icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-vimeo icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-youtube icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-pinterest-p icon" href="about.html#"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="thumb-corporate__caption">
-                                <p class="thumb__title"><a href="team-member-profile.html">Raul Catro</a></p>
-                                <p class="thumb__subtitle">Director</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <!-- Thumb corporate-->
-                        <!--<div class="thumb thumb-corporate">
-                            <div class="thumb-corporate__main"><img src="/images/amanda-smith-480x362.jpg" alt="" width="480" height="362" />
-                                <div class="thumb-corporate__overlay">
-                                    <ul class="list-inline-sm thumb-corporate__list">
-                                        <li>
-                                            <a class="icon-sm fa-facebook icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-twitter icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-google-plus icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-vimeo icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-youtube icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-pinterest-p icon" href="about.html#"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="thumb-corporate__caption">
-                                <p class="thumb__title"><a href="team-member-profile.html">Cynthia Gonzalez</a></p>
-                                <p class="thumb__subtitle">Web Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <!-- Thumb corporate-->
-                        <!--<div class="thumb thumb-corporate">
-                            <div class="thumb-corporate__main"><img src="/images/george-nelson-418x315.jpg" alt="" width="418" height="315" />
-                                <div class="thumb-corporate__overlay">
-                                    <ul class="list-inline-sm thumb-corporate__list">
-                                        <li>
-                                            <a class="icon-sm fa-facebook icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-twitter icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-google-plus icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-vimeo icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-youtube icon" href="about.html#"></a>
-                                        </li>
-                                        <li>
-                                            <a class="icon-sm fa-pinterest-p icon" href="about.html#"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="thumb-corporate__caption">
-                                <p class="thumb__title"><a href="team-member-profile.html">Arian Falcon</a></p>
-                                <p class="thumb__subtitle">Disenador Grafico</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getBanerServicesES()
-    {
-        ob_start();
-        ?>
         
-            <!-- RD Parallax-->
-        <section class="bg-gray-lighter">
-            <div class="parallax-container bg-image parallax-header" data-parallax-img="<?php echo $this->data['info']['url']; ?>images/services-header.jpg">
-                <div class="parallax-content">
-                    <div class="parallax-header__inner">
-                        <div class="parallax-header__content">
-                            <div class="container">
-                                <div class="row justify-content-sm-center">
-                                    <div class="col-md-10 col-xl-8">
-                                        <h2 class="slider"> Servicios de desarrollo web y aplicaciones moviles </h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <?php
-        $method = ob_get_contents();
+        $header = ob_get_contents();
         ob_end_clean();
-        return $method;
+        return $header;
     }
     
-    public function getGridServicesOneES()
-    {
-        ob_start();
-        ?>
-        <section class="negro section-lg bg-default">
-            <div class="container">
-                <div class="row row-60">
-                    <div class="col-md-6 col-xl-3">
-                        <div class="thumbnail-classic"><img src="/images/aplicaciones-y-desarrollo-web.jpg" alt="paginas web responsivas" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/aplicaciones/">Aplicaciones moviles y desarrollo web</a></h5>
-                                <p> Desde aplicaciones web hasta portales de clientes y todo lo demás; somos expertos en el uso de la tecnología para desarrollar la eficiencia empresarial y la ventaja competitiva. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-3">
-                        <div class="thumbnail-classic"><img src="/images/sitios-y-desarrollo-web.jpg" alt="desarrollo de sitios web y aplicaciones moviles" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/desarrollo-web/">Aplicaciones y desarrollo de sitios web</a></h5>
-                                <p>Nuestra especialidad es desarrollar aplicaciones web productivas, atractivas y seguras con compatibilidad entre navegadores y un diseño responsivo (diseños que se adaptan en dispositivos móviles, tabletas y computadoras de escritorio).</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-3">
-                        <div class="thumbnail-classic"><img src="/images/programacion-de-aplicacion-movil.jpg" alt="programacion de aplicaciones moviles" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/aplicaciones-moviles/">Desarrollo de aplicaciones móviles</a></h5>
-                                <p>Nuestro equipo de desarrolladores de aplicaciones móviles puede ayudarte a aumentar la participación de tu marca con una aplicación intuitiva, rápida, creativa e interactiva.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--<div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/data-base.jpg" alt="" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/base-de-datos/">Bases de datos a medida</a></h5>
-                                <p>Nos especializamos en el diseño y la creación de bases de datos personalizadas de MySQL que impulsan la eficiencia de tu negocio, lo ayudan a ver las tendencias operacionales y escalan tu negocio.
-                                </p>
-                            </div>
-                        </div>
-                    </div>-->
-                    <div class="col-md-6 col-xl-3">
-                        <div class="thumbnail-classic"><img src="/images/sistemas-crm.jpg" alt="sistemas crm" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/sistema-crm/">Sistemas CRM</a></h5>
-                                <p>Logre sus objetivos de interacción con el cliente con un sistema de CRM personalizado y escalable que no requiera licencias por separado para cada nuevo usuario</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--<div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/integracion-software.jpg" alt="" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="integracion-software.html">Integración de software</a></h5>
-                                <p>Si necesita procesar datos de su hardware especializado, por ejemplo, lecturas de un termómetro o dispositivo de medición, transmisión de video desde una cámara o cualquier otra cosa, crearemos un software para permitir esto.</p>
-                            </div>
-                        </div>
-                    </div>-->
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getTextSectionOneServicesES()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-            <!-- RD Parallax-->
-            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="/images/crc.jpg">
-                <div class="parallax-content">
-                    <div class="container section-xxl">
-                        <h2>Servicios de integración de sistemas</h2>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getGridServicesTwoES()
-    {
-        ob_start();
-        ?>
-        <section class="negro section-lg bg-default">
-            <div class="container">
-                <div class="row row-60">
-                    <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/migracion-datos.jpg" alt="servicio de base de datos" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/migracion-de-datos/">Servicios de migración de datos</a></h5>
-                                <p> Si necesita un servicio de migración de datos rápido, eficiente y seguro sin interrupciones en su negocio, nuestros expertos pueden ayudarlo.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/sistemas.jpg" alt="sistemas operativos" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/sistemas-operacionales/">Sistemas operacionales</a></h5>
-                                <p>Si tiene que adaptar sus procesos o resolver brechas en la administración o funcionalidad de los sistemas, podría ser momento de considerar un nuevo sistema operativo.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/actualizacion-de-software.jpg" alt="" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/modernizacion-software/">Actualizacion de software heredado</a></h5>
-                                <p>¿Harto de gastar dinero en un lento sistema de TI que no funciona? Le construiremos un reemplazo poderoso que ayude, no obstaculice su negocio.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getTextSectionTwoServicesES()
-    {
-        ob_start();
-        ?>
-        <section class="text-center">
-            <!-- RD Parallax-->
-            <div class="parallax-container bg-image rd-parallax-light" data-parallax-img="/images/crc.jpg">
-                <div class="parallax-content">
-                    <div class="container section-xxl">
-                        <h2 class="slider">Servicios profesionales y de soporte</h2>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getGridServicesThreeES()
-    {
-        ob_start();
-        ?>
-        <section class="negro section-lg bg-default">
-            <div class="container">
-                <div class="row row-60">
-
-                    <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/consultoria.jpg" alt="consultoria de software" width="418" height="315" />
-                            <div class="caption">
-                                <h5 class=""><a class="thumbnail-classic-title" href="/consultoria-software/">Consultoría de software</a></h5>
-                                <p>Si necesita ayuda para identificar las barreras tecnológicas que se interponen entre usted y un negocio más rentable, nuestros consultores de software pueden ayudarlo.
-                                </p>
-                            </div> 
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/proyecto-software.jpg" alt="proyecto de ingenieria en software" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/rescate-software/">Rescatamos su proyecto Software</a></h5>
-                                <p>Si su proyecto de software a medida ha fallado o si se ha caído con su desarrollador de software, podemos rápidamente poner su negocio nuevamente en marcha.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/codigo.jpg" alt="codigo fuente de paginas web" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/recuperacion-codigo/">Recuperación del código fuente</a></h5>
-                                <p>Podemos ayudar a aliviar el dolor de cabeza del código fuente perdido al recuperarlo o volver a desarrollarlo para usted. También podemos reconstruir repositorios de código fuente roto.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/mantenimiento-de-aplicaciones.jpg" alt="soporte y mantenimiento de aplicaciones" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/soporte-de-aplicaciones/">Soporte y mantenimiento de aplicaciones</a></h5>
-                                <p>Desde la solución de errores prioritarios hasta nuestro servicio de asistencia interna; Apoyaremos y mantendremos su software a lo largo de su ciclo de vida, incluso si no lo construimos.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/webhosting.jpg" alt="web hosting" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/hosting/">Hosting</a></h5>
-                                <p>Si necesita una forma simple y rentable de acceder a su nueva aplicación de software, pruebe nuestro servicio de alojamiento brindado a través de los líderes de la industria.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <div class="thumbnail-classic"><img src="/images/desarrollo-software.png" alt="desarrollo de software" width="418" height="315" />
-                            <div class="caption">
-                                <h5><a class="thumbnail-classic-title" href="/desarrollo-de-software/">Desarrollo de software</a></h5>
-                                <p> Permítanos ayudarlo con el aspecto más desafiante de comenzar un negocio: Desarrollar su aplicación de software</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getContactFormES()
-    {
-        ob_start();
-        ?>
-        <section class="section-lg bg-default">
-            <div class="container">
-                <div class="row row-50">
-                    <div class="col-md-5 col-lg-4">
-                        <h3>Contacto</h3>
-                        <ul class="list-xs contact-info">
-                            <li>
-                                <dl class="list-terms-minimal">
-                                    <dt>Ubicacion</dt>
-                                    <dd>Playa del Carmen. Quintana Roo. Mexico</dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl class="list-terms-minimal">
-                                    <dt>Telefono</dt>
-                                    <dd>
-                                        <ul class="list-semicolon">
-                                            <li><a href="tel:+52 1 (984)-131-4389">+52 1 (984)-131-4389</a></li>
-                                        </ul>
-                                    </dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl class="list-terms-minimal">
-                                    <dt>E-mail</dt>
-                                    <dd><a href="/contacto/">info@crc-software</a></dd>
-                                </dl>
-                            </li>
-                            <li>
-                                <dl class="list-terms-minimal">
-                                    <dt>Horario de atención</dt>
-                                    <dd>lun-sab: 10 am-8 pm</dd>
-                                </dl>
-                            </li>
-                            <!--
-                            <li>
-                                <ul class="list-inline-sm">
-                                    <li>
-                                        <a class="icon-sm fa-facebook icon" href="contacts.html#"></a>
-                                    </li>
-                                    <li>
-                                        <a class="icon-sm fa-twitter icon" href="contacts.html#"></a>
-                                    </li>
-                                    <li>
-                                        <a class="icon-sm fa-instagram icon" href="services.html#"></a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            -->
-                        </ul>
-                    </div>
-                    <div class="col-md-7 col-lg-8">
-                        <h3>Formulario de contacto</h3>
-                        <!-- RD Mailform-->
-                        <form class="rd-mailform rd-mailform_style-1" data-form-output="form-output-global" data-form-type="contact" method="post" action="/bat/rd-mailform.php">
-                            <div class="form-wrap form-wrap_icon linear-icon-man">
-                                <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
-                                <label class="form-label" for="contact-name">Nombre</label>
-                            </div>
-                            <div class="form-wrap form-wrap_icon linear-icon-envelope">
-                                <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
-                                <label class="form-label" for="contact-email"> E-mail</label>
-                            </div>
-                            <div class="form-wrap form-wrap_icon linear-icon-telephone">
-                                <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Numeric">
-                                <label class="form-label" for="contact-phone">Teléfono</label>
-                            </div>
-                            <div class="form-wrap form-wrap_icon linear-icon-feather">
-                                <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
-                                <label class="form-label" for="contact-message">Mensaje</label>
-                            </div>
-                            <button class="button button-primary" type="submit">Enviar</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getPortfolioES()
-    {
-        ob_start();
-        ?>
-        <!-- PANEL-->
-        <!-- Page Header-->
-        <header class="page-header">
-            <!-- RD Navbar-->
-            <div class="rd-navbar-wrap">
-                <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-stick-up-clone="false" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true" data-md-stick-up-offset="69px" data-lg-stick-up-offset="1px" data-body-class="rd-navbar-default-linked">
-                </nav>
-            </div>
-        </header>
-        <section class="section-lg bg-default text-center">
-            <div class="container">
-                <h3>Portafolio</h3>
-                <div class="isotope-wrap row row-70">
-                    <div class="col-sm-12">
-                        <ul class="list-nav isotope-filters isotope-filters-horizontal">
-                            <li><a class="active" data-isotope-filter="*" data-isotope-group="gallery" href="portfolio.html#">All</a></li>
-                            <li><a data-isotope-filter="Category 1" data-isotope-group="gallery" href="portfolio.html#">Objects</a></li>
-                            <li><a data-isotope-filter="Category 2" data-isotope-group="gallery" href="portfolio.html#">People</a></li>
-                        </ul>
-                        <div class="isotope row" data-isotope-layout="fitRows" data-isotope-group="gallery">
-                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1">
-                                <a class="img-thumbnail-variant-3" href="single-portfolio.html"><img src="/images/portfolio-1-418x315.jpg" alt="" width="418" height="315" /><span class="label-custom label-white">Album</span>
-                                    <div class="caption"><span class="icon hover-top-element linear-icon-folder-picture"></span>
-                                        <ul class="list-inline-tag hover-top-element">
-                                            <li>9 photos</li>
-                                            <li>Objects</li>
-                                        </ul>
-                                        <p class="heading-5 hover-top-element">Portfolio Album</p>
-                                        <div class="divider"></div>
-                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-arrow-right"></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1">
-                                <a class="img-thumbnail-variant-3" href="/images/slider-slide-14-1920x1080.jpg" data-lightgallery="item">
-                                    <figure><img src="/images/portfolio-2-418x315.jpg" alt="" width="418" height="315" />
-                                    </figure>
-                                    <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
-                                        <ul class="list-inline-tag hover-top-element">
-                                            <li>Objects</li>
-                                        </ul>
-                                        <p class="heading-5 hover-top-element">Photo</p>
-                                        <div class="divider"></div>
-                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-plus"></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1">
-                                <a class="img-thumbnail-variant-3" href="single-portfolio.html"><img src="/images/portfolio-3-418x315.jpg" alt="" width="418" height="315" /><span class="label-custom label-white">Album</span>
-                                    <div class="caption"><span class="icon hover-top-element linear-icon-folder-picture"></span>
-                                        <ul class="list-inline-tag hover-top-element">
-                                            <li>9 photos</li>
-                                            <li>Objects</li>
-                                        </ul>
-                                        <p class="heading-5 hover-top-element">Portfolio Album</p>
-                                        <div class="divider"></div>
-                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-arrow-right"></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1">
-                                <a class="img-thumbnail-variant-3" href="/images/image-original-6-1200x905.jpg" data-lightgallery="item">
-                                    <figure><img src="/images/portfolio-4-418x315.jpg" alt="" width="418" height="315" />
-                                    </figure>
-                                    <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
-                                        <ul class="list-inline-tag hover-top-element">
-                                            <li>Objects</li>
-                                        </ul>
-                                        <p class="heading-5 hover-top-element">Photo</p>
-                                        <div class="divider"></div>
-                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-plus"></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
-                                <a class="img-thumbnail-variant-3" href="single-portfolio.html"><img src="/images/portfolio-5-418x315.jpg" alt="" width="418" height="315" /><span class="label-custom label-white">Album</span>
-                                    <div class="caption"><span class="icon hover-top-element linear-icon-folder-picture"></span>
-                                        <ul class="list-inline-tag hover-top-element">
-                                            <li>9 photos</li>
-                                            <li>Objects</li>
-                                        </ul>
-                                        <p class="heading-5 hover-top-element">Portfolio Album</p>
-                                        <div class="divider"></div>
-                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-arrow-right"></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
-                                <a class="img-thumbnail-variant-3" href="/images/portfolio-orginal-6-1200x675.jpg" data-lightgallery="item">
-                                    <figure><img src="/images/portfolio-6-418x315.jpg" alt="" width="418" height="315" />
-                                    </figure>
-                                    <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
-                                        <ul class="list-inline-tag hover-top-element">
-                                            <li>Objects</li>
-                                        </ul>
-                                        <p class="heading-5 hover-top-element">Photo</p>
-                                        <div class="divider"></div>
-                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-plus"></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
-                                <a class="img-thumbnail-variant-3" href="/images/gallery-post-1-886x668.jpg" data-lightgallery="item">
-                                    <figure><img src="/images/portfolio-7-418x315.jpg" alt="" width="418" height="315" />
-                                    </figure>
-                                    <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
-                                        <ul class="list-inline-tag hover-top-element">
-                                            <li>Objects</li>
-                                        </ul>
-                                        <p class="heading-5 hover-top-element">Photo</p>
-                                        <div class="divider"></div>
-                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-plus"></span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
-                                <a class="img-thumbnail-variant-3" href="/images/day-events-1-886x668.jpg" data-lightgallery="item">
-                                    <figure><img src="/images/portfolio-8-418x315.jpg" alt="" width="418" height="315" />
-                                    </figure>
-                                    <div class="caption"><span class="icon hover-top-element linear-icon-picture"></span>
-                                        <ul class="list-inline-tag hover-top-element">
-                                            <li>Objects</li>
-                                        </ul>
-                                        <p class="heading-5 hover-top-element">Photo</p>
-                                        <div class="divider"></div>
-                                        <p class="small hover-bottom-element">Creating Portfolio.</p><span class="icon arrow-right linear-icon-plus"></span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <!-- Classic Pagination-->
-                        <nav>
-                            <ul class="pagination-classic">
-                                <li class="active"><span>1</span></li>
-                                <li><a href="portfolio.html#">2</a></li>
-                                <li><a href="portfolio.html#">3</a></li>
-                                <li><a href="portfolio.html#">4</a></li>
-                                <li>
-                                    <a class="icon linear-icon-arrow-right" href="portfolio.html#"></a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getBlogBreadcrumbs()
-    {
-        ob_start();
-        ?>
-        <section class="breadcrumbs-custom">
-            <div class="container">
-                <div class="breadcrumbs-custom__inner">
-                    <p class="breadcrumbs-custom__title">BLOG</p>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
-    
-    public function getBlog()
-    {
-        ob_start();
-        ?>
-        <div class="container">
-                <div class="breadcrumbs-custom__inner">
-                    <p class="breadcrumbs-custom__title">BLOG</p>
-                    <!--<ul class="breadcrumbs-custom__path">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html#">Pages</a></li>
-              <li class="active">About</li>
-            </ul>-->
-                </div>
-            </div>
-        <section class="bg-default section-lg">
-            <div class="container">
-                <div class="row row-60">
-                    <div class="col-md-6 col-xl-4">
-                        <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="/images/post-minimal-1-418x315.jpg" alt="" width="418" height="315" />
-                            <div class="post-classic-title">
-                                <h5><a href="/image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
-                            </div>
-                            <div class="post-meta">
-                                <div class="group">
-                                    <a href="/image-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="/image-post.html">by Brian Williamson</a></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="/images/post-classic-1-886x668.jpg" alt="" width="886" height="668" />
-                            <div class="post-classic-title">
-                                <h5><a href="/image-post.html">Getting to another  level of design and functionality.</a></h5>
-                            </div>
-                            <div class="post-meta">
-                                <div class="group">
-                                    <a href="/image-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="/image-post.html">by Brian Williamson</a></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <!-- Post slider-->
-                        <article class="post-slider post-minimal">
-                            <!-- Owl Carousel-->
-                            <div class="owl-carousel carousel-post-gallery carousel-slider-blog-post" data-autoplay="true" data-items="1" data-stage-padding="0" data-loop="false" data-margin="10px" data-mouse-drag="false" data-nav="true" data-dots="true" data-lightgallery="group">
-                                <div class="item">
-                                    <a class="img-thumbnail-variant-1" href="/images/gallery-post-01-original-1354x762.jpg" data-lightgallery="item">
-                                        <figure> <img src="/images/gallery-post-1-886x668.jpg" alt="" width="886" height="668" />
-                                        </figure>
-                                        <div class="caption"><span class="icon icon-lg linear-icon-magnifier"></span></div>
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a class="img-thumbnail-variant-1" href="/images/gallery-post-02-original-1354x762.jpg" data-lightgallery="item">
-                                        <figure> <img src="/images/gallery-post-2-886x668.jpg" alt="" width="886" height="668" />
-                                        </figure>
-                                        <div class="caption"><span class="icon icon-lg linear-icon-magnifier"></span></div>
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a class="img-thumbnail-variant-1" href="/images/gallery-post-03-original-1354x762.jpg" data-lightgallery="item">
-                                        <figure> <img src="/images/gallery-post-3-886x668.jpg" alt="" width="886" height="668" />
-                                        </figure>
-                                        <div class="caption"><span class="icon icon-lg linear-icon-magnifier"></span></div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="post-classic-title">
-                                <h5><a href="gallery-post.html">Clean Style. Cons and Pros.</a></h5>
-                            </div>
-                            <div class="post-meta">
-                                <div class="group">
-                                    <a href="gallery-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="gallery-post.html">by Brian Williamson</a></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <!-- Post video-->
-                        <article class="post-video post-minimal">
-                            <div class="entry-video embed-responsive embed-responsive-16by9">
-                                <iframe width="886" height="668" src="http://www.youtube.com/embed/ccuQoF0vKYU" allowfullscreen=""></iframe>
-                            </div>
-                            <div class="post-classic-title">
-                                <h5><a href="video-post.html">Site Speed and Search Engines Optimization Aspects.</a></h5>
-                            </div>
-                            <div class="post-meta">
-                                <div class="group">
-                                    <a href="video-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="video-post.html">by Brian Williamson</a></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="/images/post-minimal-2-418x315.jpg" alt="" width="418" height="315" />
-                            <div class="post-classic-title">
-                                <h5><a href="/image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
-                            </div>
-                            <div class="post-meta">
-                                <div class="group">
-                                    <a href="/image-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="/image-post.html">by Brian Williamson</a></div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-xl-4">
-                        <!-- Post classic-->
-                        <article class="post-classic post-minimal"><img src="/images/post-minimal-3-418x315.jpg" alt="" width="418" height="315" />
-                            <div class="post-classic-title">
-                                <h5><a href="/image-post.html">10 Reasons to Buy Monstroid<sup>2</sup>.</a></h5>
-                            </div>
-                            <div class="post-meta">
-                                <div class="group">
-                                    <a href="/image-post.html">
-                                        <time datetime="2017">Jan.20, 2016</time></a><a class="meta-author" href="/image-post.html">by Brian Williamson</a></div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <?php
-        $method = ob_get_contents();
-        ob_end_clean();
-        return $method;
-    }
+   
     
     public function myMethod()
     {

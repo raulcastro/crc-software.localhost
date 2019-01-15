@@ -1,16 +1,17 @@
 <?php
 // var_dump($_SERVER);
 
-// 	error_reporting(E_ALL);
-// 	ini_set("display_errors", 1);
+ 	error_reporting(E_ALL);
+ 	ini_set("display_errors", 0);
 
-$root = $_SERVER['DOCUMENT_ROOT'];
-require_once 'backends/public.php';
+$root = filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING);
+
+//require_once 'backends/public.php';
 require_once ($root.'/views/Layout_View.php');
 
 $section = "index";
 
-$data 		= $backend->loadBackend($section);
+//$data 		= $backend->loadBackend($section);
 // 	var_dump($data);
 $view 		= new Layout_View($data);
 
