@@ -47,16 +47,17 @@ class Layout_View
         ?>
     </head>
 
-    <body id="body" class="animsition">
-        <!-- Page -->
+    <body id="body" class="animsition tt-boxed">
         <div id="body-content">
+            
             <?php 
                 echo self::getCommonHeader();
             ?>
+           
             <!--========================================================
                                   CONTENT
             =========================================================-->
-           <main>
+         
                 <?php
                     switch ($section) 
                     {
@@ -74,8 +75,17 @@ class Layout_View
                         
                         case 'portafolio':
                             echo self::getSlider();
+                            echo self::getImagen();
+                        break;
                             
+                        case 'pricing':
+                            echo self::getPricingSlider();
+                            echo self::getPaquetes();
+                        break;
                             
+                        case 'contact':
+                            echo self::getContactSlider();
+                            echo self::getContactForm();
                         break;
                             
                         
@@ -83,7 +93,7 @@ class Layout_View
         				break;
     			    }
                 ?>
-            </main>
+           
             <?php
                 echo self::getFooter(); 
             ?>
@@ -106,17 +116,17 @@ class Layout_View
             <!-- Stylesheets-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
-	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 
-	<link rel="stylesheet" href="assets/vendor/rd-navbar/css/rd-navbar.css">
+	<link rel="stylesheet" href="/assets/vendor/rd-navbar/css/rd-navbar.css">
 	<link rel="stylesheet" href="assets/vendor/animsition/css/animsition.min.css">
-	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/vendor/lightgallery/css/lightgallery.min.css">
+	<link rel="stylesheet" href="/assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/vendor/lightgallery/css/lightgallery.min.css">
 	<link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/vendor/owl-carousel/css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="assets/vendor/ytplayer/css/jquery.mb.YTPlayer.min.css">
-	<link rel="stylesheet" href="assets/vendor/animate.min.css">
+	<link rel="stylesheet" href="/assets/vendor/owl-carousel/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="/assets/vendor/ytplayer/css/jquery.mb.YTPlayer.min.css">
+	<link rel="stylesheet" href="/assets/vendor/animate.min.css">
 
 	<link rel="stylesheet" href="/assets/css/helper.css">
 	<link rel="stylesheet" href="/assets/css/theme.css"><link rel="stylesheet" href="/assets/css/dark-style.css">
@@ -140,8 +150,8 @@ class Layout_View
         <script src="assets/vendor/imagesloaded.pkgd.min.js"></script>
         <script src="assets/vendor/jquery.mousewheel.min.js"></script>
         <script src="assets/vendor/ytplayer/js/jquery.mb.YTPlayer.min.js"></script>
-        <script src="assets/js/core.min.js"></script>
-        <script src="assets/js/script.js"></script>
+        <script src="/assets/js/core.min.js"></script>
+        <script src="/assets/js/script.js"></script>
         <?php
         	$scripts = ob_get_contents();
         	ob_end_clean();
@@ -183,7 +193,7 @@ class Layout_View
 						<!-- RD Navbar Toggle-->
 						<button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
 						<!-- RD Navbar Brand -->
-						<div class="rd-navbar-brand"><a class="brand" href="index.html">
+						<div class="rd-navbar-brand"><a class="brand" href="/">
 							<img class="brand-logo-dark" src="/assets/img/logo-dark.png" alt="" width="172" height="32"/>
 							<img class="brand-logo-light" src="/assets/img/logo-light.png" alt="" width="172" height="32"/>
 						</a>
@@ -201,20 +211,20 @@ class Layout_View
 									<a href="/about/">About</a>
 								</li>
 
-								<li class="">
+								<li>
 									<a href="/portafolio/">Portafolio</a>
 
 
 								<li>
-									<a href="blog-list-classic.html">Blog</a>
+									<a href="/blog/">Blog</a>
 								</li>
 
 								<li>
-									<a href="page-pricing.html">Pages</a>
+									<a href="/pricing/">Pricing</a>
 								</li>
 
 								<li>
-									<a href="contact.html">Contact</a>
+									<a href="/contact/">Contact</a>
 								</li>
 
 
@@ -260,20 +270,12 @@ class Layout_View
 
 						<div class="social-buttons">
 							<ul>
-								<li><a href=""
+								<li><a href="https://www.facebook.com/adrianaalvaradophotography/"
 											 class="btn btn-social-min btn-default btn-rounded-full" title="Follow me on Facebook"
 											 target="_blank"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="home-landing.html#" class="btn btn-social-min btn-default btn-rounded-full"
-											 title="Follow me on Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="home-landing.html#" class="btn btn-social-min btn-default btn-rounded-full"
-											 title="Follow me on Google+" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="home-landing.html#"
-											 class="btn btn-social-min btn-default btn-rounded-full" title="Follow me on Pinterest"
-											 target="_blank"><i class="fa fa-pinterest"></i></a></li>
-								<li><a href="home-landing.html#" class="btn btn-social-min btn-default btn-rounded-full"
-											 title="Follow me on Dribbble" target="_blank"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="contact.html" class="btn btn-social-min btn-default btn-rounded-full"
-											 title="Drop me a line" target="_blank"><i class="fa fa-envelope"></i></a></li>
+								<li><a href="https://www.instagram.com/adrianaalvaradophotography/" class="btn btn-social-min btn-default btn-rounded-full"
+											 title="Follow me on instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+								
 							</ul>
 						</div>
 
@@ -298,11 +300,11 @@ class Layout_View
 
 							<ul class="footer-menu">
 								<li><a href="/">Home</a></li>
-								<li><a href="/about-me/">About</a></li>
-								<li><a href="albums-grid-fluid-2.html">Portfolio</a></li>
-								<li><a href="blog-list-grid.html">Blog</a></li>
-								<li><a href="page-faq.html">FAQ</a></li>
-								<li><a href="contact.html">Contact</a></li>
+								<li><a href="/about/">About</a></li>
+								<li><a href="/portafoli/">Portfolio</a></li>
+								<li><a href="/">Blog</a></li>
+								<li><a href="/faq/">FAQ</a></li>
+								<li><a href="/contact/">Contact</a></li>
 							</ul>
 
 						</div>
@@ -321,6 +323,298 @@ class Layout_View
 		<a href="home-landing.html#body" class="scrolltotop sm-scroll" title="Scroll to top"><i class="fa fa-chevron-up"></i></a>
 	</section>
 
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    public function getContactSlider()
+    {
+        ob_start();
+        ?>
+        <section id="page-header" class="ph-sm">
+				
+				<div class="page-header-image  bg-image" style="background-image: url(/assets/img/misc/page-header-bg-5.jpg);">
+					<div class="cover bg-transparent-5-dark"></div>
+				</div>
+				<div class="page-header-inner tt-wrap">
+				<div class="page-header-caption ph-caption-lg parallax-4 fade-out-scroll-3">
+						<h1 class="page-header-title">Contact</h1>
+						<hr class="hr-short">
+				        <div class="page-header-description" data-max-words="40">
+							<p>Fusce imperdiet, arcu non tempor aliquam, justo tortor cursus est, sed facilisis eros purus et felis. Sed eros sapien, iaculis eget gravida euismod, dapibus vitae turpis. Pellentesque men egestas odio mi, vitae egestas massa elementum.</p>
+						</div>
+					</div>
+				</div> 
+        </section>
+			
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+     public function getContactForm()
+    {
+        ob_start();
+        ?>
+        <section id="contact-section">
+				<div class="contact-section-inner tt-wrap"> 
+					
+					
+					<div class="split-box">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="row-lg-height full-height-vh">
+									
+									<div class="col-lg-6 col-lg-height col-lg-middle bg-image" style="background-image: url(assets/img/misc/contact-bg.jpg); background-position: 50% 50%;">
+										
+										<div class="cover"></div>
+										
+										<div class="split-box-content text-left no-padding-left no-padding-right">
+											
+											<div class="contact-info-wrap">
+												<div class="contact-info">
+													<p><i class="fa fa-home"></i> address: 121 King Street, Melbourne, Australia</p>
+													<p><i class="fa fa-phone"></i> phone: +123 456 789 000</p>
+													<p><i class="fa fa-envelope"></i> email: <a href="mailto:company@email.com" target="_blank">company@email.com</a></p>
+												</div>
+												
+												<div class="social-buttons margin-top-20">
+													<ul>
+														<li><a href="https://www.facebook.com/adrianaalvaradophotography/" class="btn btn-social-min btn-default btn-rounded-full" title="Follow me on Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+														<li><a href="https://www.instagram.com/adrianaalvaradophotography/" class="btn btn-social-min btn-default btn-rounded-full" title="Follow me on Pinterest" target="_blank"><i class="fa fa-instagram"></i></a></li>
+													</ul>
+												</div>
+												
+											</div>
+											
+										</div>
+										
+									</div> 
+									
+									<div class="col-lg-6 col-lg-height col-lg-middle no-padding">
+										
+										<div class="split-box-content">
+
+                    <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact"
+                          method="post" action="https://livedemo00.template-help.com/wt_65120/assets/bat/rd-mailform.php">
+                      <div class="form-wrap">
+                        <input class="form-input" id="contact-name" type="text" name="name"
+                               data-constraints="@Required">
+                        <label class="form-label" for="contact-name">Your Name</label>
+                      </div>
+                      <div class="form-wrap">
+                        <input class="form-input" id="contact-phone" type="text" name="phone"
+                               data-constraints="@Numeric">
+                        <label class="form-label" for="contact-phone">Phone</label>
+                      </div>
+                      <div class="form-wrap">
+                        <label class="form-label" for="contact-message">Your Message</label>
+                        <textarea class="form-input" id="contact-message" name="message"
+                                  data-constraints="@Required"></textarea>
+                      </div>
+                      <div class="form-wrap">
+                        <input class="form-input" id="form-email" type="email" name="email"
+                               data-constraints="@Email @Required">
+                        <label class="form-label" for="form-email">E-mail</label>
+                      </div>
+                      <button class="btn btn-primary" type="submit">Send Message</button>
+                    </form>
+                                        </div>
+								    </div> 
+								</div> 
+							</div> 
+							<div class="row">
+								<div class="col-lg-12 no-padding">
+
+									<!--<div class="google-map-container" data-center="9870 Saint Vincent Plaza, Glasgow, United Kingdom" data-icon="assets/img/gmap_marker.png" data-icon-active="assets/img/gmap_marker_active.png" data-styles="[{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#e9e9e9&quot;},{&quot;lightness&quot;:17}]},{&quot;featureType&quot;:&quot;landscape&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f5f5f5&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:17}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:29},{&quot;weight&quot;:0.2}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:18}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:16}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f5f5f5&quot;},{&quot;lightness&quot;:21}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#dedede&quot;},{&quot;lightness&quot;:21}]},{&quot;elementType&quot;:&quot;labels.text.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:16}]},{&quot;elementType&quot;:&quot;labels.text.fill&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:36},{&quot;color&quot;:&quot;#333333&quot;},{&quot;lightness&quot;:40}]},{&quot;elementType&quot;:&quot;labels.icon&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f2f2f2&quot;},{&quot;lightness&quot;:19}]},{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fefefe&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fefefe&quot;},{&quot;lightness&quot;:17},{&quot;weight&quot;:1.2}]}]"
+											 data-zoom="15">
+										<div class="google-map google-map-big"></div>
+										<ul class="google-map-markers">
+											<li data-location="9870 Saint Vincent Plaza, Glasgow, United Kingdom" data-description="Saint Vincent Plaza, Glasgow, United Kingdom"></li>
+										</ul>
+									</div>
+									<!--<div id="map"></div>-->
+									
+								</div> 
+							</div> 
+							
+						</div> 
+					</div>
+					
+				</div> 
+			</section>
+			
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+    
+    
+    public function getPricingSlider()
+    {
+        ob_start();
+        ?>
+        <section id="page-header" class="ph-lg">
+				
+				<div class="page-header-image  bg-image" style="background-image: url(/assets/img/misc/page-header-bg-17.jpg);">
+					<div class="cover bg-transparent-5-dark"></div>
+				</div>
+                <div class="page-header-inner tt-wrap">
+					
+					<div class="page-header-caption ph-caption-lg parallax-4 fade-out-scroll-3">
+						<h1 class="page-header-title">Pricing</h1>
+						<hr class="hr-short">
+				    </div>
+				</div> 
+        </section>
+			
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
+     public function getPaquetes()
+    {
+        ob_start();
+        ?>
+        <section id="prices-section">
+				
+				<div class="custom-heading padding-on">
+					<div class="custom-heading-inner tt-wrap">
+						
+						<div class="row">
+							<div class="col-md-4">
+								
+								<h1 class="custom-heading-title">Please Choose Your Package</h1>
+								
+								<hr class="hr-short">
+							</div> 
+							<div class="col-md-8">
+								<p>Nunc euismod ipsum vel metus rhoncus, a accumsan sapien mollis. Donec malesuada lacus rhoncus ipsum dignissim, sed fringilla orci faucibus. Proin non odio dui. Donec ut tristique dolor, at interdum sem. Quisque finibus viverra lectus vitae pulvinar.</p>
+								<p>Duis mattis quam quis quam cursus, a rutrum ante luctus. Phasellus porta ornare enim ac euismod. Nulla fringilla lectus ac tincidunt viverra.</p>
+							</div> 
+						</div> 
+					</div> 
+				</div>
+
+				<div class="prices-section-inner tt-wrap">
+
+					<div class="price-boxes-container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+
+								<div class="price-box">
+									<div class="pr-box price-heading bg-image"
+											 style="background-image: url(/assets/img/misc/price-box-1.jpg);">
+										<div class="price-heading-inner">
+											<div class="pr-box price-box-price">
+												<div class="price"><span class="price-currency">$</span>19</div>
+											</div>
+										</div>
+									</div>
+									<h3 class="price-title margin-top-60">Consultation</h3>
+									<div class="pr-box price-features margin-top-15">
+										<ul class="list-unstyled">
+											<li>Photo processing</li>
+											<li>Advice from the author</li>
+											<li>Photoshop lessons</li>
+										</ul>
+									</div>
+									<div class="pr-box">
+										<a href="/contact/" class="btn btn-price-box btn-dark btn-lg">Learm more</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+
+								<div class="price-box">
+									<div class="pr-box price-heading bg-image"
+											 style="background-image: url(/assets/img/misc/price-box-2.jpg);">
+										<div class="price-heading-inner">
+											<div class="pr-box price-box-price">
+												<div class="price"><span class="price-currency">$</span>35</div>
+											</div>
+										</div>
+									</div>
+									<h3 class="price-title margin-top-60">Outdoors</h3>
+									<div class="pr-box price-features margin-top-15">
+										<ul class="list-unstyled">
+											<li>Photo processing</li>
+											<li>Advice from the author</li>
+											<li>Photoshop lessons</li>
+										</ul>
+									</div>
+									<div class="pr-box">
+										<a href="contact.html" class="btn btn-price-box btn-dark btn-lg">Learm more</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+
+								<div class="price-box">
+									<div class="pr-box price-heading bg-image"
+											 style="background-image: url(/assets/img/misc/price-box-3.jpg);">
+										<div class="price-heading-inner">
+											<div class="pr-box price-box-price">
+												<div class="price"><span class="price-currency">$</span>49</div>
+											</div>
+										</div>
+									</div>
+									<h3 class="price-title margin-top-60">Studio</h3>
+									<div class="pr-box price-features margin-top-15">
+										<ul class="list-unstyled">
+											<li>Photo processing</li>
+											<li>Advice from the author</li>
+											<li>Photoshop lessons</li>
+										</ul>
+									</div>
+									<div class="pr-box">
+										<a href="contact.html" class="btn btn-price-box btn-dark btn-lg">Learm more</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+
+								<div class="price-box">
+									<div class="pr-box price-heading bg-image"
+											 style="background-image: url(/assets/img/misc/price-box-4.jpg);">
+										<div class="price-heading-inner">
+											<div class="pr-box price-box-price">
+												<div class="price"><span class="price-currency">$</span>88</div>
+											</div>
+										</div>
+									</div>
+									<h3 class="price-title margin-top-60">Travel</h3>
+									<div class="pr-box price-features margin-top-15">
+										<ul class="list-unstyled">
+											<li>Photo processing</li>
+											<li>Advice from the author</li>
+											<li>Photoshop lessons</li>
+										</ul>
+									</div>
+									<div class="pr-box">
+										<a href="/contact/" class="btn btn-price-box btn-dark btn-lg">Learm more</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row margin-top-70 margin-auto max-width-800">
+							<div class="col-md-12 text-center">
+								<p>Thank you for your photographs that capture so beautifully the emotion during this joyful time in our
+									lives. We will treasure them. Lullaby Photography was such a wonderful experience for my baby and I. I was
+									amazed at your professionalism.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
         <?php
         $header = ob_get_contents();
         ob_end_clean();
@@ -352,6 +646,750 @@ class Layout_View
         ob_end_clean();
         return $header;
     }
+    
+     public function getImagen()
+    {
+        ob_start();
+        ?>
+        <section id="gallery-list-section">
+				<div class="isotope-wrap tt-wrap"> 
+					
+					
+					<div class="isotope col-3 gutter-3">
+						
+						
+						<div class="isotope-top-content">
+							
+							<div class="isotope-filter">
+								<div class="isotope-filter-button">
+									<span class="ifb-icon"><i class="fa fa-sliders"></i></span>
+									<span class="ifb-icon-close"><i class="fa fa-times"></i></span> 
+								</div>
+								<ul class="isotope-filter-links">
+									<li><a href="albums-grid.html#" class="active" data-filter="*">Show All</a></li>
+									<li><a href="albums-grid.html#" data-filter=".fashion">Fashion</a></li>
+									<li><a href="albums-grid.html#" data-filter=".portraits">Portraits</a></li>
+									<li><a href="albums-grid.html#" data-filter=".black-and-white">Black &amp; White</a></li>
+									<li><a href="albums-grid.html#" data-filter=".outdoor">Outdoor</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						
+						
+						<div class="isotope-items-wrap gli-colored">
+							
+							<div class="grid-sizer"></div>
+							
+							<div class="isotope-item outdoor iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-1.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">49</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">The Old Man Dreams</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Outdoor</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item black-and-white iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-2.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">85</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">These Wonderful Freckles</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Black &amp; White</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item fashion iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-3.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">7</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">Paris Fashion Week</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Fashion</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item outdoor iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-4.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">12</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">Afternoon Photoshoot</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Outdoor</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item portraits iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-5.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">96</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">Sit Back and Relax</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Portraits</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item fashion outdoor iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-6.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">56</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">Something In The Water vol.2</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Fashion</a>, <a href="albums-archive.html">Outdoor</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item outdoor iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-7.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">53</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">Autumn Nights</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Outdoor</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item fashion iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-8.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">71</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">Beauty &amp; Fashion</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Fashion</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item black-and-white iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-9.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">68</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">No Colors This Time</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Black &amp; White</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item outdoor iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-10.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">32</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">Monday's Monochromes</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Outdoor</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item fashion portraits iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-11.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">13</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">Something In The Water</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Fashion</a>, <a href="albums-archive.html">Portraits</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item outdoor fashion iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-12.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">11</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">Beautiful Bride</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Outdoor</a>, <a href="albums-archive.html">Fashion</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item outdoor fashion iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-13.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">7</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">My Super Awesome Album</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Outdoor</a>, <a href="albums-archive.html">Fashion</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item portraits iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-14.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">23</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">One Day Shoot With Ordinary People</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Portraits</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							
+							<div class="isotope-item outdoor iso-height-1">
+								
+								<div class="gallery-list-item">
+									
+									<div class="gl-item-image-wrap">
+										
+										<a href="gallery-single-grid.html" class="gl-item-image-inner">
+											<div class="gl-item-image bg-image" style="background-image: url(/assets/img/gallery/gallery-list/gallery-list-15.jpg); background-position: 50% 50%"></div>
+											
+											<span class="gl-item-image-zoom"></span>
+										</a>
+										
+										
+										<ul class="gli-meta">
+											
+											<li>
+												
+												<div class="favorite-btn">
+													<div class="fav-inner">
+														<div class="icon-heart">
+															<span class="icon-heart-empty"></span>
+															<span class="icon-heart-filled"></span>
+														</div>
+													</div>
+													<div class="fav-count">6</div>
+												</div>
+												
+											</li>
+										</ul>
+										
+									</div>
+									
+									
+									
+									<div class="gl-item-info">
+										<div class="gl-item-caption">
+											<h2 class="gl-item-title"><a href="gallery-single-grid.html">The Beauty of Nature</a></h2>
+											<span class="gl-item-category"><a href="albums-archive.html">Outdoor</a></span>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+						</div>
+						
+						
+						<div class="isotope-pagination">
+							<div class="iso-load-more">
+								<a class="btn btn-dark-bordered btn-lg" href="albums-grid.html">View More</a>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div> 
+			</section>
+        <?php
+        $header = ob_get_contents();
+        ob_end_clean();
+        return $header;
+    }
+    
     
     public function getAboutES()
     {

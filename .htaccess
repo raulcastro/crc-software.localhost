@@ -22,5 +22,6 @@ RewriteBase /
 RewriteRule ^$ 			/index.php
 RewriteRule ^about/$ 		/about.php?section=about
 RewriteRule ^portafolio/$ 		/portafolio.php?section=about
-
+RewriteRule ^pricing/$ 		/pricing.php?section=about
+RewriteRule ^contact/$ 		/contact.php?section=contact
 
